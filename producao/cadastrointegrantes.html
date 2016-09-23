@@ -1,0 +1,141 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/integrante.js"></script>
+	<style>
+		body{
+			font-family:'Segoe UI';
+		}
+		#planodefundo{
+			background-image:url('assets/images/abstract-gradient-background-vector.jpg');
+			position: absolute;
+			width:100%;
+			height: 900px;
+			top:0;
+			left:0;
+		}
+		#titulo{
+			margin-left: 330px;
+			padding-top: 17px;
+			font-size: 26px;
+		}
+		#miolo{
+			margin-top: 50px;
+			background-color: white;
+			width:780px;
+			border-radius:5px;
+			position: absolute;
+			height: 800px;
+			margin-left:296px;
+			box-shadow: 0px 0px 0.7px grey;
+		}
+		#campusprimarios{
+			margin-left: 95px;
+			padding-top:9px;
+		}
+		#campussecundarios{
+			margin-left: 480px;
+			position:absolute;
+			margin-top:-418px;
+			
+			
+		}
+		vr{
+			width: 2px;
+			height:100px;
+			background-color: black;
+
+		}
+		button:hover{
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			color:white;
+			margin-left: 280px;
+			font-size: 18px;
+			background-color:#1B5F86; 
+			border:2px solid #1B5F86;
+			box-shadow: 1px 1px 1px grey;
+			
+		}
+		button{
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: 280px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 77px;
+		}
+		input{
+			width:200px;
+			height:30px;
+			border-radius:2px;
+			border:1px solid grey; 
+		}
+		#logo{
+			margin-left:-7px;
+			position:absolute;
+			width:8em;
+			height:auto;
+		}
+
+	</style>
+</head>
+<body>
+	<div ng-controller="IntegranteController" id="planodefundo">
+	<div id="miolo">
+		<a href=""><img id="logo" src="assets/images/logo.fw.png"/></a>
+		<p id="titulo">Cadastro</p>
+		<form>
+			<div id="campusprimarios">
+			<p>Nome</p>
+			<input name="nome" type="name" placeholder="Nome" ng-model="model.nome"></input>
+			<p>Email</p>
+			<input name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<p>Senha</p>
+			<input name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
+			<p>Confirmar senha</p>
+			<input type="password" placeholder="Confirmar senha" ></input>
+			<p>Escola</p>
+			<select ng-model="model.escola">
+				<option>Fundação Nokia de Ensino</option>
+				<option>IFAM</option>
+				<option>Fucapi</option>
+				<option>Senai</option>
+			</select>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<p>Data de nascimento</p>
+			<input type="date" placeholder="DD/MM/AA" ng-model="model.data_nascimento"></input>
+			<p>CPF</p>
+			<input type="name" placeholder="CPF" ng-model="model.cpf"></input>
+			<p>Telefone</p>
+			<input placeholder="Tel" ng-model="model.telefone"></input>
+			<p>Endereço</p>
+			<input type="name" placeholder="Endereço" ng-model="model.endereco"></input>
+			<p>Cidade</p>
+			<select ng-model="model.cidade">
+				<option>Manaus</option>
+				<option>Belém</option>
+				<option>São Paulo</option>
+				<option>Rio Branco</option>
+			</select>
+			</div>
+			
+			<button ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+			<button ng-show="updateMode" ng-click="cancel()">Cancelar</button>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/mascaradata.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
+	
+</head>
+<body>
+	<header>
+	
+	</header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
+		<div id="desconect">
+			<a id="logout1" href="conta.html">
+			<img id="logout" src="assets/images/logout.png">
+			</a>
+			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+		</div>
+	
+
+	<div id="planodefundo">
+	<div id="lado-esquerdo">
+		<div id="meuperfil">
+			<a><img src="assets/images/contaicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="dadosorient.html" class="menuopcao" style="margin-left:70px; font-size:20px; font-family:'Segoe UI'; margin-top:60px;">Meu perfil</a>
+		</div>
+		
+		<div id="meuprojeto">
+			<a><img src="assets/images/listaproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="perfilorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Projetos</a>
+		</div>
+		
+		<div id="sugerirescola">
+			<a><img src="assets/images/localizacaoicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="cadastroescola.html" class="menuopcao" style="margin-left:58px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Sugerir escola</a>
+		</div>
+		
+		<div id="contato">
+			<a><img src="assets/images/suporteproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="contateorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
+		</div>
+	</div>
+		<div  id="miolo" ng-controller="ProjetoController as projetoCtrl">
+			<div id="Projeto"><p style="margin-left:200px; font-size:22px; font-family:'Segoe UI';" >Cadastrar projeto</p></div>
+			<form>
+				<div id="wrapper" style="width: 100%; margin-top: 5%; margin-left: 3%;">
+					<input id="fileUpload" type="file"  style="width: 100%;"/></br>
+					<div id="image-holder"></div>
+				</div>
+				<div  id="campusprimarios">
+					<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Título</p>
+					<input ng-model="model.nome" style="width:540px; margin-left:20px;"" name="nome" type="name" placeholder="Nome" ></input>
+				</div>
+				</br>
+				<div id="estcid">
+					<div id="divest">
+						<p id="idest" style=" font-family:'Segoe UI';"> Estado</p>
+						<select ng-model="model.estado" ng-change="setcidades(model.estado)" style="width:250px;">
+							<option ng-repeat="estado in arrestados" value="{{estado.nome}}">{{estado.nome}}</option>
+
+						</select>
+					</div>
+					<div id="divcid">
+						<p id="idcid" style=" font-family:'Segoe UI';">Cidade</p>
+						<select ng-model="model.cidade" style="width:250px;">
+							<option ng-repeat="cidade in arrcidades" value="{{cidade.nome}}">{{cidade}}</option>
+
+						</select>
+					</div>
+				</div>
+				</br>
+				<div id="catobj">
+					<div id="divcat">
+					<p id="categoria" style=" font-family:'Segoe UI';">Categoria</p>
+					<select ng-model="model.categoria" style="width:250px;">
+						<option>Exatas</option>
+						<option>Humanas</option>
+						<option>Biológica</option>
+					</select>
+					</div>
+					<div id="divobj">
+					<p id="objmilenio" style=" font-family:'Segoe UI';">Objetivo do milênio</p>
+					<select ng-model="model.metaobj" style="width:250px;">
+						<option>1- Acabar com a fome e a miséria</option>
+						<option>2- Antingir o ensino básico universal</option>
+						<option>3- Igualdade entre sexos e valorização da mulher</option>
+						<option>4- Reduzir a mortalidade infantil</option>
+						<option>5- Melhorar a saúde materna</option>
+						<option>6- Combater a AIDS, malárias e outras doenças</option>
+						<option>7- Qualidade de vida e respeito ao meio ambiente</option>
+						<option>8- Todo mundo trabalhando pelo desenvolvimento</option>
+					</select>
+					</div>
+				</div>
+				</br>
+			<div id="escolar" >
+			<p id="escolap" style=" font-family:'Segoe UI';">Escola</p>
+			<select ng-controller="escolaController as escolaCtrl" ng-model="model.idescola" style="width:540px;">
+				<option ng-value="{{escola.id}}" ng-repeat="escola in arrEscolas">{{escola.nome}}</option>
+			</select>
+			</div>
+			<div id="termosdepesquisa">
+				<p id="termos"> ATENÇÃO: Deve ter no máximo 12 meses de pesquisa até a véspera da mostra de projeto:</p>
+			</div>
+			</br>
+			<div id="datas">
+				<div id="datainicio">
+					<p style=" font-family:'Segoe UI'; font-size:18;">Data de início</p>
+						<input placeholder="DD/MM/AA" type="text" name="datainicio" style="width:250px;" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" ng-model="model.datainicio"></input>
+				</div>
+				<div id="datafinal" style="margin-left:35px;">
+					<p style=" font-family:'Segoe UI'; font-size:18;">Data de conclusão</p>
+						<input placeholder="DD/MM/AA" type="text" name="datafinal" style="width:250px;" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" ng-model="model.datafinal"></input>
+				</div>
+			</div>
+			<div id="savecancel">
+				<button id="salvar" ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+			</div>
+			</form>
+		</div>
+		
+	</div>
+
+</body>
+</html>

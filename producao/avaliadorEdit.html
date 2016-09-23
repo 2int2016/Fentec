@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="fentec" >
+<head>
+	<title>Mobile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/avaliador.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div data-role="page" data-quicklinks="true" class="jqm-demos" ng-controller="avaliadorController">
+		<div data-role="header" class="jqm-header">
+			<h2><a href="" title="Hello jQuery Mobile"><img src="images/jquery-logo.png"></a></h2>
+			<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+			<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+		</div>
+		
+		<div role="main" class="ui-content jqm-content" >
+		<div>
+			<form class="ui-filterable">
+				<input id="filterBasic-input" data-type="search">
+			</form>
+				</br>
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+			 <li style="text-decoration:none" ng-repeat="avaliador in arrAvaliador">
+				<div>
+					<h4>{{avaliador.nome}}</h4>
+					<h4>{{avaliador.email}}</h4>
+					<h4>{{avaliador.nacionalidade}}</h4>
+					<h4>{{avaliador.rg}}</h4>
+					<h4>{{avaliador.profissao}}</h4>
+					<h4>{{avaliador.empresa}}</h4>
+					<h4>{{avaliador.escolaridade}}</h4>
+					<button ng-click="change(avaliador)">Alterar</button>
+					<button ng-click="delete(avaliador.id)">Remover</button>
+				</div>
+			</li>
+		</ul>
+		</div>
+
+
+			
+		</div>
+		
+		<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+			<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+				<li data-filtertext="demos" data-icon="home"><a href="#">Home</a></li>
+				<li data-filtertext="introduction" ><a href="#" data-ajax="false">Introduction</a></li>
+				<li data-filtertext="buttons" ><a href="#" data-ajax="false">Buttons</a></li>
+				<li data-filtertext="form" ><a href="#" data-ajax="false">Button widget</a></li>
+			</ul>
+		</div>
+		
+	</div>
+</body>
+</html>

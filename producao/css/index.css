@@ -1,0 +1,305 @@
+@font-face{ font-family: Carte; src: url('http://192.168.4.61/fentec/producao/css/fonts/DK%20Carte%20Blanche.otf'); }
+
+html, body{
+	width:100%;
+	height:100%;
+	background-color:white;
+	padding:0;
+	margin:0;
+	font-family: Carte;
+	font-size:;*/
+}
+
+header{
+	position:fixed;
+	z-index:2;
+	
+}
+#buttonmyacount{
+	margin-left:90px;
+}
+
+#main{
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+#center{
+	margin:0 auto;
+	width:1348px;
+	height:4240px;
+}
+
+#principal{
+	width:100%;
+	height:14.5%;
+}
+
+#menu{
+	width:100%;
+	height:15%;
+	margin-bottom:5px;
+	background: rgba(24,3,34,0.9);
+	
+}
+header>*{
+	display:inline-block;
+}
+#logo{
+	margin-left:2%;
+	margin-top:-7px;
+}
+nav{
+	position:absolute;
+	font-family: "Arvo";
+	color:white;
+	font-size: 170%;
+	width:100%;
+}
+.option{
+	color:white;
+	margin-left: 5%;
+	border-bottom:2px rgba(24,3,34,0.9);
+
+}
+.option:hover{
+	text-decoration: none;
+	border-bottom:2px solid #1E90FF;
+	color:white;
+}
+.option:focus{
+	border-bottom:2px solid #1E90FF;
+	outline: none;
+	text-decoration: none;
+	color:white;
+}
+#patrocinadoresicon{
+	width:4rem;
+	margin-left: 9%;
+}
+#contaicon{
+	width:3rem;
+	margin-left: 12%;
+	margin-top: 1%;
+}
+#projetoicon{
+	width:3.5rem;
+	margin-left: 9.5%;
+	margin-top: 0.5%;
+}
+#midiaicon{
+	width:3.7rem;
+	margin-left: 7.3%;
+	margin-top: 0.4%;
+}
+#localizacaoicon{
+	width:3rem;
+	margin-left:9%;
+	margin-top: 1%;
+}
+#homeicon{
+	margin-top: 1%;
+	width:3rem;
+	margin-left:9%;
+}
+#imagesheader{
+	width:100%;
+}
+#localizacao{
+	width:100%;
+	height:116%;
+	position: absolute;
+	margin-top:-0.5%;
+}
+#maps{
+	width:30%;
+	height: 300px;
+	margin-left:63%;
+}
+#conteudo{
+	margin-top:5%;
+}
+#cadas{
+	color:#D90000;
+}
+#titlelocalizacao{
+	font-family: DK Carte Blanche;
+	color:white;
+	margin-top:10%;
+	margin-left:-58%;
+	font-size:500%;
+}
+#p{
+	margin-left: 170px;
+	color:white;
+	margin-top: -2%;
+}
+#dia{
+		margin-left: 980px;
+		margin-top: -190px;
+		color:white;
+		font-size: 400%;
+	}
+#de{
+	margin-left: 1077px;
+	color:white;
+	font-size: 200%;
+	margin-top: -2%;
+}
+#local{
+	margin-left: 13%;
+	margin-top: -6%;
+	color:white;
+	font-size: 180%;
+}
+#hora{
+	margin-left: 13%;
+	color:white;
+	font-size: 180%;
+
+}
+#imglocalizacao{
+	width:35%;
+	margin-left: 52%;
+	margin-top: 4%;
+}
+#projeto{
+	width:100%;
+	height:120%;
+	position: absolute;
+	margin-top:49%;
+}
+#carousel{
+	margin-top: -2%;
+	margin-left: 2%;
+}
+#myTabDrop1{
+	color:black;
+	background-color: white;
+}
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+.containerbar{
+	position: absolute;
+	margin-top: 12.2%;
+	margin-left: 31%;
+}
+.search-box {
+  display: inline-block;
+  width:320%;
+  height:40px;
+  border-radius: 3px;
+  padding: 4px 55px 4px 15px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.search-box.hovered, .search-box:hover, .search-box:active {
+  border: 1px solid #aaa;
+}
+.search-box input[type=text] {
+  border: none;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+}
+.search-box input[type=text]:hover, .search-box input[type=text]:focus, .search-box input[type=text]:active {
+  box-shadow: none;
+}
+.search-box .search-btn {
+  position: absolute;
+  right: 2px;
+  top: 1.5px;
+  color: #aaa;
+  border-radius: 3px;
+  font-size: 21px;
+  padding: 5px 10px 1px;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+#titleprojeto{
+	font-family: DK Carte Blanche;
+	color:white;
+	margin-top:10%;
+	margin-left: 11%;
+	font-size:500%;
+}
+
+#contenttop>*{
+	display: inline-block;
+}
+#midia{
+	width:100%;
+	height:150%;
+	margin-top:95%;
+	margin-bottom:84%;
+	position:absolute;
+}
+#titlemidia{
+	font-family: DK Carte Blanche;
+	color:white;
+	margin-top:10%;
+	margin-left: 11%;
+	font-size:500%;
+	
+}
+#contenttopmidia>*{
+	display:inline-block;
+}
+#p2{
+	margin-left: 150px;
+	color: #FFF;
+	margin-top: -3%;
+	font-size: 180%;
+	text-align:justify;
+	width:25%;
+}
+#carouselmidia{
+	margin-left: 8.5%;
+	margin-top: -2%;
+}
+#video{
+	position:absolute;
+	margin-top:10%;
+	margin-left:35.5%;
+	height:25%;
+}
+#vermais{
+	color:white;
+	margin-left:82%;
+	position:absolute;
+	text-decoration: none;
+}
+#vermais:hover{
+	outline:none;
+	text-decoration: underline;
+}
+#patrocinadores{
+	width:1349px;
+	height:120%;
+	position:absolute;
+	margin-top: -117%;
+}
+#titlepatrocinadores{
+	font-family: DK Carte Blanche;
+	color:white;
+	margin-top:10%;
+	margin-left: 11%;
+	font-size:500%;	
+}
+#p3{
+	color:white;
+	margin-left: 11.3%;
+}
+
+
+

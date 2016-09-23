@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="fentec">
+<head>
+
+<title>Cadastro Fentec</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/escolamob.css">
+<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+	
+	<script type="text/javascript">
+		if(window.innerWidth <= 800 || window.innerHeight > window.innerWidth) 		{
+			window.location = 'listaescolamob.html'
+		} 
+		else {
+			
+		}
+	</script>
+
+</head>
+
+<body>
+
+<div data-role="page" class="jqm-demos" data-quicklinks="true">
+	
+	<div data-role="header">
+	
+	<h2><a href="#" title="hello jquery mobile"><img  src="assets/images/logologin.fw.png"></a></h2>
+	<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left"> menu</a>
+	<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right"> search</a>
+	</div>
+	
+	<div role="main" class="ui-content jqm-content">
+	
+	<h1 style="text-align:center;">Cadastro de Escola</h1>
+	
+	</div>
+	<div data-role="panel" class="jqm-navmenu-panel" data-position="right" data-display="overlay" data-theme="a">
+	
+		<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+			<li data-filtertext="demos" data-icon="home"><a href="#" >Home</a></li>
+			<li data-filtertext="visitantes"><a href="#" data-ajax="false">Visitantes</a></li>
+			<li data-filtertext="projetos"><a href="#" data-ajax="false">Projetos</a></li>
+			<li data-filtertext="orientadores"><a href="#" data-ajax="false">Orientadores</a></li>
+		</ul>
+	
+	</div>
+	
+	<div ng-controller="escolaController" role="main" class="ui-content jqm-content">
+	
+	<form>
+			<div class="ui-field-contain" id="campusprimarios">
+			<p>Nome</p>
+			<input   placeholder="Nome" ng-model="model.nome"></input>
+			<p>Email</p>
+			<input name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<p>Telefone 1</p>
+			<input name="telefone" placeholder="Tel1"  ng-model="model.telefone"></input>
+			<p>Telefone 2</p>
+			<input name="telefone2" placeholder="Tel2" ng-model="model.telefone2"></input>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<p>Endereço</p>
+			<input name="end"  placeholder="Endereço" ng-model="model.endereco"></input>
+			<p>Cidade</p>
+			<input name="cidade" placeholder="Cidade" ng-model="model.cidade"></input>
+			<p>Estado</p>
+			<select placeholder="Selecione" ng-model="model.estado">
+				<option>Acre</option>
+				<option>Amapá</option>
+				<option>Amazonas</option>
+				<option>Pará</option>
+				<option>Roraima</option>
+				<option>Rondônia</option>
+				<option>Tocantins</option>
+			</select>
+			</div>
+			</br>
+			</br>
+			<button ng-show="updateMode" ng-click="cancel()">Cancelar</button>
+			<button ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+		</form>
+
+	</div>
+
+</div>	
+</body>
+</html>

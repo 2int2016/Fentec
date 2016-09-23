@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/libs/velocity.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="css/turmas.css">
+    <link rel="stylesheet" href="css/normalize.css">
+ 	<link rel="stylesheet" href="css/style.css">
+
+     	<script src="js/respond.js"></script>
+ 	<style type="text/css">
+    	html,body{
+    		background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
+    	}
+    </style>
+</head>
+<body>
+	<header id="menu">
+		<img id="logo" src="assets/images/logo.fw.png"/>
+		<nav ng-controller="NavController">
+		<div  id="imagesheader">
+			<img id="homeicon" src="assets/images/homeicon.fw.png">
+			<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+			<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+			<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+			<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+			<img id="contaicon" src="assets/images/contaicon.fw.png">
+		</div>
+			<ul>
+				<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
+				<a href="index.html#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
+				<a href="index.html#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+				<a href="index.html#midia" class="option" id="buttonmidia">Mídia</span></a>
+				<a href="index.html#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
+				<a href="conta.html" class="option" id="buttonmyacount">Minha conta</span></a>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs>
+	<div class="nav" id="pagination">
+      <ul>
+        <li class="nav--btn nav--btn-1 active" data-page="1" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1></li>
+        <li class="nav--btn nav--btn-2" data-page="2" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2></li>
+        <li class="nav--btn nav--btn-3" data-page="3" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3></li>
+        <li class="nav--btn nav--btn-4" data-page="4" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4></li>
+      </ul>
+    </div>
+	
+	<div id=myTabContent class=tab-content> 
+		<div role=tabpanel class="tab-pane fade in active" id=home aria-labelledby=home-tab> 
+			<p>
+				<img id="metas" src="assets/turmas/mecatronica.fw.png"/>
+				 <div class='containerbar'>
+					 <div class='row'>
+						<div class='col-md-6'>
+							<div class='search-box'>
+								<form class='search-form'>
+									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+										<button class='btn btn-link search-btn'>
+											<i class='glyphicon glyphicon-search'></i>
+										</button>
+								</form>
+							</div>    
+						</div>					    
+					 </div>						 
+				</div>	
+				<div class="btn-group">
+				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Filtrar por... <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
+				    <li><a href="projetos.html">Metas globais</a></li>
+				    <li><a href="turmas.html">Turmas</a></li>
+				  </ul>
+				</div>	
+				<hr>					
+
+				<div id="top"></div>
+					<section class="gallery">
+						<div class="rowg">
+							<ul id="ul">
+								<a href="#" class="close"></a>
+								<li>
+									<a href="perfilprojeto.html">
+										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item02">
+										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item03">
+										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item04">
+										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item05">
+										<img class="images" src="assets/projetos/logo2.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item06">
+										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item07">
+										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item08">
+										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
+									</a>
+								</li>
+								
+							</ul>
+						</div> 
+						</section>
+		</p> 
+		</div> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown1 aria-labelledby=dropdown1-tab> 
+			<p>
+				<img id="metas" src="assets/turmas/mecatronica.fw.png"/>
+				<div class='containerbar'>
+					 <div class='row'>
+						<div class='col-md-6'>
+							<div class='search-box'>
+								<form class='search-form'>
+									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+										<button class='btn btn-link search-btn'>
+											<i class='glyphicon glyphicon-search'></i>
+										</button>
+								</form>
+							</div>    
+						</div>					    
+					 </div>						 
+				</div>	
+				<div class="btn-group">
+				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Filtrar por... <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
+				    <li><a href="projetos.html">Metas globais</a></li>
+				    <li><a href="turmas.html">Turmas</a></li>
+				  </ul>
+				</div>	
+				<hr>					
+
+				<div id="top"></div>
+					<section class="gallery">
+						<div class="rowg">
+							<ul id="ul">
+								<a href="#" class="close"></a>
+								<li>
+									<a href="perfilprojeto.html">
+										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item02">
+										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item03">
+										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item04">
+										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item05">
+										<img class="images" src="assets/projetos/logo2.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item06">
+										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item07">
+										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item08">
+										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
+									</a>
+								</li>
+								
+							</ul>
+						</div> 
+						</section>
+			</p>
+		</div> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown2 aria-labelledby=dropdown2-tab> 
+			<p><img id="metas" src="assets/turmas/informatica.fw.png"/>
+				<div class='containerbar'>
+					 <div class='row'>
+						<div class='col-md-6'>
+							<div class='search-box'>
+								<form class='search-form'>
+									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+										<button class='btn btn-link search-btn'>
+											<i class='glyphicon glyphicon-search'></i>
+										</button>
+								</form>
+							</div>    
+						</div>					    
+					 </div>						 
+				</div>	
+				<div class="btn-group">
+				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Filtrar por... <span class="caret"></span>
+				  </button>
+				   <ul class="dropdown-menu">
+				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
+				    <li><a href="projetos.html">Metas globais</a></li>
+				    <li><a href="turmas.html">Turmas</a></li>
+				  </ul>
+				</div>	
+				<hr>					
+
+				<div id="top"></div>
+					<section class="gallery">
+						<div class="rowg">
+							<ul id="ul">
+								<a href="#" class="close"></a>
+								<li>
+									<a href="perfilprojeto.html">
+										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item02">
+										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item03">
+										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item04">
+										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item05">
+										<img class="images" src="assets/projetos/logo2.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item06">
+										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item07">
+										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item08">
+										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
+									</a>
+								</li>
+								
+							</ul>
+						</div> 
+						</section>
+			</p>
+		</div> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown3 aria-labelledby=dropdown3-tab> 
+			<p>
+				<img id="metas" src="assets/turmas/telecomunicacoes.fw.png"/>
+				<div class='containerbar'>
+					 <div class='row'>
+						<div class='col-md-6'>
+							<div class='search-box'>
+								<form class='search-form'>
+									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+										<button class='btn btn-link search-btn'>
+											<i class='glyphicon glyphicon-search'></i>
+										</button>
+								</form>
+							</div>    
+						</div>					    
+					 </div>						 
+				</div>	
+				<div class="btn-group">
+				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Filtrar por... <span class="caret"></span>
+				  </button>
+				   <ul class="dropdown-menu">
+				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
+				    <li><a href="projetos.html">Metas globais</a></li>
+				    <li><a href="turmas.html">Turmas</a></li>
+				  </ul>
+				</div>	
+				<hr>					
+
+				<div id="top"></div>
+					<section class="gallery">
+						<div class="rowg">
+							<ul id="ul">
+								<a href="#" class="close"></a>
+								<li>
+									<a href="perfilprojeto.html">
+										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item02">
+										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item03">
+										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item04">
+										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item05">
+										<img class="images" src="assets/projetos/logo2.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item06">
+										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item07">
+										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item08">
+										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
+									</a>
+								</li>
+								
+							</ul>
+						</div> 
+						</section>
+			</p>
+		</div> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown4 aria-labelledby=dropdown4-tab> 
+			<p>
+				<img id="metas" src="assets/turmas/eletronica.fw.png"/>
+				<div class='containerbar'>
+					 <div class='row'>
+						<div class='col-md-6'>
+							<div class='search-box'>
+								<form class='search-form'>
+									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+										<button class='btn btn-link search-btn'>
+											<i class='glyphicon glyphicon-search'></i>
+										</button>
+								</form>
+							</div>    
+						</div>					    
+					 </div>						 
+				</div>	
+				<div class="btn-group">
+				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Filtrar por... <span class="caret"></span>
+				  </button>
+				   <ul class="dropdown-menu">
+				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
+				    <li><a href="projetos.html">Metas globais</a></li>
+				    <li><a href="turmas.html">Turmas</a></li>
+				  </ul>
+				</div>	
+				<hr>					
+
+				<div id="top"></div>
+					<section class="gallery">
+						<div class="rowg">
+							<ul id="ul">
+								<a href="#" class="close"></a>
+								<li>
+									<a href="perfilprojeto.html">
+										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item02">
+										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
+									</a>
+								</li>
+
+								<li>
+									<a href="#item03">
+										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item04">
+										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item05">
+										<img class="images" src="assets/projetos/logo2.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item06">
+										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item07">
+										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a class="image" href="#item08">
+										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
+									</a>
+								</li>
+								
+							</ul>
+						</div> 
+						</section>
+			</p>
+		</div>   
+	</div> 
+</div>	
+</html>

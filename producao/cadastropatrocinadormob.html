@@ -1,0 +1,132 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=">
+	
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	<link rel="stylesheet" href="css/orientmob.css"/>
+	
+		<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
+		<script type="text/javascript" src="js/fentec.js"></script>
+		<script type="text/javascript" src="js/Patrocinador.js"></script>
+		<script src="js/jquery/jquery.js"></script>
+		
+		<script src="js/jquery/index.js"></script>
+		<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/jquery/jquery.ui.datepicker.js"></script>
+		<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+		<script src="js/masktelefone.js"></script>
+		<script src="js/maskcep.js"></script>
+		<script src="js/inputnumero.js"></script>
+	<style>
+#fotoprin{
+	background-color:#dbdbea;
+	}
+	#h{
+	color: black <!--#00B750-->;
+	margin-left:10px;
+	}
+	input{
+	background-color:#0A56AD;
+	color:#0A56AD;
+	border':white;
+    padding: 8px;
+	
+	#header{
+	opacity:0.9;
+	background-color:#0A56AD;
+
+	}
+	</style>
+</head>
+<body>
+	<div ng-controller="PatrocinadorController">
+		<form>
+		<div data-demo-html="true">
+		<div id="fotoprin" data-role="page" data-quicklinks="true" class="jqm-demos">
+	<div id="header" data-role="header" data-position="fixed">
+		<img style= "height:100px; width:100px; margin-left:120px;" id="logo" src="assets/images/fmm.png"/>
+		<!--<img style= "height:100px; width:100px; margin-left:120px;" id="logo" src="assets/images/logologin.fw.png"/>-->
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		
+			
+			<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+				<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+					<li data-filtertext="home" data-icon="home"><a href="#">Home</a></li>
+					<li data-filtertext="materiais" ><a href="#" data-ajax="false">Materiais</a></li>
+					<li data-filtertext="avaliadores" ><a href="#" data-ajax="false">Avaliadores</a></li>
+					<li data-filtertext="orientadores" ><a href="cadastroorientadormob.html" data-ajax="false">Orientadores</a></li>
+					<li data-filtertext="visitantes" ><a href="#"data-ajax="false" >Visitantes</a></li>
+				</ul>
+			</div>
+	</div>	
+				
+			<div id="miolo">
+	
+		<p style="color:#0A56AD; position:center;" id="titulo">Cadastro</p>
+		<form>
+			<div id="campusprimarios">
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Nome</h4>
+			<input  style="background:#FCF7F7 none repeat scroll 0% ;" name="nome"  placeholder="Nome" ng-model="model.nome"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Email</h4>
+			<input  style="background:#FCF7F7 none repeat scroll 0% ;" name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Senha</h4>
+			<input style="background:#FCF7F7 none repeat scroll 0% ;"  name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Confirmar senha</h4>
+			<input  style="background:#FCF7F7 none repeat scroll 0% ;" name="confsenha" type="password" placeholder="Confirmar senha" ></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>País</h4>
+			<input style="background:#FCF7F7 none repeat scroll 0% ;" name="pais" placeholder="País" ng-model="model.pais"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Estado</h4>
+			<select id="sestado" ng-model="model.estado" ng-change="setcidades(document.getElementById('sestado').value)">
+				<option ng-repeat="estado in arrestados" value="{{estado}}">{{estado.nome}}</option>
+
+			</select>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Cidade</h4>
+			<select ng-model="model.cidade">
+				<option ng-repeat="cidade in arrcidades">{{cidade}}</option>
+
+			</select>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>CEP</h4>
+			<input style="background:#FCF7F7 none repeat scroll 0% ;" name="cep" id="cep" size="20" maxlength="9" onkeypress="maskara(this); return SomenteNumero(event)" placeholder="CEP" ng-model="model.cep"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>CNPJ</h4>
+			<input style="background:#FCF7F7 none repeat scroll 0% ;"  type="text" name="cnpj" maxlength="11" onkeypress=" return SomenteNumero(event)" placeholder="CNPJ" ng-model="model.cnpj"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Telefone</h4>
+			<input style="background:#FCF7F7 none repeat scroll 0% ;"  type="text" name="telefone" placeholder="Tel" id="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)" type="text" ng-model="model.telefone"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Telefone2</h4>
+			<input  style="background:#FCF7F7 none repeat scroll 0% ;" type="text" name="telefone" placeholder="Tel2" id="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)" type="text" ng-model="model.telefone2"></input>
+			</div>
+			<br>
+			<a href="index.html" style="text-decoration:none"><button id="butao" ng-show="updateMode" ng-click="cancel()">Cancelar</button></a>
+			
+			<button id="butao" ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+		</form>
+	</div>
+</div>
+		
+		<!--<ul>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="patrocinador in arrPatrocinador">
+				<div>
+					<h4>{{patrocinador.nome}}</h4>
+					<P>{{patrocinador.email}}</P>
+					<P>{{patrocinador.senha}}</P>
+					<P>{{patrocinador.escola}}</P>
+					<P>{{patrocinador.cargo}}</P>
+					<P>{{patrocinador.CPF}}</P>
+					<P>{{patrocinador.telefone}}</P>
+					<P>{{patrocinador.endereco}}</P>
+					<P>{{patrocinador.cidade}}</P>
+					<button ng-click="change(patrocinador)">Alterar</button>
+					<button ng-click="delete(patrocinador.id)">Remover</button>
+				</div>
+			</li>
+		</ul> -->
+		
+	</div>
+</body>
+</html>

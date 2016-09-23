@@ -1,0 +1,642 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/hover.css"/>
+	<link rel="stylesheet" href="css/hover2.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script src="js/hover.js"></script>
+	<script src="js/nav2.js"></script>
+	<script type="text/javascript" src="js/material.js"></script>
+	
+	
+	<style>
+		body{
+			font-family:'Segoe UI';
+		}
+		#planodefundo{
+			
+			position: absolute;
+			width:100%;
+			height: 832px;
+			top:0;
+			left:0;
+		}
+		#titulo{
+			
+			margin-left: 125px;
+			padding-top: 5px;
+			font-size: 26px;
+		}
+		#titudiv{
+			background-color:#036;
+			width:100%;
+			height:50px;
+		}
+		#miolo{
+			margin-top: 160px;
+			background-color:#DBDBEA;
+			width:500px;
+			border-radius:5px;
+			position: absolute;
+			height: auto;
+			margin-left:480px;
+			border:1px solid grey;
+		}
+		#campusprimarios{
+			margin-left:-45px;
+			padding-top:20px;
+		}
+		#campussecundarios{
+			margin-left: 480px;
+			position:absolute;
+			margin-top:-418px;
+			
+			
+		}
+		vr{
+			width: 2px;
+			height:100px;
+			background-color: black;
+
+		}
+		#salvar:hover{
+			color:white;	
+				background-color:#134577; 
+				border:2px solid #134577;
+				transition:all 0.8s ease;
+			
+		}
+		#salvar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color:#036;
+			color:white;
+			margin-left: 185px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid transparent ;
+			margin-top: 380px;
+			
+			
+				   
+				   
+				  
+				   
+				  
+			
+		}
+		#cancelar:hover{
+			color:white;	
+			background-color:#1B5F86; 
+			border:2px solid #1B5F86;
+			box-shadow: 1px 1px 1px grey;
+			
+		}
+		#cancelar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: -100px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 77px;
+		}
+		input{
+			width:200px;
+			height:30px;
+			border-radius:2px;
+			border:1px solid grey; 
+		}
+		
+		
+		#foto{
+			
+			margin-left: 94px;
+			margin-top:-130px;
+		
+		}
+		#fotocampo{
+			margin-left: 4px;
+			position:absolute;
+			margin-top:-38px;
+		
+		}
+		header{
+			width:100%;
+			height:110px;
+			background-color:#036;
+		
+			position:absolute;
+			margin-top:0;
+		}
+		#logo{
+			margin-left:8px;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-6px;
+		}
+		#cadastro{
+			margin-left:320px;
+		}
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#plus{
+			margin-left:270px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#list{
+		margin-left:497px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#Sairt{
+			margin-left:30px;
+			margin-top:14px;
+		}
+		#p5{
+			position:absolute;
+			margin-left:1180px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#p6{
+			position:absolute;
+			margin-left:78px;
+			margin-top:60px;
+			font-size:20;
+			font-family:Arial;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:57px;
+			font-size:20;
+			
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:57px;
+			font-size:20;
+			
+		}
+		#p9{
+			position:absolute;
+			margin-left:78px;
+			margin-top:57px;
+			font-size:20;
+		}
+		#p9:hover{
+			text-decoration:underline;
+		}
+		#p6:hover{
+			text-decoration:underline;
+			}
+		#log{
+			margin-left:1184px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#log2{
+			margin-left:1230px;
+			width:3rem;
+			position:absolute;
+			margin-top:40px;
+		}
+		#p5:hover{
+			text-decoration:underline;
+		}
+		#white{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat{
+			margin-left:110px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat1{
+			margin-left:105px;
+			width:3rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat2{
+			margin-left:100px;
+			width:3rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat3{
+			margin-left:105px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#ipt1:hover{
+			
+		}
+		#ipt1{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:28px;
+		}
+		#ipt2{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt3{
+			border-radius:5px;
+			width:145px;
+		}
+		#ipt4{
+			border-radius:5px;
+			width:300px;
+			resize:none;
+			height:80px;
+		}
+		#ipt5{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt6{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt7{
+			margin-left:170px;
+			position:absolute;
+			border-radius:5px;
+			width:15px;
+			margin-top:-32px;
+			height:15px;
+		}
+		#ipt8{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#ipt9{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#nomep{
+			margin-left:140px;
+			margin-top:5px;
+			position:absolute;
+		}
+		#marcap{
+			margin-left:140px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#tipop{
+			margin-left:295px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#descrp{
+			margin-left:140px;
+			margin-top:117px;
+			position:absolute;
+		}
+		#precop{
+			margin-left:140px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#nump{
+			margin-left:295px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#posp{
+			margin-left:160px;
+			margin-top:283px;
+			position:absolute;
+		}
+		#ida{
+			margin-left:140px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#volta{
+			margin-left:295px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#privacity{
+			margin-top:563px;
+			position:absolute;
+			margin-left:-475px;
+			}
+			#dv2{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv3{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv8{
+				margin-top:5px;
+				position:absolute;
+				width:400px;
+			}
+			
+			
+			#allwhite{
+				margin-left:80px;
+			
+			}
+			#user{
+				position:absolute;
+				margin-top:45px;
+				margin-left:160px;
+				color:white;
+				font-family:Square721 BT;
+			}
+			#cp{
+				margin-top:505px;
+				margin-left:50px;
+				position:absolute;
+				font-size:13;
+			}
+			#oii{
+				margin-left:464px;
+				text-decoration:none;
+				background-color:white;
+				width:500px;
+				height:auto;
+				border-radius:10px;
+				border:1px solid grey;
+				margin-bottom:30px;
+				
+			}
+			#oii>*{
+				
+				list-style:none;
+			}
+			#ul-tudo>*{
+				list-style:none;
+			}
+			#oi1{
+	
+				text-decoration:none;
+			}
+			#miolo-inlne>*{
+				display:inline-block;
+			}
+			#butsaltdel{
+				margin-top:-95px;
+				margin-left:55px;
+				position:absolute;
+			}
+			#remover{
+				opacity:0.6;
+				width:15px;
+				border:none;
+				margin-left:10px;
+				height:15px;
+			}
+			#remove{
+					opacity:0.6;
+					width:15px;
+					border:none;
+					height:15px;
+			}
+			#remove:hover{
+					opacity:0.8;
+			}
+			#form-top{
+				margin-left:80px;
+				margin-top:15px;
+			}
+			hr{
+				width:335px;
+				background-color:black;
+				color:black;
+				margin-left:70px;
+				border-color:grey;
+			}
+	</style>
+</head> 
+<body>
+	<div id="planodefundo" ng-controller="MatController">
+	<header></header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
+	<h2 id="user" >Monitoria</h2>
+	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+	<div id="allwhite">
+		<div id="Sairt">
+			
+			<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+		</div>
+		
+		<div id="white">
+				<a href="cadastromaterial.html"><img id="mat1" src="assets/images/tools2.png"/></a>
+				<a id="ap" href="cadastromaterial.html" style="color:black;"><p style="color:white" id="p6">Cadastro</p></a>
+		</div>
+		<div id="tuts" style="background-color:#036; margin-left:30px; margin-top:270px; width:240px; height:auto; position:absolute; border:0px solid black; border-radius:5px;">
+			<h1 style="margin-left:70px; color:white;">Filtrar</h1>
+			<input id="ipt7" type="checkbox" class="form-control" >
+			<div id="titv" style="background-color:#036; width:240px; height:auto; position:absolute; border:0px solid black; border-radius:5px;">
+				<input data-type="search"  type="text" ng-model="pesqnome" style="width:205px; margin-top:23px; margin-left:20px; position:absolute;" class="form-control" placeholder="Alterar Nome">
+				<input data-type="search"  type="text" ng-model="pesqmarca" style="width:205px; margin-top:63px; margin-left:20px; position:absolute;" class="form-control" placeholder="Alterar Marca">
+				<select data-type="search"  placeholder="Alterar Tipo" class="form-control"  style="width:205px; margin-top:103px; margin-left:20px; position:absolute;" id="ipt3" ng-model="pesqtipo">
+					<option>Mecanico</option>
+					<option>Logico</option>
+				</select>
+				<textarea data-type="search"  id="ipt4" class="form-control" style="position:absolute; height:50px;	resize:none; margin-left:20px; width:205px; margin-top:144px;" placeholder="Alterar Descrição"  ng-model="pesqdescricao"></textarea>
+				<input data-type="search"  type="text" data-thousands="."  data-decimal="," data-prefix="R$ " onkeypress="return SomenteNumero(event)" maxlength="20" class="form-control" style="position:absolute; margin-left:20px; width:205px; margin-top:200px;" placeholder="Alterar Preço" ng-model="pesqpreco"/>
+				<input data-type="search"  type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:205px; margin-left:20px; margin-top:240px; position:absolute;" placeholder="Alterar Dia da ida" ng-model="pesqida"></input>
+				<input data-type="search"  type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:205px; margin-left:20px; margin-top:280px; position:absolute;" placeholder="Alterar Dia de retorno " ng-model="pesqretorno"></input>
+			</div>
+		</div>
+		<!--<div id="white1">
+				<a href="listaavaliadores.html"><img id="mat1" src="assets/images/grades2.png"/></a>
+				<a id="ap" href="listaavaliadores.html" style="color:black;"><p style="color:white" id="p7">Avaliadores</p></a>
+		</div>
+		
+		<div id="white2">
+			<a href="perfilorient.html">	<img id="mat2" src="assets/images/teacher2.png"/></a>
+				<a id="ap" href="perfilorient.html" style="color:black;"><p style="color:white" id="p8">Orientadores</p></a>
+		</div>
+		
+		<div id="white3">
+			<a href="listavisitantes.html">	<img id="mat3" src="assets/images/person2.png" /></a>
+				<a id="ap" href="listavisitantes.html" style="color:black;"><p style="color:white" id="p9">Visitantes</p></a>
+		</div>-->
+	</div>	
+	
+	<div id="miolo">
+		<ul id="ul-tudo" data-filter="true" data-input="#filterBasic-input">
+				<li id="oi1" style="text-decoration:none;" ng-repeat="material in arr | filter:{nome:pesqnome, marca:pesqmarca, tipo:pesqtipo, descricao:pesqdescricao, preco:pesqpreco, ida:pesqida, retorno:pesqretorno}" >
+						<div id="miolo-inlne">
+							<div id="goods" class="goods">
+								<span id="info" class="info">
+					            	<div id="index">
+					            		<img ng-src="assets/images/{{material.arquivo}}" alt="Picture" id="pic">
+					            	</div>
+									<span id="text" class="text">
+										<h2 id="name" >{{material.nome}}</h2>
+										<p class="description">{{material.descricao}}</p>
+								    </span>
+							
+								</span>
+							</div>
+							<form>
+								<div id="butsaltdel">
+									<input type="image" href="alterarmaterial.html" title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(material)"/>
+									<input type="image" ng-click="delete(material.id)" src="assets/images/delete-black.png" title="Deletar" id="remover"/>
+								</div>	
+							</form> 
+						
+						</div>
+						<br/>
+						<hr>
+						<br/>
+						<br/>
+				</li>
+
+				<form id="form-top" >
+							<nav class="nav-background">
+								<input type="text" ng-model="model.nome" style="width:315px;" class="form-control" placeholder="Alterar nome">
+								<input type="text" ng-model="model.marca" style="width:315px; margin-top:5px;" class="form-control" placeholder="Alterar Marca">
+								<select placeholder="Alterar Tipo" class="form-control"  style="width:315px; margin-top:5px;" id="ipt3" ng-model="model.tipo">
+									<option>Mecanico</option>
+									<option>Logico</option>
+								</select>
+								<textarea id="ipt4" class="form-control" style="	resize:none; width:315px; margin-top:5px;" placeholder="Alterar Descrição"  ng-model="model.descricao"></textarea>
+								<input type="text" data-thousands="."  data-decimal="," data-prefix="R$ " onkeypress="return SomenteNumero(event)" maxlength="20" class="form-control" style="width:315px; margin-top:5px;" placeholder="Alterar Preço" ng-model="model.preco"/>
+								<input type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:315px; margin-top:5px;" placeholder="Alterar Dia da ida" ng-model="model.ida"></input>
+								<input type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:315px; margin-top:5px;" placeholder="Alterar Dia de retorno" ng-model="model.retorno"></input>
+								</br>
+								</br>
+								<button  ng-click="save()"  style="margin-left:80px;" >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
+							</nav>	
+				</form>
+			</ul>
+	
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+ $('#titv').fadeOut('slow');
+    $('#ipt7').change(function () {
+        if (!this.checked) 
+        //  ^
+           $('#titv').fadeOut('slow');
+		   
+        else 
+            $('#titv').fadeIn('slow');
+            $('#tuts').height('420px');
+			
+			
+			
+			  
+    });
+});
+
+</script>
+</body>
+</html>
+

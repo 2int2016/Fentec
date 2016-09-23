@@ -1,0 +1,652 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script src="js/inputnumero.js"></script>
+	<script src="js/jquery.maskMoney.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/material.js"></script>
+	
+	
+	
+	
+	
+	<style>
+		body{
+			
+		}
+		#planodefundo{
+			
+			position: absolute;
+			width:100%;
+			height: 832px;
+			top:0;
+			left:0;
+		}
+		#titulo{
+			
+			margin-left: 125px;
+			padding-top: 5px;
+			font-size: 26px;
+		}
+		#titudiv{
+			background-color:#036;
+			width:100%;
+			height:50px;
+		}
+		#miolo{
+			margin-top: 160px;
+			background-color:#DBDBEA;
+			width:500px;
+			border-radius:5px;
+			position: absolute;
+			height: 600px;
+			margin-left:480px;
+			border:1px solid grey;
+		}
+		#campusprimarios{
+			margin-left:-45px;
+			padding-top:20px;
+		}
+		#campussecundarios{
+			margin-left: 480px;
+			position:absolute;
+			margin-top:-418px;
+			
+			
+		}
+		vr{
+			width: 2px;
+			height:100px;
+			background-color: black;
+
+		}
+		#salvar:hover{
+			color:white;	
+				background-color:#134577; 
+				border:2px solid #134577;
+				transition:all 0.8s ease;
+			
+		}
+		#salvar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color:#036;
+			color:white;
+			margin-left: 140px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid transparent ;
+			margin-top: 360px;
+			
+			
+				   
+				   
+				  
+				   
+				  
+			
+		}
+		#cancelar:hover{
+			color:white;	
+			background-color:#1B5F86; 
+			border:2px solid #1B5F86;
+			box-shadow: 1px 1px 1px grey;
+			
+		}
+		#cancelar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: -100px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 77px;
+		}
+		input{
+			width:200px;
+			height:30px;
+			border-radius:2px;
+			
+		}
+		
+		
+		#foto{
+			
+			margin-left: 94px;
+			margin-top:-130px;
+		
+		}
+		#fotocampo{
+			margin-left: 4px;
+			position:absolute;
+			margin-top:-38px;
+		
+		}
+		header{
+			width:100%;
+			height:110px;
+			background-color:#036;
+		
+			position:absolute;
+			margin-top:0;
+		}
+		#logo{
+			margin-left:8px;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-6px;
+		}
+		#cadastro{
+			margin-left:320px;
+		}
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#plus{
+			margin-left:270px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#list{
+		margin-left:497px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#Sairt{
+			margin-left:30px;
+			margin-top:14px;
+		}
+		#p5{
+			position:absolute;
+			margin-left:1180px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#p6{
+			position:absolute;
+			margin-left:78px;
+			margin-top:56px;
+			font-size:20;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:57px;
+			font-size:20;
+			
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:57px;
+			font-size:20;
+			
+		}
+		#p9{
+			position:absolute;
+			margin-left:78px;
+			margin-top:57px;
+			font-size:20;
+		}
+		#p9:hover{
+			text-decoration:underline;
+		}
+		#p6:hover{
+			text-decoration:underline;
+			}
+		#log{
+			margin-left:1184px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#log2{
+			margin-left:1230px;
+			width:3rem;
+			position:absolute;
+			margin-top:40px;
+		}
+		#p5:hover{
+			text-decoration:underline;
+		}
+		#white{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat{
+			margin-left:110px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat1{
+			margin-left:105px;
+			width:3rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat2{
+			margin-left:100px;
+			width:3rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat3{
+			margin-left:105px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#ipt1:hover{
+			
+		}
+		#ipt1{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:28px;
+		}
+		#ipt2{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt3{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt4{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:140px;
+			resize:none;
+			height:80px;
+		}
+		#ipt5{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt6{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt7{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:10px;
+			margin-top:287px;
+			height:10px;
+		}
+		#ipt8{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#ipt9{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#nomep{
+			margin-left:140px;
+			margin-top:5px;
+			position:absolute;
+		}
+		#marcap{
+			margin-left:140px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#tipop{
+			margin-left:295px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#descrp{
+			margin-left:140px;
+			margin-top:117px;
+			position:absolute;
+		}
+		#precop{
+			margin-left:140px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#nump{
+			margin-left:295px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#posp{
+			margin-left:160px;
+			margin-top:283px;
+			position:absolute;
+		}
+		#ida{
+			margin-left:140px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#volta{
+			margin-left:295px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#privacity{
+			margin-top:563px;
+			position:absolute;
+			margin-left:-475px;
+			}
+			#dv2{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv3{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv8{
+				margin-top:-25px;
+				position:absolute;
+				width:400px;
+			}
+			
+			
+			#allwhite{
+				margin-left:80px;
+			
+			}
+			#user{
+				position:absolute;
+				margin-top:45px;
+				margin-left:160px;
+				color:white;
+				font-family:Square721 BT;
+			}
+			#cp{
+				margin-top:445px;
+				margin-left:5px;
+				position:absolute;
+				font-size:13;
+			}
+			#dv7{
+				margin-top:3px;
+				margin-left:-18px;
+			}
+			#quasetudo{
+				margin-top:30px;
+			}
+			#fileUpload{
+				position:absolute;
+				margin-top:-10px;
+				margin-left:95px;
+				width:340px;
+			}
+			#ap{
+				font-family:sans-serif;
+			}
+	</style>
+</head> 
+<body>
+	<div id="planodefundo" ng-controller="MatController">
+	<header></header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
+	<h2 id="user" >Monitoria</h2>
+	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+	<div id="allwhite">
+		<div id="Sairt">
+			
+			<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+		</div>
+		
+		<div id="white">
+				<a href="listamaterialnew.html"><img id="mat1" src="assets/images/tools2.png"/></a>
+				<a id="ap" href="listamaterialnew.html" style="color:black;"><p style="color:white" id="p6">Materiais</p></a>
+		</div>
+		
+		<!--<div id="white1">
+				<a href="listaavaliadores.html"><img id="mat1" src="assets/images/grades2.png"/></a>
+				<a id="ap" href="listaavaliadores.html" style="color:black;"><p style="color:white" id="p7">Avaliadores</p></a>
+		</div>
+		
+		<div id="white2">
+			<a href="perfilorient.html">	<img id="mat2" src="assets/images/teacher2.png"/></a>
+				<a id="ap" href="perfilorient.html" style="color:black;"><p style="color:white" id="p8">Orientadores</p></a>
+		</div>
+		
+		<div id="white3">
+			<a href="listavisitantes.html">	<img id="mat3" src="assets/images/person2.png" /></a>
+				<a id="ap" href="listavisitantes.html" style="color:black;"><p style="color:white" id="p9">Visitantes</p></a>
+		</div>-->
+	</div>	
+	<div id="miolo">
+		<div id="titudiv">
+		<p id="titulo" style="color:white">Cadastro de Materiais</p>
+		</div>
+		<form>
+			<div id="quasetudo">
+			
+				<div id="wrapper">
+					<input type="file" id="fileUpload"/>
+					<!--<div id="image-holder"></div>-->
+				</div>
+				<div id="campusprimarios">
+				
+					<div id="dv1">
+						<p id="nomep" >Alterar Nome*</p>
+						<input name="nome" required class="form-control"  id="ipt1" ng-model="model.nome"/>
+					</div>
+					<div id="dv2">
+						<p id="marcap">Alterar Marca*</p>
+						<input id="ipt2" required class="form-control" ng-model="model.marca"/>
+					</div>
+					<div id="dv3">
+						<p id="tipop">Alterar Tipo*</p>
+						<select  id="ipt3" required class="form-control" ng-model="model.tipo">
+							<option >Mecânico</option>
+							<hr/>
+							<option>Lógico</option>
+						</select>
+					</div>
+					<div id="dv4">
+						<p id="descrp">Alterar Descrição*</p>
+						<textarea id="ipt4" required class="form-control" ng-model="model.descricao"></textarea>
+					</div>
+					<div id="dv5">
+						<p id="precop">Alterar Preço</p>
+						<input class="form-control" type="text" id="ipt5" data-thousands="."  data-decimal="," data-prefix="R$ " onkeypress="return SomenteNumero(event)" maxlength="20" ng-model="model.preco"/>
+						
+					</div>
+					<div id="dv6" >
+						<p id="nump">Número do ativo*</p>
+						<input onkeypress="return SomenteNumero(event)" required class="form-control" id="ipt6" ng-model="model.numerodoativo"/>
+					</div>
+					<div id="dv7" class="checkbox">
+					<label>
+						<input id="ipt7" type="checkbox" class="form-control" ng-change="model.ida = '';   model.retorno = '' " ng-model="model.posse">
+						<p id="posp">Alterar se ele está em posse de alguém?</p>
+						</label>
+					</div>
+					<div id="dv8">
+						<p id="ida">Alterar Dia da ida</p>
+						
+						<form>
+							<input class="form-control" type="text" id="ipt8" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10"  placeholder="AAAA-mm-dd"  ng-model="model.ida" name="data" />
+						</form>
+						
+						
+						<p id="volta">Alterar Dia da volta</p>
+						<form>
+							<input class="form-control" placeholder="AAAA-mm-dd" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" ng-model="model.retorno"  id="ipt9"/>
+						</form>
+						
+					</div>
+				</div>
+				<p id="cp">*Campos obrigatórios</p>
+				
+				<input id="salvar" type="submit" ng-value="{{updateMode?'Salvar alterações': 'Salvar'}}" ng-click="save()" />
+				
+			</div>
+		</form>
+		<p id="privacity">&copy; 2016 FENTEC, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+	</div>
+	
+</div>
+<script type="text/javascript">
+
+
+
+
+$(document).ready(function () {
+ $('#dv8').fadeOut('slow');
+    $('#ipt7').change(function () {
+        if (!this.checked) 
+        //  ^
+           $('#dv8').fadeOut('slow');
+        else 
+            $('#dv8').fadeIn('slow');
+			
+			
+			
+			  
+    });
+});
+
+
+function mascaraData( campo, e )
+{
+	var kC = (document.all) ? event.keyCode : e.keyCode;
+	var data = campo.value;
+	
+	if( kC!=8 && kC!=46 )
+	{
+		if( data.length==4 )
+		{
+			campo.value = data += '-';
+		}
+		else if( data.length==7 )
+		{
+			campo.value = data += '-';
+		}
+		else
+			campo.value = data;
+	}
+}
+
+
+/*function mask(data){ 
+ if(data.value.length == 4)
+     data.value = data.value + '-';
+	
+ if(data.value.length == 7)
+     data.value = data.value + '-';
+	
+}*/
+
+
+$("#demo4").maskMoney();
+
+$(function() {
+    $('#ipt5').maskMoney();
+  })
+  
+ 
+</script>
+</body>
+
+</html>

@@ -1,0 +1,722 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<script type="text/javascript" src="js/cpf.js"></script>
+	<script src="js/masktelefone.js"></script>
+	
+	
+	<style>
+		#miolo{
+			margin-top: 160px;
+			background-color: white;
+			width:580px;
+			border-radius:5px;
+			position: absolute;
+			height: 711px;
+			margin-left: 310px;
+			box-shadow: 0px 0px 0.7px grey;
+			background-color:#DBDBEA;
+		}
+		#campussecundarios{
+			margin-left: 480px;
+			position:absolute;
+			margin-top:-490px;
+			
+		}
+		body{
+			font-family:'Segoe UI';
+		}
+		#planodefundo {
+				width: 100%;
+				height: 832px;
+				top: 0px;
+				left: 0px;
+}
+		#titulo{
+			color:white;
+			background-color:#036;
+			font-size:22;
+			height:50px;
+		}
+		#titulo>*{
+			display:inline-block;
+		}
+		#titulop{
+			margin-top: 8.9px;
+			margin-left: 162px;
+		}
+		#cancelar:hover{
+			color:white;	
+			background-color:#1B5F86; 
+			border:2px solid #1B5F86;
+			box-shadow: 1px 1px 1px grey;
+			
+		}
+		#cancelar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: -100px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 77px;
+		}
+		
+		#foto{
+			
+			margin-left: 94px;
+			margin-top:-130px;
+		
+		}
+		#fotocampo{
+			margin-left: 4px;
+			position:absolute;
+			margin-top:-38px;
+		
+		}
+		header{
+			width:100%;
+			height:98px;
+			background-color: #036;
+			
+			position:absolute;
+			margin-top:0;
+		}
+		#logo{
+			margin-left:;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-6px;
+		}
+		#cadastro{
+			margin-left:320px;
+		}
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#plus{
+			margin-left:270px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#list{
+		margin-left:497px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#Sairt{
+			margin-left:30px;
+			margin-top:14px;
+		}
+		#p5{
+			position:absolute;
+			margin-left:1180px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#p6{
+			position:absolute;
+			margin-left:78px;
+			margin-top:60px;
+			font-size:20;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:60px;
+			font-size:20;
+			
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:60px;
+			font-size:20;
+			
+		}
+		#p6:hover{
+			text-decoration:underline;
+			}
+		#log{
+			margin-left:1184px;
+			width: 35px;
+			position:absolute;
+			margin-top:15px;
+		}
+		#p5:hover{
+			text-decoration:underline;
+		}
+		#white{
+			width:240px;
+			height:100px;
+			background-color: #036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:240px;
+			height:100px;
+			background-color: #036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+			width:240px;
+			height:100px;
+			background-color: #036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:240px;
+			height:100px;
+			background-color: #036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat{
+			margin-left:110px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat1{
+			margin-left:105px;
+			width:30px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat2{
+			margin-left:100px;
+			width:30px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat3{
+			margin-left:105px;
+			width:35px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#ipt1:hover{
+			
+		}
+		#ipt1{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:28px;
+		}
+		#ipt2{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt3{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt4{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:140px;
+			resize:none;
+			height:80px;
+		}
+		#ipt5{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt6{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt7{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:10px;
+			margin-top:287px;
+			height:10px;
+		}
+		#ipt8{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#ipt9{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#nomep{
+			margin-left:140px;
+			margin-top:5px;
+			position:absolute;
+		}
+		#marcap{
+			margin-left:140px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#tipop{
+			margin-left:295px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#descrp{
+			margin-left:140px;
+			margin-top:117px;
+			position:absolute;
+		}
+		#precop{
+			margin-left:140px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#nump{
+			margin-left:295px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#posp{
+			margin-left:160px;
+			margin-top:283px;
+			position:absolute;
+		}
+		#ida{
+			margin-left:140px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#volta{
+			margin-left:295px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#privacity{
+			margin-top:550px;
+			position:absolute;
+			margin-left:-475px;
+			}
+			#dv2{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv3{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv8{
+				margin-top:5px;
+				position:absolute;
+				width:400px;
+			}
+			
+			
+			#allwhite{
+				margin-left:80px;
+			
+			}
+			#nome{
+				width:500px;
+				height:30px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				margin-left: 42px;
+				
+			}
+			#nome1{
+				margin-left: 45px;
+				margin-bottom:5px;
+			}
+			#email{
+				width:500px;
+				height:30px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				margin-left: 42px;
+				margin-bottom:40px;
+			}
+			#email1{
+				margin-left: 150px;
+				margin-bottom:5px;
+				margin-left: 42px;
+			}
+			
+			
+			#senha{
+				width:220px;
+				height:30px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				margin-left: 42px;
+				margin-top:-0.5px;
+			
+			}
+			#senha1{
+				margin-left: 42px;
+				margin-top:-24px;
+				position:absolute;
+			}
+			#senha2{
+				width:234px;
+				height:30px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				margin-left: 42px;
+				margin-top:-2px;
+			
+			}
+			#senha11{
+				margin-left: 307px;
+				margin-top:-53px;
+				position:absolute;
+				
+			}
+			#escola{
+				margin-left: 42px;
+				margin-top:11px;
+			
+			}
+			#escola1{
+				margin-left: 42px;
+				margin-top: -15px;
+				position:absolute;
+				width: 500px;
+				height: 30px;
+				border-radius: 6px;
+				border:1px solid grey; 
+			}
+			#2{
+				margin-left: 42px;
+			
+			}
+			#cargo1{
+				margin-left: 308px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				width:234px;
+				height:30px;
+				margin-top: 50px;
+				position:absolute;
+			}
+			#size{
+				margin-left: 42px;
+				margin-top:43px;
+			
+			}
+			#size1{
+				margin-left: 42px;
+				margin-top:-11px;
+				border-radius: 6px;
+				border:1px solid grey; 
+			}
+			#cargo{
+				
+				margin-top:25px;
+				position:absolute;
+				margin-left: 307;
+				
+			}
+			#ad1{
+				border-radius: 6px;
+				border:1px solid grey; 
+				margin-top: 103px;
+				position:absolute;
+				width:500px;
+				height:30px;
+				margin-left:-46px;
+			}
+			#ad{
+				margin-top: 70px;
+				position:absolute;
+				margin-left: 42px;
+				
+			}
+			#city{
+				margin-top: 10px;
+				position:absolute;
+				margin-left: 306px;
+			}
+			#city1{
+				margin-top: 47px;
+				margin-left: 221px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				position:absolute;
+				width: 234px;
+				height: 30px;
+			}
+			#cpf {
+				   margin-top: 130px;
+				    position: absolute;
+				   margin-left: 42px;
+				    
+}
+			#cpf1{
+				border-radius: 6px;
+				border:1px solid grey; 
+				position:absolute;
+				width: 220px;
+				margin-left: -45px;
+				margin-top: 165px;
+				height: 30px;
+			
+			
+			}
+			#telefone{
+				   margin-top: 130px;
+				    position: absolute;
+				    margin-left: 307px;
+				    position:absolute;
+			
+			}
+			#telefone1{
+				width: 234px;
+				height: 30px;
+				border-radius: 6px;
+				border: 1px solid #808080;
+				margin-left: 221px;
+				margin-top: 165px;
+				position:absolute;
+			
+			
+			}
+			#save{
+				    position: absolute;
+				    cursor: pointer;
+				    border-radius: 4px;
+				    width: 200px;
+				    height: 50px;
+				    background-color:#036;
+				    color: white;
+				    margin-bottom: 0px;
+				    font-size: 18px;
+				    border: 2px solid #036;
+				    margin-top: 200px;
+				    margin-left: 195px;
+			
+			
+			}
+			#save:hover{
+				color:white;	
+				background-color:#134577; 
+				border:2px solid #134577;
+				transition:all 0.8s ease;
+			
+			}
+			#am{
+				margin-top:10px;
+				position:absolute;
+				margin-left: 40px;
+			}
+			#am1{
+				margin-top: 47px;
+				margin-left: -44px;
+				border-radius: 6px;
+				border:1px solid grey; 
+				position:absolute;
+				width: 234px;
+				height: 30px;
+			}
+			#user {
+				    position: absolute;
+				    margin-top: 45px;
+				    margin-left: 160px;
+				    color: #FFF;
+				    font-family: sans-serif;
+					font-weight: 20px;
+				}
+				#log2 {
+				    margin-left: 1230px;
+				    width: 30px;
+				    position: absolute;
+				   margin-top: 16px;
+}
+				#quasetudo{
+				margin-top:30px;
+			}
+			#white4{
+				width:240px;
+				height:100px;
+				background-color:#036;
+				position:absolute;
+				border-radius:5px;
+				margin-top:600px;
+				margin-left:30px;
+				border:1px solid grey;
+		}
+	</style>
+	<script>
+		
+</script>
+</head>
+		
+<body>
+	<div id="white">
+				<a href="listamaterialnew.html"><img id="mat1" src="assets/images/tools2.png"/></a>
+				<a id="ap" href="listamaterialnew.html" style="color:black;"><p style="color:white" id="p6">Materiais</p></a>
+		</div>
+		
+		<div id="white1">
+				<a href="listaavaliadores.html"><img id="mat1" src="assets/images/grades2.png"/></a>
+				<a id="ap" href="listaavaliadores.html" style="color:black;"><p style="color:white" id="p7">Avaliadores</p></a>
+		</div>
+		
+		<div id="white2">
+			<a href="perfilorient.html">	<img id="mat2" src="assets/images/teacher2.png"/></a>
+				<a id="ap" href="perfilorient.html" style="color:black;"><p style="color:white" id="p8">Orientadores</p></a>
+		</div>
+		
+		<div id="white3">
+			<a href="listavisitantes.html">	<img id="mat3" src="assets/images/person2.png" /></a>
+				<a id="ap" href="listavisitantes.html" style="color:black;"><p style="color:white" id="p9">Visitantes</p></a>
+		</div>
+		<div id="white4">
+			<a href="listapatrocinadornew.html"><img id="mat3" src="assets/images/patrocinadoricon.png" /></a>
+				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p style="color:white" id="p10">Patrocinador</p></a>
+		</div>
+	</div>	
+	
+	<div ng-controller="OrientadorController as orientadorCtrl" id="planodefundo">
+	<header></header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
+		<h2 id="user">Coordenação</h2>
+		<img id="log2" src="assets/images/engr.fw.png"></img>
+		<div id="allwhite">
+		<div id="Sairt">
+			<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+		</div>
+	
+	<div id="miolo" >
+		<div id="titulo"><p id="titulop">Cadastro de orientadores</p></div>
+		<div id="2">
+		<form>		
+				<p id="nome1">Nome</p>
+				<input id="nome" name="nome" type="name" placeholder="Nome" ng-model="model.nome"></input>
+				<p id="email1">Email</p>
+			<input id="email" name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<p id="senha1">Senha</p>
+			<input id="senha" name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
+			<p id="senha11">Confirmar senha</p>
+			<input id="senha2" name="confsenha" type="password" placeholder="Confirmar senha" ></input>
+			<p id="escola">Escola</p>
+			<select id="escola1" ng-controller="escolaController as escolaCtrl" ng-model="orientadorCtrl.model.idescola">
+				<option ng-value="escola.id" ng-repeat="escola in arrEscolas">
+					{{escola.nome}}
+				</option>
+			</select>
+			<p id="cargo">Cargo</p>
+			<input id="cargo1" name="cargo" placeholder="Cargo" ng-model="model.cargo"></input>
+			<p id="size">Tamanho da camisa</p>
+			<select id="size1" ng-model= "model.tamanho">
+				<option>PP</option>
+				<option>P</option>
+				<option>M</option>
+				<option>G</option>
+				<option>GG</option>
+			</select>	
+			
+			<p id="city">Cidade</p>
+			<select id="city1" ng-model="model.cidade">
+				<option ng-repeat="cidade in arrcidades">{{cidade}}</option>
+			</select>
+			<p id="am">Estado</p>
+			<select id="am1" ng-model="model.estado" ng-change="setcidades(model.estado)">
+				<option ng-repeat="estado in arrestados" value="{{estado}}">{{estado.nome}}</option>
+			</select>
+			<p id="ad">Endereço</p>
+			<input  id="ad1" name="end"  placeholder="Endereço" ng-model="model.endereco"></input>
+			<p id="cpf">CPF</p>
+			<input  id="cpf1"  name="cpf" type="text" placeholder="CPF" ng-model="model.cpf" onblur="javascript: validarCPF(this.value); this.value=cpf_mask(this.value);"   maxlength="14"></input>
+			
+			<p id="telefone">Telefone</p>
+			<input   id="telefone1" name="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone"></input>
+			
+		</div>
+		
+			<br>
+		</form>	
+			<button  id="save" ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+			
+			</div>
+
+			
+			
+</div>
+			
+			
+</body>
+</html>

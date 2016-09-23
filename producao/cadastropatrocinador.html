@@ -1,0 +1,530 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/patrocinador.js"></script>
+	<script src="js/masktelefone.js"></script>
+	<script src="js/maskdata.js"></script>
+	<script src="js/maskcep.js"></script>
+	<script src="js/inputnumero.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>-->
+	<style>
+		body{
+		
+		}
+		#planodefundo{
+			
+			position: absolute;
+			width:100%;
+			height: 800px;
+			top:0;
+			left:0;
+		}
+		#titulo{
+			
+			margin-left: 220px;
+			padding-top: 5px;
+			font-size: 26px;
+		}
+		#titudiv{
+			background-color:#036;
+			width:100%;
+			height:50px;
+			margin-top: -26px;
+			border-radius: 3px 3px 0px 0px;
+		}
+		#miolo{
+			margin-top: 160px;
+			background-color:#DBDBEA;
+			width:670px;
+			border-radius:5px;
+			position: absolute;
+			height: 700px;
+			margin-left:480px;
+			border:1px solid grey;
+		}
+		#campusprimarios{
+			margin-left: 80px;
+			padding-top:2px;
+		}
+		#campussecundarios{
+			margin-left: 400px;
+			position:absolute;
+			margin-top:-410px;
+						
+		}
+		vr{
+			width: 2px;
+			height:100px;
+			background-color: black;
+
+		}
+		#salvar:hover{
+			color:white;	
+				background-color:#134577; 
+				border:2px solid #134577;
+				transition:all 0.8s ease;
+			
+		}
+		#salvar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color:#036;
+			color:white;
+			margin-left:0px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid transparent ;
+			margin-top: 100px;
+	
+		}
+		#cancelar:hover{
+			color:white;	
+			background-color:#1B5F86; 
+			border:2px solid #1B5F86;
+			box-shadow: 1px 1px 1px grey;
+			
+		}
+		#cancelar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: -100px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 77px;
+		}
+		input{
+			width:200px;
+			height:30px;
+			border-radius:2px;
+			
+		}
+		
+		
+		#foto{
+			
+			margin-left: 94px;
+			margin-top:-130px;
+		
+		}
+		#fotocampo{
+			margin-left: 4px;
+			position:absolute;
+			margin-top:-38px;
+		
+		}
+		header{
+			width:100%;
+			height:110px;
+			background-color:#036;
+		
+			position:absolute;
+			margin-top:0;
+		}
+		#logo{
+			margin-left:8px;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-6px;
+		}
+		#cadastro{
+			margin-left:320px;
+		}
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#plus{
+			margin-left:270px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#list{
+		margin-left:497px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#Sairt{
+			margin-left:30px;
+			margin-top:14px;
+		}
+		#p5{
+			position:absolute;
+			margin-left:1180px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#p6{
+			position:absolute;
+			margin-left:60px;
+			margin-top:56px;
+			font-size:20;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:57px;
+			font-size:20;
+			
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:57px;
+			font-size:20;
+			
+		}
+		#p9{
+			position:absolute;
+			margin-left:78px;
+			margin-top:57px;
+			font-size:20;
+		}
+		#p9:hover{
+			text-decoration:underline;
+		}
+		#p6:hover{
+			text-decoration:underline;
+			}
+		#log{
+			margin-left:1184px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#log2{
+			margin-left:1230px;
+			width:2.4rem;
+			position:absolute;
+			margin-top:40px;
+		}
+		#p5:hover{
+			text-decoration:underline;
+		}
+		#white{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat1{
+			margin-left:105px;
+			width:2rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#ipt1:hover{
+			
+		}
+		#ipt1{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:28px;
+		}
+		#ipt2{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt3{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt4{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:140px;
+			resize:none;
+			height:80px;
+		}
+		#ipt5{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt6{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt7{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:10px;
+			margin-top:287px;
+			height:10px;
+		}
+		#ipt8{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#ipt9{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:330px;
+			resize:none;
+			
+		}
+		#nomep{
+			margin-left:140px;
+			margin-top:5px;
+			position:absolute;
+		}
+		#marcap{
+			margin-left:140px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#tipop{
+			margin-left:295px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#descrp{
+			margin-left:140px;
+			margin-top:117px;
+			position:absolute;
+		}
+		#precop{
+			margin-left:140px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#nump{
+			margin-left:295px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#posp{
+			margin-left:160px;
+			margin-top:283px;
+			position:absolute;
+		}
+		#ida{
+			margin-left:140px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#volta{
+			margin-left:295px;
+			margin-top:308px;
+			position:absolute;
+		}
+		#privacity{
+			margin-top:563px;
+			position:absolute;
+			margin-left:-475px;
+			}
+			#dv2{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv3{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv8{
+				margin-top:-25px;
+				position:absolute;
+				width:400px;
+			}
+			
+			
+			#allwhite{
+				margin-left:80px;
+			
+			}
+			#user{
+				position:absolute;
+				margin-top:45px;
+				margin-left:160px;
+				color:white;
+				font-family:Square721 BT;
+			}
+			#cp{
+				margin-top:445px;
+				margin-left:5px;
+				position:absolute;
+				font-size:13;
+			}
+			#dv7{
+				margin-top:3px;
+				margin-left:-18px;
+			}
+			#quasetudo{
+				margin-top:30px;
+			}
+			#btselec{
+				position:absolute;
+				margin-top:-10px;
+				margin-left:95px;
+				width:350px;
+			}
+			#ap{
+				font-family:sans-serif;
+			}
+	</style>
+</head> 
+<body>
+	<div id="planodefundo" ng-controller="PatrocinadorController">
+	<header></header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
+	<h2 id="user" >Coordenação</h2>
+	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+	<div id="allwhite">
+		<div id="Sairt">
+			
+			<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+		</div>
+		
+		<div id="white">
+				<a href="listapatrocinadornew.html"><img id="mat1" src="assets/images/tools2.png"/></a>
+				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p style="color:white" id="p6">Patrocinadores</p></a>
+		</div>
+		
+	</div>	
+	<div id="miolo">
+		<div id="titudiv">
+		<p id="titulo" style="color:white">Cadastro de Patrocinador</p>
+		</div>
+		<form>
+		<div id="quasetudo">
+		
+			<div id="campusprimarios">
+			<div id="wrapper">
+			<input id="fileUpload" type="file"/><br/>
+			<!--<div id="image-holder"></div>-->
+			</div>
+			<p>Nome</p>
+			<input name="nome" type="name" placeholder="Ex: joao da silva neves" ng-model="model.nome"></input>
+			<p>Email</p>
+			<input name="email" type="email" placeholder="Exemplo@email.com" ng-model="model.email"></input>
+			<p>Senha</p>
+			<input name="senha" type="password" placeholder="Senha" ng-model="model.senha"></input>
+			<p>CNPJ</p>
+			<input name="cnpj" maxlength="15" onkeypress=" return SomenteNumero(event)" type="name" placeholder="Ex:123456789012345" ng-model="model.cnpj"></input>
+			<p>CEP</p>
+			<input name="cep" id="cep" size="20" maxlength="9" onkeypress="maskara(this); return SomenteNumero(event)" type="text" placeholder="Ex: 12345-678" ng-model="model.cep"></input>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<p>Telefone</p>
+			<input name="telefone" id="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone"></input>
+			<p>Telefone(2)</p>
+			<input name="telefone" id="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)" type="text" placeholder="Tel2" ng-model="model.telefone2"></input>
+			<p>País</p>
+			<input name="cargo" type="name" placeholder="país" ng-model="model.pais"></input>
+			<p>Estado</p>
+			<select ng-model="model.estado" ng-change="arrcidades = []; arrcidades = model.estado.cidades">
+				<option ng-repeat="estado in arrestados" value="{{estado.cidades}}">{{estado.nome}}</option>
+			</select>
+			<p>Cidade</p>
+			<select ng-model="model.cidade">
+				<option ng-repeat="cidade in arrcidades">{{cidade}}</option>
+			</select>
+			
+			<input id="salvar" type="submit" ng-value="{{updateMode?'Salvar alterações': 'Salvar'}}" ng-click="save()" />
+			</div>
+			</div>
+		</form>
+		<p id="privacity">&copy; 2016 FENTEC, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+	</div>
+	
+</div>
+
+</body>
+
+</html>

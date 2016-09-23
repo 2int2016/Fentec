@@ -1,0 +1,84 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
+	
+</head>
+<body>
+	<header>
+	
+	</header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
+		<div id="desconect">
+			<a id="logout1" href="conta.html">
+			<img id="logout" src="assets/images/logout.png">
+			
+			</a>
+			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+		</div>
+	
+
+	<div id="planodefundo">
+	<div id="lado-esquerdo">
+		<div id="meuperfil">
+			<a><img src="assets/images/contaicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="dadosorient.html" class="menuopcao" style="margin-left:70px; font-size:20px; font-family:'Segoe UI'; margin-top:60px;">Meu perfil</a>
+		</div>
+		
+		<div id="meuprojeto">
+			<a><img src="assets/images/listaproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="perfilorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Projetos</a>
+		</div>
+		
+		<div id="sugerirescola">
+			<a><img src="assets/images/localizacaoicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="cadastroescola.html" class="menuopcao" style="margin-left:58px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Sugerir escola</a>
+		</div>
+		
+		<div id="contato">
+			<a><img src="assets/images/suporteproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="contateorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
+		</div>
+	</div>
+		<div  ng-controller="OrientadorController" id="miolo">
+			<div id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
+			<div id="dados" ng-repeat="orientador in arrOrientador">
+				<img ng-src="assets/uploads/{{orientador.arquivo}}" style="width:100px; border-radius:200px;">
+			</div>
+			<!-- <ul>
+			 <li style="text-decoration:none" ng-repeat="orientador in arr">
+				<div id="divlist">
+					<h4>Título: {{orientador.nome}}</h4>
+					<h4>Escola: {{projeto.idescola}}</h4>
+					<h4>Estado: {{projeto.estado}}</h4>
+					<h4>Cidade: {{projeto.cidade}}</h4>
+					<a href="alterProjet.html"id="edit" ng-click="change(projeto)">[Alterar]</a>
+					<button ng-click="delete(projeto.id)">Remover</button>
+					<hr id="hrlist">
+				</div>
+			</li>
+			</ul> -->
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
+<?php
+	if(isset($_FILES['fileUpload']))
+	{
+		$new_name = $_FILES['fileUpload']['name'];
+		$dir = 'assets/uploads';
+		move_uploaded_file($_FILES['fileUpload']['tmp_name'], $dir.$new_name);
+	}
+?>

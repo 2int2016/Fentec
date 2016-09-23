@@ -1,0 +1,74 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=">
+
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/visitante.js"></script>
+	<script type="text/javascript" src="js/visitantelista.js"></script>
+
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+</head>
+	<style>
+		#miolo{
+			font-family:'Segoe UI';
+			background-image:url('assets/images/abstract-gradient-background-vector.jpg');
+		};
+
+	</style>
+<body>
+	
+	<div  id="oi" ng-controller="NavController">
+	<div id="miolo">
+	<form>
+	<div id="miolo" data-role="page" data-quicklinks="true" class="jqm-demos">
+	
+		<div id="miolo">
+		
+			<form class="ui-filterable">
+				<input id="filterBasic-input" data-type="search">
+			</form>
+			
+		
+			<input type="text" ng-model="model.email"  placeholder="alterar email">
+			<input type="text"  ng-model="model.instituicao"  placeholder="alterar instituição">
+			<button  ng-click="save()"  >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
+			
+					
+			</br>
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">		
+			 <li style="text-decoration:none" ng-repeat="Visitante in arr">
+			
+			<div>
+				
+			
+				<p>Email:</p>
+				<h4>{{Visitante.email}}</h4>
+				<p>Instituição:</p>
+				<h4>{{Visitante.instituicao}}</h4>
+				<button ng-click="change(Visitante)">Alterar</button>
+				<button ng-click="delete(Visitante.id)">Remover</button>
+			</div>
+			</li>
+			</ul>
+		</div>
+				</br>
+				<a href="cadastrovisitantes.html"><button>ADICIONAR</button></a>
+	</div>
+	</form>
+	
+	
+	</div>
+	</div>
+
+</body>
+</html>

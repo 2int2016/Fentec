@@ -1,0 +1,430 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/material.js"></script>
+</head>
+<style>
+#divTop{
+	width:100%;
+	height:30px;
+	background-color:#5EBDB9;
+	padding:0;
+	position:absolute;
+	
+	position:absolute;
+}
+#user{
+margin-top:2px;
+margin-left:8px;
+font-family:verdana;
+font-size:14;
+}
+#sup{
+	margin-left:1230px;
+	margin-top:-30px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+}
+#sair{
+	margin-left:1310px;
+	margin-top:-30px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+#in{
+	position:absolute;
+	margin-top:30px;
+	font-size:18px;
+}
+#cad{
+	
+	margin-top:80px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+	#oi{
+	margin-left:550px;
+	text-decoration:none;
+	position:absolute;
+	
+}
+
+#oii{
+	margin-left:464px;
+	text-decoration:none;
+	background-color:white;
+	width:500px;
+	height:auto;
+	border-radius:10px;
+	border:1px solid grey;
+	margin-bottom:30px;
+	
+}
+#oii>*{
+	
+	list-style:none;
+}
+#oi1{
+	
+	text-decoration:none;
+}
+#volt{
+
+
+	
+}
+#h4{
+margin-top:0px;
+font-size:20px;
+margin-left:60px;
+color:black;
+font-family: bitter;
+position:absolute;
+margin-top:20px;
+}
+
+#fot{
+	position:absolute;
+	height:20px;
+	width:90px;
+	margin-top:91px;
+}
+#miolo{
+	height:80%;
+	width:100%;
+	
+}
+#bt{
+margin-bottom:20px;
+}
+a{
+text-decoration:none;
+}
+a:hover{
+text-decoration:underline;
+}
+
+
+		#bty{
+			width:90%;
+			margin-left:60px;
+		}
+		#tudo{
+			margin-top:118px;
+			width:1300;
+				
+		}
+header{
+		width:100%;
+		height:124px;
+		background-color:white;
+		opacity:0.8;
+		position:absolute;
+		margin-top:-14.5px;
+		}
+		#log{
+			margin-left:1254px;
+			width:1.55rem;
+			position:absolute;
+			margin-top:29px;
+			
+		}
+		#logo{
+			margin-left:8px;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-3px;
+		}
+		#plus{
+			margin-left:270px;
+			width:1.9rem;
+			position:absolute;
+			margin-top:29px;
+		}
+		#list{
+		margin-left:490px;
+			width:1.9rem;
+			position:absolute;
+			margin-top:29px;
+		}
+		
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:60px;
+			font-size:20;
+			font-family:"Segoe UI";
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:60px;
+			font-size:20;
+			font-family:"Segoe UI";
+		}
+		
+		#p5{
+			position:absolute;
+			margin-left:1250px;
+			margin-top:60px;
+			font-size:20;
+			font-family:"Segoe UI";
+		}
+		#Cadt{
+			margin-left:320px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#Sairt{
+		margin-left:40px;
+		}
+		#ap{
+			color:black;
+		}
+		#inputt{
+			margin-top:40px;
+			width:500px;
+			margin-left:464px;
+			background-color:white;
+			border-radius:5px;
+		}
+		#ul-tudo>*{
+			list-style:none;
+		}
+			#white{
+			width:240px;
+			height:100px;
+			background-color:white;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white{
+			width:238px;
+			height:98px;
+			background-color:white;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:238px;
+			height:98px;
+			background-color:white;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+		width:238px;
+			height:98px;
+			background-color:white;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:238px;
+			height:98px;
+			background-color:white;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat{
+			margin-left:110px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat1{
+			margin-left:105px;
+			width:1.85rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat2{
+			margin-left:100px;
+			width:1.85rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat3{
+		margin-left:105px;
+			width:2.2rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#p9{
+			position:absolute;
+			margin-left:78px;
+			margin-top:61px;
+			font-size:20;
+			font-family:Segoe UI;
+		}
+		#p6{
+			position:absolute;
+			margin-left:78px;
+			margin-top:60px;
+			font-size:20;
+			font-family:Segoe UI;
+		}
+		#p9:hover{
+			text-decoration:underline;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:61px;
+			font-size:20;
+			font-family:Segoe UI;
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:61px;
+			font-size:20;
+			font-family:Segoe UI;
+		}
+		#parte-esquerda{
+			margin-top:14px;
+			margin-left:80px;
+		}
+		
+		#h4:hover{
+			text-decoration:underline;
+		}
+		#no{
+			position:absolute;
+		}
+		#hr-divisor{
+			width:300px;
+			height:0.1px;
+			color:white;
+			margin-right:100px;
+			margin-top:15px;
+			border-color:white;
+		}
+
+</style>
+
+<body>
+	
+	<div id="tudooo" style="background-image:url('assets/images/abstract-gradient-background-vector.jpg');" ng-controller="escolaController" data-role="page" class="jqm-demos" data-quicklinks="true">
+	<header></header>
+	<a href=""><img id="logo" src="assets/images/logoo.fw.png"/></a>
+	
+	<div id="Sairt">
+	<a id="ap" href="conta.html"><p id="p5">Sair</p></a>
+	<img id="log" src="assets/images/loggout.jpg"/>
+	</div>
+	<div id="parte-esquerda">
+	<div id="white">
+			<img id="mat1" src="assets/images/tools.png"/>
+			<a id="ap" href="cadastromaterial.html" style="color:black;"><p id="p6">Materiais</p></a>
+	</div>
+	<div id="white1">
+			<img id="mat1" src="assets/images/grades.png"/>
+			<a id="ap" href="listaavaliadores.html" style="color:black;"><p id="p7">Avaliadores</p></a>
+	</div>
+	<div id="white2">
+			<img id="mat2" src="assets/images/teacher.png"/>
+			<a id="ap" href="listaorientador.html" style="color:black;"><p id="p8">Orientadores</p></a>
+	</div>
+	<div id="white3">
+			<img id="mat3" src="assets/images/person.png"/>
+			<a id="ap" href="conta.html" style="color:black;"><p id="p9">Visitantes</p></a>
+	</div>
+	</div>
+		<div id="tudo" role="main" class="ui-content jqm-content">
+			
+			
+			<div>
+				<form id="inputt" class="ui-filterable">
+					<input id="filterBasic-input" data-type="search"/>
+				</form>
+				
+			
+			<div id="oii">
+			<ul id="ul-tudo" data-filter="true" data-input="#filterBasic-input">
+				<li id="oi1" style="text-decoration:none;" ng-repeat="escola in arrEscolas" >
+					
+					
+						<a href=" "><img id="img-pessoa"/>{{escola.foto}}</a>
+						<a id="aa" href=" "><h4 id="h4">{{escola.nome}}</h4></a>
+						<br>
+						<br>
+						<br>
+						<br>
+						<hr id="hr-divisor"></hr>
+						<!--<button id="bt" ng-click="delete(material.id)">Remover</button>-->
+			
+					
+				</li>
+			</ul>
+			</div>
+			</div>
+				
+		</div>	
+		
+		
+		
+		</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

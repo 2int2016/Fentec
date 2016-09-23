@@ -1,0 +1,51 @@
+#foto{
+	height:100px;
+	width:100px;
+	
+}
+#titulo{
+	font-size: 30px;
+	margin-left: 115px;
+}
+#tit{
+	font-size: 30px;
+	margin-left: 30px;
+	
+}
+.ui-page-theme-a .ui-body-inherit,html .ui-bar-a .ui-body-inherit,html .ui-body-a .ui-body-inherit.ui-page-theme-a a,html .ui-bar-a a,html .ui-body-a a,html body .ui-group-theme-a a{color:#9DA1A7;font-weight:0;width:94%;margin-left:2.5%;}
+.ui-page-theme-a{
+	color:#3C3D42;
+}
+.ui-select {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    position: relative;
+    width: 94%;
+    margin-left: 2.7%;
+}
+#butao{
+	width:94%;
+	margin-left:2.7%;
+}
+
+#ipt7{
+			
+			position:absolute;
+			margin-top:0px;
+			
+			
+			
+		}
+		#posp{
+			
+			margin-left:30px;
+		}
+		#ipt4{
+			
+			
+			border-radius:5px;
+			width:20px;
+			
+			resize:none;
+			
+		}

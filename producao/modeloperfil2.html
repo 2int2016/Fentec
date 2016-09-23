@@ -1,0 +1,90 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
+	
+	
+	<style>
+		body{
+			background-image:url('assets/images/patrocinadores.fw.png') ;
+			width:100%;
+			height:100%;
+			right:0;
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	
+	</header>
+	<a href="index.html"><img id="logo" src="assets/images/logo.fw.png"></a>
+		<div id="desconect">
+			<a id="logout1" href="conta.html">
+			<img id="logout" src="assets/images/logout.png">
+			<p id="sair">Sair</p>
+			
+			</a>
+		</div>
+	
+
+	<div id="planodefundo">
+	<div id="lado-esquerdo">
+		<div id="meuperfil">
+			<a href="" class="menuopcao">Meu perfil</a>
+		</div>
+		
+		<div id="meuprojeto">
+			<a href="" class="menuopcao">Projetos</a>
+		</div>
+		
+		<div id="sugerirescola">
+			<a href="" class="menuopcao">Sugerir escola</a>
+		</div>
+		
+		<div id="contato">
+			<a href="" class="menuopcao">Contato</a>
+		</div>
+	</div>
+		<div ng-controller="OrientadorController" id="miolo">
+			<p id="Projeto">Projetos</p>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="orientador in arrOrientadores">
+				<div>
+					<h4>{{orientador.nome}}</h4>
+					<P>{{orientador.email}}</P>
+					<P>{{orientador.escola}}</P>
+					<P>{{orientador.cargo}}</P>
+					<P>{{orientador.CPF}}</P>
+					<P>{{orientador.telefone}}</P>
+					<P>{{orientador.telefone2}}</P>
+					<P>{{orientador.endereco}}</P>
+					<P>{{orientador.cidade}}</P>
+					<button ng-click="change(orientador)">Alterar</button>
+					<button ng-click="delete(orientador.id)">Remover</button>
+				</div>
+			</li>
+		</ul>
+			<hr>
+			<div id="butaoadd">
+			<a href="#" class="btn btn-success">
+				Novo projeto  <span class="glyphicon glyphicon-plus"></span> 
+			</a>
+			</div>
+		</div>
+		
+	</div>
+	<footer>
+		Fentec 2016
+	</footer>
+
+</body>
+</html>

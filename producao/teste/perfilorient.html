@@ -1,0 +1,73 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
+	
+</head>
+<body>
+	<header>
+	
+	</header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
+		<div id="desconect">
+			<a id="logout1" href="conta.html">
+			<img id="logout" src="assets/images/logout.png">
+			
+			</a>
+		</div>
+	
+
+	<div id="planodefundo">
+	<div id="lado-esquerdo">
+		<div id="meuperfil">
+			<a href="" class="menuopcao">Meu perfil</a>
+		</div>
+		
+		<div id="meuprojeto">
+			<a href="perfilorient.html" class="menuopcao">Projetos</a>
+		</div>
+		
+		<div id="sugerirescola">
+			<a href="cadastroescola.html" class="menuopcao">Sugerir escola</a>
+		</div>
+		
+		<div id="contato">
+			<a href="contateorient.html" class="menuopcao">Contato</a>
+		</div>
+	</div>
+		<div  ng-controller="ProjetoController" id="miolo">
+			<p id="Projeto">> Projetos</p>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="projeto in arrProjeto">
+				<div id="divlist">
+					<h4>Título: {{projeto.nome}}</h4>
+					<h4>Escola: {{projeto.idescola}}</h4>
+					<h4>Estado: {{projeto.estado}}</h4>
+					<h4>Cidade: {{projeto.cidade}}</h4>
+					<a href="alterProjet.html"id="edit" ng-click="change(projeto)">[Alterar]</a>
+					<button ng-click="delete(projeto.id)">Remover</button>
+					<hr id="hrlist">
+				</div>
+			</li>
+		</ul>
+			<hr>
+			<div id="butaoadd">
+			<a href="cadastroprojeto.html" class="btn btn-success">
+				Novo projeto  <span class="glyphicon glyphicon-plus"></span> 
+			</a>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

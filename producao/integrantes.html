@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="fentec">
+<head>
+
+<title>Cadastro Fentec</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/integranteMob.css">
+
+<script src="js/jquery/jquery.js"></script>
+<script src="js/jquery/index.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/libs/angular.min.js"></script>
+<script type="text/javascript" src="js/integrante.js"></script>
+
+
+</head>
+
+<body>
+
+<div data-role="page" class="jqm-demos" data-quicklinks="true">
+	
+	<div data-role="header">
+	
+	<h2><a href="#" title="hello jquery mobile"><img  src="assets/images/logologin.fw.png"></a></h2>
+	<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left"> menu</a>
+	</div>
+	
+	<div role="main" class="ui-content jqm-content">
+	
+	<h1 style="text-align:center;">Cadastro</h1>
+	
+	</div>
+	<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+	
+		<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+			<li data-filtertext="demos" data-icon="home"><a href="#" >Home</a></li>
+			<li data-filtertext="visitantes"><a href="#" data-ajax="false">Visitantes</a></li>
+			<li data-filtertext="projetos"><a href="#" data-ajax="false">Projetos</a></li>
+			<li data-filtertext="orientadores"><a href="#" data-ajax="false">Orientadores</a></li>
+		</ul>
+	
+	</div>
+	
+	<div ng-controller="IntegranteController" role="main" class="ui-content jqm-content">
+	
+		<form>
+		<div >
+		<h3 for="select-native-1" style="text-align:center;">Tipo de cadastro:</h3>
+		<select>
+		<option value="1">Aluno</option>
+		<option value="2">Visitante</option>
+		<option value="3">Patrocinador</option>
+		<option value="4">Orientador</option>
+		<option value="5">Monitoria</option>
+		</select>
+		</div>
+	</form>
+	<form>
+			<div class="ui-field-contain" id="campusprimarios">
+			<p>Nome</p>
+			<input   placeholder="Nome" ng-model="model.nome"></input>
+			<p>Email</p>
+			<input name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<p>Senha</p>
+			<input name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
+			<p>Confirmar senha</p>
+			<input type="password" placeholder="Confirmar senha" ></input>
+			<p>Escola</p>
+			<select ng-model="model.escola">
+				<option>Fundação Nokia de Ensino</option>
+				<option>IFAM</option>
+				<option>Fucapi</option>
+				<option>Senai</option>
+				
+			</select>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<p>Data de nascimento</p>
+			<input  type="text" data-role="date" ng-model="model.data_nascimento"></input>
+			<p>CPF</p>
+			<input  placeholder="CPF" ng-model="model.cpf"></input>
+			<p>Telefone</p>
+			<input placeholder="Tel" ng-model="model.telefone"></input>
+			<p>Endereço</p>
+			<input  placeholder="Endereço" ng-model="model.endereco"></input>
+			<p>Cidade</p>
+			<select ng-model="model.cidade">
+				<option>Manaus</option>
+				<option>Belém</option>
+				<option>São Paulo</option>
+				<option>Rio Branco</option>
+			</select>
+			</div>
+			</br>
+			</br>
+			<button ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+			<button ng-show="updateMode" ng-click="cancel()">Cancelar</button>
+			
+		</form>
+
+	</div>
+
+</div>	
+</body>
+</html>

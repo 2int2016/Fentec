@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	
+</head>
+<style>
+	#oi{
+	margin-left:550px;
+	text-decoration:none
+}
+#oi1{
+	
+	text-decoration:none
+}
+</style>
+<body>
+	<div  ng-controller="ProjetoController">
+		<ul>
+			<li id="oi1" style="text-decoration:none" ng-repeat="projeto in arrProjeto">
+				<div id="oi">
+					<h4>{{projeto.nome}}</h4>
+					<h4>{{projeto.escola}}</h4>
+					<h4>{{projeto.primeiroemail}}</h4>
+					<h4>{{projeto.segundoemail}}</h4>
+					<h4>{{projeto.terceiroemail}}</h4>
+					<h4>{{projeto.estado}}</h4>
+					<h4>{{projeto.cidade}}</h4>
+					<h4>{{projeto.categoria}}</h4>
+					<h4>{{projeto.metaobj}}</h4>
+					<h4>{{projeto.datainicio}}</h4>
+					<h4>{{projeto.datafinal}}</h4>
+					<h4>{{projeto.local}}</h4>
+					
+					<button ng-click="change(projeto)">Alterar</button>
+					<button ng-click="delete(projeto.id)">Remover</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

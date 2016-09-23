@@ -1,0 +1,132 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/material.js"></script>
+	<link type="text/css" rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css"/>
+</head>
+<style>
+	#divTop{
+	width:100%;
+	height:30px;
+	background-color:#5EBDB9;
+	padding:0;
+	position:absolute;
+	
+}
+#user{
+margin-top:2px;
+margin-left:8px;
+font-family:verdana;
+font-size:14;
+}
+#sup{
+	margin-left:250px;
+	margin-top:-28.5px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+}
+#sair{
+	margin-left:320px;
+	margin-top:-28.5px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+#in{
+	position:absolute;
+	margin-top:30px;
+	font-size:18px;
+}
+#cad{
+	
+	margin-top:80px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+#input{
+	margin-top:-10px;
+	position:absolute;
+	margin-left:20px;
+	width:270;
+}
+#cads{
+	position:absolute;
+	margin-top:35px;
+	font-family:verdana;
+	font-size:14;
+	margin-left:8px;
+}
+#fot{
+	position:fixed;
+	height:20px;
+	width:90px;
+	margin-top:583px;
+}
+#volt{
+font-size:16;
+}
+#pos{
+margin-top:-30px;
+margin-left:-10px;
+}
+#ele{
+position:absolute;
+margin-top:-30px;
+margin-left:17px;
+width:700px;
+}
+#h3{
+margin-left:5px;
+}
+</style>
+
+<script type="text/javascript">
+		/*if(window.innerWidth <= 800 || window.innerHeight > window.innerWidth) 		{
+			window.location = 'monitmob.html'
+		} 
+		else {
+			window.location = 'listamaterial.html'
+		}*/
+	</script>
+<body>
+	<div ng-controller="MatController" data-role="page" class="jqm-demos" data-quicklinks="true">
+		<div data-role="header">
+		<img style= "height:100px; width:100px; margin-left:100px;" id="logo" src="assets/images/fmm.png"/>
+	</div>	
+	<h3 id="h3">Cadastro de materiais</h3>
+	<div id="input" role="main" class="ui-content jqm-content">
+	
+				<input data-clear-btn="true" type="text" placeholder="titulo" ng-model="model.nome">
+				
+				<input data-clear-btn="true" type="text" placeholder="descricao" ng-model="model.descricao">
+				<input data-clear-btn="true" type="text" placeholder="marca" ng-model="model.marca">
+				<br>
+				<input  id="pos" type="checkbox" placeholder="posse" ng-model="model.posse"><p id="ele">Ele está em posse de alguem?</p>
+				<input data-clear-btn="true" type="text" placeholder="preco" ng-model="model.preco">
+				<input data-clear-btn="true" type="text" placeholder="tipo" ng-model="model.tipo">
+				<input data-clear-btn="true" type="text" placeholder="numerodoativo" ng-model="model.numerodoativo">
+				<input data-clear-btn="true" type="text" placeholder="ida" ng-model="model.ida">
+				<input data-clear-btn="true" type="text" placeholder="retorno" ng-model="model.retorno">
+			
+
+			
+			<button ng-click="save()" >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
+		</div>
+		
+		
+	</div>
+
+</body>
+</html>

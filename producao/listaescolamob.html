@@ -1,0 +1,48 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/escolamob.css">
+<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+</head>
+	<style>
+	
+
+	</style>
+<body>
+	<div  ng-controller="escolaController">
+	
+		<div>
+			<form class="ui-filterable">
+				<input id="filterBasic-input" data-type="search">
+			</form>
+				</br>
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+			 <li style="text-decoration:none" ng-repeat="escola in arrEscolas">
+				<div>
+					<a  ng-click="editar(escola.id)"><h4>{{escola.nome}}</h4></a>
+				</div>
+			</li>
+		</ul>
+		</div>
+		</br>
+			<a href="cadastroescolamob.html"><button>ADICIONAR</button></a>
+		</form>
+	
+	
+	</div>
+	</div>
+
+</body>
+</html>

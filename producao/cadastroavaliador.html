@@ -1,0 +1,502 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/avaliador.js"></script>
+	
+	
+	<script type="text/javascript">
+
+
+$(document).ready(function () {
+    $('#checkbox1').change(function () {
+        if (!this.checked) 
+        //  ^
+           $('#autoUpdate').fadeOut('slow');
+        else 
+            $('#autoUpdate').fadeIn('slow');
+    });
+});
+
+</script>
+	
+	
+	<style>
+		body{
+			font-family:'Segoe UI';
+		}
+		#planodefundo{
+			position: absolute;
+			width:100%;
+			height: 832px;
+			top:0;
+			left:0;
+		}
+		#titulo{
+			margin-left: 114px;
+			padding-top: 5px;
+			font-size: 26px;
+		}
+		#titudiv{
+			background-color:#036;
+			width:100%;
+			height:50px;
+			margin-top:-5px;
+		}
+		#miolo{
+			margin-top: 160px;
+			background-color: #DBDBEA;
+			width:500px;
+			border-radius:5px;
+			position: absolute;
+			height: 630px;
+			margin-left:480px;
+			border:1px solid grey;
+		}
+		#campusprimarios{
+			margin-left:28px;
+			padding-top:9px;
+		}
+		#campussecundarios{
+			margin-left: 480px;
+			position:absolute;
+			margin-top:-418px;
+			
+			
+		}
+		vr{
+			width: 2px;
+			height:100px;
+			background-color: black;
+
+		}
+		#salvar:hover{
+			color:white;	
+			background-color:#134577; 
+			border:2px solid #134577;
+			transition:all 0.8s ease;
+		}
+		#salvar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: #036;
+			color:#FFF;
+			margin-left: -460px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 98px;
+			margin-left: -308px;
+		}
+		#cancelar:hover{
+			color:white;	
+			background-color:#1B5F86; 
+			border:2px solid #1B5F86;
+			box-shadow: 1px 1px 1px grey;
+			
+		}
+		#cancelar{
+			position:absolute;
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: -100px;
+			margin-bottom:0px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 77px;
+		}
+		input{
+			width:200px;
+			height:30px;
+			border-radius:5px;
+			border:1px solid grey; 
+		}
+		
+		
+		#foto{
+			
+			margin-left: 94px;
+			margin-top:-130px;
+		
+		}
+		#fotocampo{
+			margin-left: 4px;
+			position:absolute;
+			margin-top:-38px;
+		
+		}
+		header{
+			width:100%;
+			height:110px;
+			background-color:#036;
+			position:absolute;
+			margin-top:0;
+		}
+		#logo{
+			margin-left:8px;
+			position:absolute;
+			width:150px;
+			height:150px;
+			margin-top:-6px;
+		}
+		#cadastro{
+			margin-left:320px;
+		}
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#plus{
+			margin-left:270px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#list{
+		margin-left:497px;
+			width:2rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#Sairt{
+			margin-left:30px;
+			margin-top:14px;
+		}
+		#p5{
+			position:absolute;
+			margin-left:1180px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#p6{
+			position:absolute;
+			margin-left:78px;
+			margin-top:56px;
+			font-size:20px;
+			font-family:Arial;
+			color:white;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:60px;
+			font-size:20;
+			
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:60px;
+			font-size:20;
+			
+		}
+		#p6:hover{
+			text-decoration:underline;
+			}
+		#log{
+			margin-left:1184px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#log2{
+			margin-left:1230px;
+			width:3rem;
+			position:absolute;
+			margin-top:40px;
+		}
+		#p5:hover{
+			text-decoration:underline;
+		}
+		#white{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat{
+			margin-left:110px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat1{
+			margin-left:105px;
+			width:3rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat2{
+			margin-left:100px;
+			width:3rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat3{
+			margin-left:105px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#ipt1:hover{
+			
+		}
+		#ipt1{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:28px;
+		}
+		#ipt2{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt3{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:80px;
+		}
+		#ipt4{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:300px;
+			margin-top:140px;
+			resize:none;
+			height:80px;
+		}
+		#ipt5{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt6{
+			margin-left:295px;
+			position:absolute;
+			border-radius:5px;
+			width:145px;
+			margin-top:245px;
+		}
+		#ipt7{
+			margin-left:140px;
+			position:absolute;
+			border-radius:5px;
+			width:10px;
+			margin-top:287px;
+			height:10px;
+		}
+		#nomep{
+			margin-left:140px;
+			margin-top:5px;
+			position:absolute;
+		}
+		#marcap{
+			margin-left:140px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#tipop{
+			margin-left:295px;
+			margin-top:58px;
+			position:absolute;
+		}
+		#descrp{
+			margin-left:140px;
+			margin-top:117px;
+			position:absolute;
+		}
+		#precop{
+			margin-left:140px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#nump{
+			margin-left:295px;
+			margin-top:220px;
+			position:absolute;
+		}
+		#posp{
+			margin-left:160px;
+			margin-top:283px;
+			position:absolute;
+		}
+		#privacity{
+			margin-top:90px;
+			position:absolute;
+			margin-left:-475px;
+			}
+			#dv2{
+				margin-top:5px;
+				position:absolute;
+			}
+			#dv3{
+				margin-top:5px;
+				position:absolute;
+			}
+			#user{
+				position:absolute;
+				margin-top:45px;
+				margin-left:160px;
+				color:white;
+				font-family:Square721 BT;
+			}
+			
+			#allwhite{
+				margin-left:80px;
+			
+			}
+		p{
+			margin-top:5px;
+		}
+	</style>
+</head> 
+<body>
+	<div id="planodefundo" ng-controller="avaliadorController">
+	<header></header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
+	<h2 id="user" >Avaliador</h2>
+	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+	<div id="allwhite">
+		<div id="Sairt">
+			<img id="log" src="assets/images/logout.png"/>
+		</div>
+		
+		<div id="white">
+				<img id="mat1" src="assets/images/grades2.png"/>
+				<a id="ap" href="listaavaliadoresf.html" style="color:white;"><p id="p6">Avaliadores</p></a>
+		</div>
+		
+	</div>	
+	<div id="miolo">
+		<div id="titudiv">
+		<p id="titulo" style="color:white">Cadastro de Avaliadores</p>
+		</div>
+		<form>
+			<div id="campusprimarios">
+				<p>Nome</p>
+				<input style="width:94%" name="nome" ng-model="model.nome"/>
+				<p>Email</p>
+				<input style="width:94%" type="email" name="email" ng-model="model.email"/>
+				<div style="display:inline-flex;" >
+					<div style="width:40%" >
+					<p>Senha</p>
+					<input type="password" name="nome" id="input2" ng-model="model.senha"/>
+					</div>
+					<div style="float:right; margin-left:15%" >
+					<p>Confirmar Senha</p>
+					<input type="password" name="nome" id="input2"/>
+					</div>
+				</div>
+					<p>Profissão</p>
+					<input style="width:94%" name="nome" ng-model="model.profissao"/>
+					<p>Empresa</p>
+					<input style="width:94%" name="nome" ng-model="model.empresa"/>
+				<div style="display:inline-flex;" >
+					<div style="width:40%" >
+					<p>RG</p>
+					<input maxlength="8" name="nome" id="input2" ng-model="model.rg"/>
+					</div>
+					<div style="float:right; margin-left:36%; margin-top:5%" >
+					<p>Escolaridade</p>
+						<select ng-model="model.escolaridade">
+							<option ng-model="model.escolaridade">Mestre</option>
+							<option ng-model="model.escolaridade">Doutor</option>
+						</select>
+					</div>
+				</div>
+				<div style="display:inline-flex;" >
+					<div style="width:40%" >
+					<p>Nacionalidade</p>
+					<input name="nome" id="input2" ng-model="model.nacionalidade"/>
+					</div>
+					<div style="float:right; margin-left:15%" >
+					<p>Data de Nascimento</p>
+					<input name="nome" id="input2" ng-model="model.nascimento"/>
+					</div>
+				</div>
+			
+			
+			<button id="salvar" type="submit" value="Enviar arquivo" href="index.html" ng-click="save()" >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
+			
+			</div>
+		</form>
+		<p id="privacity">&copy; 2016 FENTEC, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+	</div>
+	
+</div>
+
+</body>
+</html>

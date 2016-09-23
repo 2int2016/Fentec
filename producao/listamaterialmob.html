@@ -1,0 +1,97 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script src="js/hover.js"></script>
+	<script type="text/javascript" src="js/material.js"></script>
+	
+	
+
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+	
+
+</head >
+	<style>
+		
+		#fotoprin{
+	background-color:#dbdbea;
+	}
+	#h{
+	color:#3C3D42; 
+	margin-left:10px;
+	}
+	input{
+	background-color:#0A56AD;
+	color:#0A56AD;
+	border':white;
+    padding: 8px;
+	
+	#header{
+	opacity:0.9;
+	background-color:#0A56AD;
+
+	}
+	#miolo{
+
+
+	</style>
+<body>
+	<div  ng-controller="MatController">
+		<form>
+		<div >
+		<div data-role="page" id="fotoprin" data-quicklinks="true" class="jqm-demos">
+	<div id="miolo" role="main" class="ui-content jqm-content">
+	<div id="header" data-role="header" data-position="fixed">
+		<img style= "height:100px; width:100px; margin-left:120px;" id="logo" src="assets/images/fmm.png"/>
+		<!--<img style= "height:100px; width:100px; margin-left:120px;" id="logo" src="assets/images/logologin.fw.png"/>-->
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		
+			
+			<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+				<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+					<li data-filtertext="home" data-icon="home"><a href="#">Home</a></li>
+					<li data-filtertext="materiais" ><a href="#" data-ajax="false">Materiais</a></li>
+					<li data-filtertext="avaliadores" ><a href="listaavaliadormob.html" data-ajax="false">Avaliadores</a></li>
+					<li data-filtertext="orientadores" ><a href="cadastroorientadormob.html" data-ajax="false">Orientadores</a></li>
+					<li data-filtertext="visitantes" ><a href="#"data-ajax="false" >Visitantes</a></li>
+				</ul>
+			</div>
+	</div>	
+
+	
+		<div id="miolo">
+			<form class="ui-filterable">
+				<input id="filterBasic-input" data-type="search">
+			</form>
+				</br>
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+			 <li style="text-decoration:none" ng-repeat="material in arr">
+				<div >
+					<p>{{material.nome}}</p>
+					
+					<a  ng-click="editarMob(Visitante.id)" ><h4>{{Visitante.id}}.{{Visitante.email}}</h4></a>
+				</div>
+			</li>
+		</ul>
+		</div>
+		</br>
+		
+	</div>
+		</form>
+		
+	
+	</div>
+	</div>
+
+</body>
+</html>

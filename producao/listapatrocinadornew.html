@@ -1,0 +1,499 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/perfil.css"/>
+	<link rel="stylesheet" href="css/hover.css"/>
+	<link rel="stylesheet" href="css/hover2.css"/>
+	<link rel="stylesheet" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+
+	
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script src="js/hover.js"></script>
+	<script type="text/javascript" src="js/patrocinador.js"></script>
+	
+</head>
+<style>
+#divTop{
+	width:100%;
+	height:90px;
+	background-color:#5EBDB9;
+	padding:0;
+	position:absolute;
+	
+	position:absolute;
+}
+#user{
+margin-top:2px;
+margin-left:8px;
+font-family:verdana;
+font-size:14;
+}
+#sup{
+	margin-left:1230px;
+	margin-top:-30px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+}
+#sair{
+	margin-left:1310px;
+	margin-top:-30px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+#in{
+	position:absolute;
+	margin-top:30px;
+	font-size:18px;
+}
+#cad{
+	
+	margin-top:80px;
+	position:absolute;
+	font-family:verdana;
+	font-size:14;
+	
+}
+	#oi{
+	margin-left:550px;
+	text-decoration:none;
+	position:absolute;
+	
+}
+
+#oii{
+	margin-left:464px;
+	text-decoration:none;
+	background-color:white;
+	width:500px;
+	height:auto;
+	border-radius:10px;
+	border:1px solid grey;
+	margin-bottom:10px;
+	margin-top:150px;
+	
+}
+#oii>*{
+	
+	list-style:none;
+}
+#oi1{
+	
+	text-decoration:none;
+}
+#volt{
+
+
+	
+}
+#h4{
+	margin-top:0px;
+	font-size:20px;
+	text-align:center;
+	color:black;
+	font-family: bitter;
+	margin-right:35px;
+	margin-top:20px;
+
+}
+
+#fot{
+	position:absolute;
+	height:20px;
+	width:90px;
+	margin-top:91px;
+}
+#miolo{
+	height:80%;
+	width:100%;
+	
+}
+#bt{
+margin-bottom:20px;
+}
+a{
+text-decoration:none;
+}
+a:hover{
+text-decoration:underline;
+}
+
+
+		#bty{
+			width:90%;
+			margin-left:60px;
+		}
+		#tudo{
+			margin-top:118px;
+			width:1300;
+				
+		}
+		header{
+			width:100%;
+			height:109px;
+			position:absolute;
+			margin-top:-150px;
+		}
+		
+		#logo{
+			margin-left:8px;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-150px;
+		}
+		#plus{
+			margin-left:270px;
+			width:1.9rem;
+			position:absolute;
+			margin-top:29px;
+		}
+		#list{
+			margin-left:490px;
+			width:1.9rem;
+			position:absolute;
+			margin-top:29px;
+		}
+		
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:60px;
+			font-size:20;
+			font-family:"Segoe UI";
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:60px;
+			font-size:20;
+			font-family:"Segoe UI";
+		}
+		
+		#p5{
+			position:absolute;
+			margin-left:1250px;
+			margin-top:60px;
+			font-size:20;
+			font-family:"Segoe UI";
+		}
+		#Cadt{
+			margin-left:320px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#Sairt{
+		margin-left:40px;
+		}
+		#ap{
+			color:black;
+		}
+		#inputt{
+			margin-top:40px;
+			width:500px;
+			margin-left:464px;
+			background-color:white;
+			border-radius:5px;
+		}
+		#ul-tudo>*{
+			list-style:none;
+		}
+			#white{
+			width:240px;
+			height:100px;
+			background-color:white;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white{
+			width:238px;
+			height:98px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:160px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white1{
+			width:238px;
+			height:98px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:270px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white2{
+			width:238px;
+			height:98px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:380px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#white3{
+			width:238px;
+			height:98px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:490px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#mat{
+			margin-left:110px;
+			width:35px;
+			height:40px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat1{
+			margin-left:105px;
+			width:35px;
+			height:35px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat2{
+			margin-left:100px;
+			width:35px;
+			height:40px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat3{
+			margin-left:105px;
+			width:35px;
+			height:40px;
+			position:absolute;
+			margin-top:25px;
+		}
+		#p6:hover{
+			text-decoration:underline;
+		}
+		#p7:hover{
+			text-decoration:underline;
+		}
+		#p8:hover{
+			text-decoration:underline;
+		}
+		#p9{
+			position:absolute;
+			margin-left:78px;
+			margin-top:61px;
+			font-size:20;
+			font-family:Segoe UI;
+			color:white;
+		}
+		#p6{
+			position:absolute;
+			margin-left:78px;
+			margin-top:61px;
+			color:white;
+			font-size:20;
+			font-family:Segoe UI;
+		}
+		#p9:hover{
+			text-decoration:underline;
+		}
+		#p7{
+			position:absolute;
+			margin-left:68px;
+			margin-top:61px;
+			font-size:20;
+			font-family:Segoe UI;
+			color:white;
+		}
+		#p8{
+			position:absolute;
+			margin-left:60px;
+			margin-top:61px;
+			font-size:20;
+			font-family:Segoe UI;
+			color:white;
+		}
+		#parte-esquerda{
+			position:absolute;
+			margin-top:-160px;
+			margin-left:80px;
+		}
+		
+		#h4:hover{
+			text-decoration:underline;
+		}
+		#no{
+			position:absolute;
+		}
+		#p5:hover{
+			text-decoration:underline;
+		}
+		#esquerda-miolo{
+			width:200px;
+			height:150px;
+			background-color:black;
+			border-radius:2px;
+		}
+		#direita-miolo{
+			width:200px;
+			height:150px;
+			background-color:black;
+			border-radius:2px;
+		}
+		#miolo-inlne>*{
+		display:inline-block;
+		}
+		hr{
+			width:350px;
+			height:1px;
+			color:#DBDBEA;
+			background-color:#DBDBEA;
+			margin-left:70px;
+			margin-top:0px;
+		}
+		#butao-alterar{
+			margin-top: -100px;
+			margin-left: 15px;
+			position:absolute;
+			width: 20px;
+			height:20px;
+		
+		}
+		#butao-remover{
+			margin-top: -60px;
+			position:absolute;
+			margin-left: 15px;
+			width: 90px;
+			float:right;
+		}
+		#white4{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:600px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
+		#p10{
+			position:absolute;
+			margin-left:65px;
+			margin-top:57px;
+			font-size:20;
+		}
+		#log{
+			margin-left:1294px;
+			width:3.5rem;
+			position:absolute;
+			margin-top:46px;
+			
+		}
+		#log2{
+			margin-left:1230px;
+			width:3rem;
+			position:absolute;
+			margin-top:45px;
+		}
+</style>
+
+<body>
+
+	
+	
+	<div id="tudooo" ng-controller="PatrocinadorController" data-role="page" class="jqm-demos" data-quicklinks="true">
+	<header>
+	<h1 style="position:absolute; margin-top:60px; margin-left:160px; color:white; font-family:Square721 BT; font-size:26;">Coordenação</h1>
+	<a id="ap" href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+	</header>
+	<a href=""><img id="logo" src="assets/images/logo.fw.png"/></a>
+	
+	<div id="Sairt">
+	<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+	</div>
+	<div id="parte-esquerda">
+	<a href="cadastromaterial.html"><div id="white">
+			<img id="mat1" src="assets/images/tools2.png"/>
+			<a id="ap" href="cadastromaterial.html" style="color:black;"><p id="p6">Materiais</p></a>
+	</div></a>
+	<a href="listaavaliadores.html"><div id="white1">
+			<img id="mat1" src="assets/images/grades2.png"/>
+			<a id="ap" href="listaavaliadores.html" style="color:black;"><p id="p7">Avaliadores</p></a>
+	</div></a>
+	<a href="listaorientador.html"><div id="white2">
+			<img id="mat2" src="assets/images/teacher2.png"/>
+			<a id="ap" href="listaorientador.html" style="color:black;"><p id="p8">Orientadores</p></a>
+	</div></a>
+	<a href="conta.html"><div id="white3">
+			<img id="mat3" src="assets/images/person2.png"/>
+			<a id="ap" href="listavisitantes.html" style="color:black;"><p id="p9">Visitantes</p></a>
+	</div></a>
+	<div id="white4">
+			<a href="listapatrocinadornew.html">	<img id="mat3" src="assets/images/patrocinadoricon.png" /></a>
+				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p style="color:white" id="p10">Patrocinador</p></a>
+		</div>
+	</div>
+		<div id="tudo" role="main" class="ui-content jqm-content">
+			
+			
+			
+			<div id="oii">
+			<ul id="ul-tudo" data-filter="true" data-input="#filterBasic-input">
+				<li id="oi1" style="text-decoration:none;" ng-repeat="patrocinador in arr" >
+						<div id="miolo-inlne">
+							<div id="goods" class="goods">
+								<span id="info" class="info">
+					            	<div id="index">
+					            		<img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Picture" id="pic">
+					            	</div>
+									<span id="text" class="text">
+										<h2 id="name" >{{patrocinador.nome}}</h2>
+										<p class="description">{{patrocinador.descricao}}</p>
+								    </span>
+							
+								</span>
+							</div>
+						<form id="editar-e-apagar">
+							<input style="width:40px; height:35px; margin-top:-20px;" id="butao-alterar" class="btn btn-default" ng-click="change(patrocinador)" type="image" src="assets/images/edit-black.png"></input>
+							<input style="width:20px; height:20px; margin-left:25px;" id="butao-remover" class="butao" ng-click="delete(patrocinador.id)" type="image" src="assets/images/delete-black.png"></input>
+						</form> 						
+						</div>
+						<br/>
+						<hr>
+						<br/>
+						<br/>
+				</li>
+			</ul>
+			</div>
+				
+		</div>	
+		
+		
+		
+		</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

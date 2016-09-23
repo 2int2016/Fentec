@@ -1,0 +1,331 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<script type="text/javascript" src="js/masktelefone.js"></script>
+</head>
+<style>
+	#divTop{
+	width:100%;
+	height:30px;
+	background-color:#5EBDB9;
+	padding:0;
+	position:absolute;
+	
+}
+#user{
+margin-top:2px;
+margin-left:8px;
+font-family:verdana;
+font-size:14;
+}
+#sup{
+	margin-left:250px;
+	margin-top:-28.5px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+}
+#sair{
+	margin-left:320px;
+	margin-top:-28.5px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+#in{
+	position:absolute;
+	margin-top:30px;
+	font-size:18px;
+}
+#cad{
+	
+	margin-top:80px;
+	position:absolute;
+	font-family:verdana;
+font-size:14;
+	
+}
+#input{
+	margin-top:-10px;
+	position:absolute;
+	margin-left:460px;
+	width:270;
+}
+#cads{
+	position:absolute;
+	margin-top:35px;
+	font-family:verdana;
+	font-size:14;
+	margin-left:8px;
+}
+#fot{
+	position:fixed;
+	height:20px;
+	width:90px;
+	margin-top:583px;
+}
+#volt{
+font-size:16;
+}
+#pos{
+margin-top:250px;
+			position:absolute;
+			margin-left:380px;
+			
+}
+#ele{
+margin-top:248px;
+			position:absolute;
+			margin-left:395px;
+			font-size:12.5px;
+width:500px;
+}
+body{
+			font-family:'Segoe UI';
+			background-image:url('assets/images/abstract-gradient-background-vector.jpg');
+		}
+		#miolo{
+			margin-top: 130px;
+			background-color: white;
+			width:800px;
+			border-radius:5px;
+			position: absolute;
+			height: 500px;
+			margin-left:300px;
+			box-shadow: 0px 0px 0.7px grey;
+		
+		}
+		#logo{
+			margin-left:;
+			position:absolute;
+			width:150;
+			height:150;
+			margin-top:-15px;
+		}
+		button{
+			cursor:pointer;
+			border-radius: 4px;
+			width:200px;
+			height:50px;
+			background-color: transparent;
+			color:#1B5F86;
+			margin-left: 190px;
+			font-size: 18px;
+			border:2px solid #1B5F86 ;
+			margin-top: 380px;
+			position:absolute;
+		}
+		#p{
+		margin-top:7px;
+		}
+		
+		button:hover{
+			background-color:#1B5F86;
+			color:white;
+			border:2px solid white ;
+		}
+		#nome{
+			margin-top:130px;
+			position:absolute;
+			margin-left:20px;
+		}
+		#descr{
+			margin-top:130px;
+			position:absolute;
+			margin-left:200px;
+		}
+		#marca{
+		margin-top:130px;
+			position:absolute;
+			margin-left:380px;
+		}
+		#preco{
+			margin-top:180px;
+			position:absolute;
+			margin-left:20px;
+		}
+		#tipo{
+			margin-top:180px;
+			position:absolute;
+			margin-left:200px;
+		}
+		#num{
+			margin-top:180px;
+			position:absolute;
+			margin-left:380px;
+		}
+		#ida{
+			margin-top:250px;
+			position:absolute;
+			margin-left:20px;
+		}
+		#volta{
+			margin-top:250px;
+			position:absolute;
+			margin-left:200px;
+		}
+		#bt{
+			margin-left:180px;
+		}
+		#btt{
+		margin-left:70px;
+		}
+		#h1{
+			position:absolute;
+			margin-left:100px;
+		}
+		#dentro{
+		margin-left:120px;
+		}
+		header{
+		width:100%;
+		height:110px;
+		background-color:white;
+		opacity:0.8;
+		position:absolute;
+		margin-top:-14.5px;
+		}
+		#log{
+			margin-left:1253px;
+			width:2.5rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#plus{
+			margin-left:270px;
+			width:3rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		#list{
+		margin-left:490px;
+			width:3rem;
+			position:absolute;
+			margin-top:15px;
+		}
+		
+		#p1{
+			position:absolute;
+			margin-left:200px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#p2{
+			position:absolute;
+			margin-left:430px;
+			margin-top:45px;
+			font-size:20;
+		}
+		
+		#p5{
+			position:absolute;
+			margin-left:1250px;
+			margin-top:45px;
+			font-size:20;
+		}
+		#Cadt{
+			margin-left:320px;
+		}
+		#Listt{
+			margin-left:300px;
+		}
+		#Sairt{
+		margin-left:30px;
+		}
+</style>
+
+<script type="text/javascript">
+		/**/
+	</script>
+<body>
+<header></header>
+	<a href=""><img id="logo" src="assets/images/logo.fw.png"/></a>
+	<div id="Cadt">	
+		<p id="p1">Cadastrar orientador</p>
+		<img id="plus" src="assets/images/plus.png"/>
+	</div>	
+	<div id="Listt">
+		<p id="p2">Lista de orientadores</p>
+		<img id="list" src="assets/images/list.png"/>
+	</div>
+	<div id="Sairt">
+	<a id="ap" href="conta.html"><p id="p5">Sair</p></a>
+	<img id="log" src="assets/images/loggout.jpg"/>
+	</div>
+	
+
+
+	<div ng-controller="MatController" data-role="page" class="jqm-demos" data-quicklinks="true">
+		
+	<form>
+	<div id="miolo" role="main" class="ui-content jqm-content">
+	<div id="dentro">
+	<h1 id="h1">Cadastro de orientador</h1>
+				<form>
+			<div id="campusprimarios">
+			<p>Nome</p>
+			<input name="nome" type="name" placeholder="Nome" ng-model="model.nome"></input>
+			<p>Email</p>
+			<input name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<p>Senha</p>
+			<input name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
+			<p>Confirmar senha</p>
+			<input name="confsenha" type="password" placeholder="Confirmar senha" ></input>
+			<p>Escola</p>
+			<select ng-controller="escolaController as escolaCtrl" ng-model="orientadorCtrl.model.idescola">
+				<option ng-value="escola.id" ng-repeat="escola in arrEscolas">
+					{{escola.nome}}
+				</option>
+			</select>
+			<p>Tamanho da camisa</p>
+			<select ng-model= "model.tamanho">
+				<option>PP</option>
+				<option>P</option>
+				<option>M</option>
+				<option>G</option>
+			</select>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<p>Cargo</p>
+			<input name="cargo" type="name" placeholder="Cargo" ng-model="model.cargo"></input>
+			<p>CPF</p>
+			<input name="cpf" type="name" placeholder="CPF" ng-model="model.cpf"></input>
+			<p>Telefone</p>
+			<input name="telefone" id=telefone size=20 maxlength="15"  onkeypress="mascara(this)" type="text" placeholder="Tel" ng-model="model.telefone"></input>
+			<p>Telefone2</p>
+			<input name="telefone" id=telefone size=20   maxlength="15" onkeypress="mascara(this)"  type="text" placeholder="Tel2" ng-model="model.telefone2"></input>
+			<p>Endereço</p>
+			<input name="end" type="name" placeholder="Endereço" ng-model="model.endereco"></input>
+			<p>Cidade</p>
+			<select ng-model="model.cidade">
+				<option>Manaus</option>
+				<option>Belém</option>
+				<option>São Paulo</option>
+				<option>Rio Branco</option>
+			</select>
+			</div>
+			<br>
+			<br>
+			<br>
+		</form>
+			
+			<button id="bt" ng-click="save()" ><p id="p">{{updateMode?'Salvar alterações': 'Salvar'}}</p></button>
+				
+				</div>
+		</div>
+		
+		</form>
+	</div>
+
+</body>
+</html>

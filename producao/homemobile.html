@@ -1,0 +1,122 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=">
+	
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	<link rel="stylesheet" href="css/orientmob.css"/>
+	
+		<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
+		<script type="text/javascript" src="js/fentec.js"></script>
+		<script type="text/javascript" src="js/orientador.js"></script>
+		<script type="text/javascript" src="js/escola.js"></script>
+		<script type="text/javascript" src="js/cpf.js"></script>
+		<script type="text/javascript" src="js/logarMob.js"></script>
+		<script src="js/masktelefone.js"></script>
+		
+
+		<script src="js/jquery/jquery.js"></script>
+		
+		<script src="js/jquery/index.js"></script>
+		<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/jquery/jquery.ui.datepicker.js"></script>
+		<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+		<script src="js/masktelefone.js"></script>
+		<script src="js/maskcep.js"></script>
+		<script src="js/inputnumero.js"></script>
+	<style>
+	#fotoprin{
+	background-image:url('assets/galeria/dsc_0131_1.jpg');
+	background-repeat: no-repeat;
+	}
+	#logo{
+		margin-left: 110px;
+	}
+	#h{
+	color: black <!--#00B750-->;
+	margin-left:10px;
+	}
+	input{
+	background-color:#0A56AD;
+	color:#0A56AD;
+	border':white;
+    padding: 8px;
+	
+	#header{
+	opacity:0.9;
+	background-color:white;
+	}
+	</style>
+</head>
+<body>
+	<div ng-controller="LogarMobController">
+		<form>
+		<div data-demo-html="true">
+		<form>
+		<div id="fotoprin" data-role="page" data-quicklinks="true" class="jqm-demos">
+	<div style="background-color:transparent; border-color:transparent;" id="header" data-role="header" >
+		<img style= "height:100px; width:100px; margin-left:35%;" data-position="center" id="logo" src="assets/images/fmm.png"/>
+		<!--<img style= "height:100px; width:100px; margin-left:120px;" id="logo" src="assets/images/logologin.fw.png"/>-->
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		
+			
+			<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+				<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+					<li data-filtertext="home" data-icon="home"><a href="homemobile.html">Home</a></li>
+					<li data-filtertext="materiais" ><a href="#" data-ajax="false">Materiais</a></li>
+					<li data-filtertext="avaliadores" ><a href="#" data-ajax="false">Avaliadores</a></li>
+					<li data-filtertext="orientadores" ><a href="#" data-ajax="false">Orientadores</a></li>
+					<li data-filtertext="visitantes" ><a href="#"data-ajax="false" >Visitantes</a></li>
+				</ul>
+			</div>
+			
+	</div>	
+				
+	<div id="miolo">
+		<form >	
+				<div  id="geral2" style="background-color:white; opacity:0.9; width:94%;margin-left:2.7%;" >
+					<span><div id="login">
+						<h1 style="color:#1F84CE; margin-left:25%;" ()">Faça o login</h1>
+							
+							<input  id="email" class="form-control" placeholder="Login" required>
+							
+							<input type="password" id="senha" class="form-control" placeholder="Senha" required>
+							<div class="checkbox">
+							  <label style="border-radius: 0px" >
+								<input type="checkbox" value="remember-me" > <p >Mantenha-me conectado</p>
+							  </label>
+							</div>
+							<a style="text-decoration:none;" id="a" href="" ><p style="margin-left:16px;" >Esqueceu sua senha?</p></a>
+						<button class="btn btn-lg btn-primary " ng-click="logar()" id="bt" style="background-color:#1F84CE; border-color:#1F84CE; color:white; border-radius:0%;" >Entrar</button>
+					</div>	
+				</div>
+			</form>	
+		</span>
+		
+	</div>
+</div>
+		
+		<!--<ul>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="patrocinador in arrPatrocinador">
+				<div>
+					<h4>{{patrocinador.nome}}</h4>
+					<P>{{patrocinador.email}}</P>
+					<P>{{patrocinador.senha}}</P>
+					<P>{{patrocinador.escola}}</P>
+					<P>{{patrocinador.cargo}}</P>
+					<P>{{patrocinador.CPF}}</P>
+					<P>{{patrocinador.telefone}}</P>
+					<P>{{patrocinador.endereco}}</P>
+					<P>{{patrocinador.cidade}}</P>
+					<button ng-click="change(patrocinador)">Alterar</button>
+					<button ng-click="delete(patrocinador.id)">Remover</button>
+				</div>
+			</li>
+		</ul> -->
+		
+	</div>
+</body>
+</html>

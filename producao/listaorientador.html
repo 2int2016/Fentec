@@ -1,0 +1,115 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<title>Portal Fentec</title>
+	<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	
+	
+	
+		
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script src="js/hover.js"></script>
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="css/listorient.css">
+		
+		
+	
+</head>
+		
+	
+<body>
+	
+	<div id="tudooo"  ng-controller="OrientadorController as orientadorCtrl" data-role="page" class="jqm-demos" data-quicklinks="true"> 
+	<header></header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
+		
+	
+	<div id="Sairt">
+		
+	<a id="ap" href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+	
+	</div>
+	<div id="parte-esquerda">
+	<div id="white">
+	<h2 id="use" >Coordenação</h2>
+			<img id="mat1" src="assets/images/tools2.png"/>
+			<a id="ap" href="listamaterialnew.html" style="color:black;"><p id="p6">Materiais</p></a>
+	</div>
+	<div id="white1">
+			<img id="mat1" src="assets/images/grades2.png"/>
+			<a id="ap" href="listaavaliadores.html" style="color:black;"><p id="p7">Avaliadores</p></a>
+	</div>
+	<div id="white2">
+			<img id="mat2" src="assets/images/teacher2.png"/>
+			<a id="ap" href="listaorientador.html" style="color:black;"><p id="p8">Orientadores</p></a>
+	</div>
+	<div id="white3">
+			<img id="mat3" src="assets/images/person2.png"/>
+			<a id="ap" href="listavisitantes.html" style="color:black;"><p id="p9">Visitantes</p></a>
+	</div>
+	<div id="white4">
+			<a href="listapatrocinadornew.html">	<img id="mat3" src="assets/images/patrocinadoricon.png" /></a>
+				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p style="color:white" id="p10">Patrocinador</p></a>
+		</div>
+	</div>
+		<div id="tudo" role="main" class="ui-content jqm-content">
+			
+			
+			<div>
+				
+					<input id="idd" data-type="search" ng-model="pesquisa" class="form-control"/>
+					<img id="elemento" style="width:20px; position:absolute; margin-left:930px; margin-top:170px;" src="assets/images/search.png"/>
+				
+			
+			<div id="oii">
+			<ul id="ul-tudo">
+				<li id="oi1" style="text-decoration:none;" ng-repeat="orientador in arrOrientadores| filter:pesquisa" >
+						<div id="miolo-inlne">
+							<div id="goods-direito" class="goods">
+								<span id="info" class="info">
+					            	<div id="index">
+									
+					            		<h1 id="name1" >{{orientador.id}}</h1>
+										<img src="assets/images/menino.jpg"  alt="Picture" id="pic">
+					            	</div>
+									<div id="vaiaia">
+										<h4 id="name">Nome: {{orientador.nome}}</h4>
+										<h4 id="name"> Email: {{orientador.email}}</h4>
+										<h4 id="name"> Cargo: {{orientador.cargo}}</h4>
+										</div>
+								</span>
+							</div>
+							
+						</div>
+						<br/>
+						<hr>
+						<br/>
+						<br/>
+
+				
+				</li>
+					
+			</ul>
+			
+			</div>
+			
+			</div>
+			
+		</div>	
+		
+		
+		
+
+		</div>
+		
+		<p id="foot" >&copy; 2016 FENTEC, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+</body>
+
+</html>
+	

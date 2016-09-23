@@ -1,0 +1,112 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=">
+	
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	<link rel="stylesheet" href="css/orientmob.css"/>
+	
+		<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
+		<script type="text/javascript" src="js/fentec.js"></script>
+		<script type="text/javascript" src="js/orientador.js"></script>
+		<script src="js/jquery/jquery.js"></script>
+		
+		<script src="js/jquery/index.js"></script>
+		<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/jquery/jquery.ui.datepicker.js"></script>
+		<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+	
+</head>
+	<style>
+	
+	</style>
+<body>
+	<div  ng-controller="OrientadorController">
+		<form>
+		<div data-demo-html="true">
+		<form>
+		<div data-role="page" data-quicklinks="true" class="jqm-demos">
+	<div data-role="header">
+		<img style= "height:100px; width:100px; margin-left:120px;" id="logo" src="assets/images/logologin.fw.png"/>
+		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+		
+			
+			<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
+				<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
+					<li data-filtertext="demos" data-icon="home"><a href="#">Home</a></li>
+					<li data-filtertext="introduction" ><a href="#" data-ajax="false">introduction</a></li>
+					<li data-filtertext="buttons" ><a href="#" data-ajax="false">buttons</a></li>
+					<li data-filtertext="form" ><a href="#"data-ajax="false" >Button widget</a></li>
+				</ul>
+			</div>
+	</div>	
+				
+			<div id="miolo">
+	
+		<p id="titulo">Cadastro</p>
+		<form>
+			<div id="campusprimarios">
+			<p>Nome</p>
+			<input name="nome" type="name" placeholder="Nome" ng-model="model.nome"></input>
+			<p>Email</p>
+			<input name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
+			<p>Senha</p>
+			<input name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
+			<p>Confirmar senha</p>
+			<input name="confsenha" type="password" placeholder="Confirmar senha" ></input>
+			<p>Escola</p>
+			<select>
+				<option>Fundação Nokia de Ensino</option>
+				<option>IFAM</option>
+				<option>Fucapi</option>
+				<option>Senai</option>
+			</select>
+			</div>
+			<center><vr/></center>
+			<div id="campussecundarios">
+			<p>Cargo</p>
+			<input name="cargo" type="name" placeholder="Cargo" ng-model="model.cargo"></input>
+			<p>CPF</p>
+			<input name="cpf" type="name" placeholder="CPF" ng-model="model.cpf"></input>
+			<p>Telefone</p>
+			<input name="telefone" placeholder="Tel" ng-model="model.telefone"></input>
+			<p>Endereço</p>
+			<input name="end" type="name" placeholder="Endereço" ng-model="model.endereco"></input>
+			<p>Cidade</p>
+			<select>
+				<option>Manaus</option>
+				<option>Belém</option>
+				<option>São Paulo</option>
+				<option>Rio Branco</option>
+			</select>
+			</div>
+			<button ng-show="updateMode" ng-click="cancel()">Cancelar</button>
+			<button ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+		</form>
+	</div>
+</div>
+		
+		<!--<ul>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="orientador in arrOrientadores">
+				<div>
+					<h4>{{orientador.nome}}</h4>
+					<P>{{orientador.email}}</P>
+					<P>{{orientador.senha}}</P>
+					<P>{{orientador.escola}}</P>
+					<P>{{orientador.cargo}}</P>
+					<P>{{orientador.CPF}}</P>
+					<P>{{orientador.telefone}}</P>
+					<P>{{orientador.endereco}}</P>
+					<P>{{orientador.cidade}}</P>
+					<button ng-click="change(orientador)">Alterar</button>
+					<button ng-click="delete(orientador.id)">Remover</button>
+				</div>
+			</li>
+		</ul> !-->
+	</div>
+
+</body>
+</html>

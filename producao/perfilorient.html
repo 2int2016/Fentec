@@ -1,0 +1,87 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
+	
+</head>
+<body>
+	<header>
+	
+	</header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
+		<div id="desconect">
+			<a id="logout1" href="conta.html">
+			<img id="logout" src="assets/images/logout.png">
+			
+			
+			</a>
+				<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+		</div>
+	
+
+	<div id="planodefundo">
+	<div id="lado-esquerdo">
+		<div id="meuperfil">
+			<a><img src="assets/images/contaicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="dadosorient.html" class="menuopcao" style="margin-left:70px; font-size:20px; font-family:'Segoe UI'; margin-top:60px;">Meu perfil</a>
+		</div>
+		
+		<div id="meuprojeto">
+			<a><img src="assets/images/listaproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="perfilorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Projetos</a>
+		</div>
+		
+		<div id="sugerirescola">
+			<a><img src="assets/images/localizacaoicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="cadastroescola.html" class="menuopcao" style="margin-left:58px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Sugerir escola</a>
+		</div>
+		
+		<div id="contato">
+			<a><img src="assets/images/suporteproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="contateorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
+		</div>
+	</div>
+		<div  ng-controller="ProjetoController" id="miolo">
+			<div id="Projeto"><p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Projetos</p></div>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="projeto in arrProjeto">
+				<div id="divlist">
+				</br>
+				<div id="atributos">
+					<img ng-src="assets/uploads/{{projeto.arquivo}}" style="width:100px; border-radius:200px;">
+					<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
+						<h3 style="color:#4365B9;">{{projeto.nome}}</h3>
+						<h4 style="color:#58585E; font-size:15px;">Escola: {{projeto.escola}}</h4>
+						<h4 style="color:#58585E; font-size:15px;">Estado: {{projeto.estado}}</h4>
+					</div>
+				</div>
+					<!-- <h4>Cidade: {{projeto.cidade}}</h4> -->
+					<div id="butsaltdel">
+					<input type="image" href="alterProjet.html" title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(projeto)"/>
+					
+					<input type="image" ng-click="delete(projeto.id)" src="assets/images/delete-black.png" title="Deletar" id="remover"/>
+					</div>
+					<hr id="hrlist">
+				</div>
+			</li>
+		</ul>
+			<div id="butaoadd">
+			<a href="cadastroprojeto.html" class="btn btn-success">
+				Novo projeto  <span class="glyphicon glyphicon-plus"></span> 
+			</a>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

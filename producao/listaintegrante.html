@@ -1,0 +1,51 @@
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/integrante.js"></script>
+
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery/jquery.ui.datepicker.js"></script>
+	<script src="js/jquery/jquery.mobile.datepicker.js"></script>
+</head>
+		
+	<style>
+	
+
+	</style>
+<body>
+	<div  ng-controller="IntegranteController">
+	<div id="miolo">
+
+	
+		<div>
+			<form class="ui-filterable">
+				<input id="filterBasic-input" data-type="search">
+			</form>
+				</br>
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+			 <li style="text-decoration:none" ng-repeat="Integrante in arr">
+				<div>
+					<a  ng-click="editar(Integrante.id)"><h4>{{Integrante.nome}}</h4></a>
+				</div>
+			</li>
+		</ul>
+		</div>
+		</br>
+			<a href="integrantes.html"><button>ADICIONAR</button></a>
+	</div>
+		</form>
+	
+	
+	</div>
+	</div>
+
+</body>
+</html>
