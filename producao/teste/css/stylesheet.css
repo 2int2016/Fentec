@@ -1,0 +1,86 @@
+body{
+	
+}
+#login{
+	margin-left:65px;
+	margin-top:30px;
+	opacity: 1;
+}
+#geral{
+	width:1250;
+	height:400;
+	background-color:#D9FFE0;
+	margin-left:55px;
+	margin-top:120px;
+	position:absolute;
+
+}
+#a1:hover{
+
+
+}
+#a{
+	position: absolute;
+}
+#senha{
+	width:180;
+	border-top:0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+#email{
+	width:180;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+#bt{
+	width:180;
+	margin-top:30px;
+}
+#geral2{
+	margin-left:900;
+	margin-top:30;
+	height:300px;
+	width:300px;
+	position:absolute;
+	background-color:white;
+	border:solid 1px black;
+}
+
+#head{
+	width:500px;
+	height:200px;
+	background-color: black;
+}
+#logo{
+	position: absolute;
+	margin-left:180px;
+	width:220px;
+	margin-top: 120px;
+}
+#bv{
+	position: absolute;
+	margin-left:;
+	color:#0C85BF;
+	font-size: 40;
+}
+#bv1{
+	position: absolute;
+	margin-left:215;
+	font-size: 40;
+}
+#juncaoDoBv{
+	margin-left:80;
+	position: absolute;
+	margin-top: 40px;
+	width:800;
+}
+#geral3{
+	height:657;
+	width:1366;
+}
+
+
+
+
+
