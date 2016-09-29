@@ -12,18 +12,22 @@
 		$scope.init = function(){
 			$scope.updateMode = false;
 			$scope.read();
-			$scope.model ={};
 		};
 		
 
 		$scope.create = function(){
-			$scope.uploadFile();
 			$http.post('./service/tbvisitantes', $scope.model).success(function(data){
 				
 				if(data==0){
 					alert("email já cadastrado");
 				}
 				else{
+					if(window.innerWidth <= 800 || window.innerHeight > window.innerWidth) 		{
+					window.location = 'listavistantesMob.html'
+				} 
+					else {
+						window.location = 'listavistantes.html'
+					}
 					window.location="cadastroefetuado.html";
 				}
 				
@@ -69,16 +73,31 @@
 			$scope.updateMode = false;
 		};
 		
-
+		
 		$scope.save = function(){
-			if($scope.updateMode){
-				$scope.update();
+			$agora = new Date();
+			$ano=$scope.model.idade.substr(0,4);
+			$mes=$scope.model.idade.substr(5,2);
+			$dia=$scope.model.idade.substr(8,10);
+			
+				if( $ano>= $agora.getFullYear () || $mes > '12'  || $dia > '31'   ){
+					alert("data invalida");
+				}
 				
-			}
-			else{
-				$scope.create();
-				
-			}
+				else{
+					
+					if($scope.updateMode){
+						
+						$scope.update();
+						
+					}
+					else{
+						
+					$scope.model.idade = $agora.getFullYear () - $ano;
+						$scope.create();
+						
+					}
+				}
 		};
 		
 		
@@ -90,39 +109,7 @@
 			window.location="visitanteEditeMob.html?id="+$id;
 		};
 		
-		$("fileUpload").on('change' , function (){
-			if (typeof (FileReader) != "undefined"){
-				var image_holder = $("#image_holder");
-				image_holder.empty();
-				
-				var reader = new FileReader();
-				read.onload = function (e) {
-					$("<img />" , {
-						"src": e.target.result,
-						"class": "thumb-image"
-					}).appendTo(image_holder);
-				}
-				image_holder.show();
-				$scope.model.arquivo = $(this)[0].files[0].name;
-				reader.readAsDataURL($(this)[0].files[0]);
-			}else{
-				alert("Este navegador n?o suporta FileReader");
-			}
-		});	
-		$scope.uploadFile = function(){
-			var fd = new FormData();
-			$scope.files = document.getElementById("fileUpload");
-			
-			fd.append('file', $scope.files.files[0]);
-			
-			$http.post('./upload.php',fd,
-			{
-				transformRequest:angular.identify,
-				headers:{'Content-Type':undefined}
-			})
-			.success(function(d){
-		})
-		};
+	
 		
 		
 		$scope.init();

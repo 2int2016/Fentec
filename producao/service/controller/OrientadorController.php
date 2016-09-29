@@ -72,11 +72,11 @@ class OrientadorController{
 		$obj['email'] = mb_check_encoding($value->email, 'UTF-8') ? $value->email : utf8_encode($value->email);
 		$obj['senha'] = mb_check_encoding($value->senha, 'UTF-8') ? $value->senha : utf8_encode($value->senha);
 		$obj['escola'] = mb_check_encoding($value->escola, 'UTF-8') ? $value->escola : utf8_encode($value->escola);
-		$obj['tamanho'] = mb_check_encoding($value->cpf, 'UTF-8') ? $value->tamanho : utf8_encode($value->tamanho);
+		$obj['tamanho'] = mb_check_encoding($value->tamanho, 'UTF-8') ? $value->tamanho : utf8_encode($value->tamanho);
 		$obj['cargo'] = mb_check_encoding($value->cargo, 'UTF-8') ? $value->cargo : utf8_encode($value->cargo);
-		$obj['cpf'] = mb_check_encoding($value->cpf, 'UTF-8') ? $value->cpf : utf8_encode($value->cpf);
 		$obj['telefone'] = mb_check_encoding($value->telefone, 'UTF-8') ? $value->telefone : utf8_encode($value->telefone);
 		$obj['endereco'] = mb_check_encoding($value->endereco, 'UTF-8') ? $value->endereco : utf8_encode($value->endereco);
+		$obj['sexo'] = mb_check_encoding($value->sexo, 'UTF-8') ? $value->sexo : utf8_encode($value->sexo);
 		$obj['cidade'] = mb_check_encoding($value->cidade, 'UTF-8') ? $value->cidade : utf8_encode($value->cidade);
 		$obj['estado'] = mb_check_encoding($value->estado, 'UTF-8') ? $value->estado : utf8_encode($value->estado);
 		return $obj;

@@ -32,10 +32,11 @@
 		};
 
 		$scope.create = function(){
-			$scope.uploadFile();
+			
 			$http.post('./service/tbcadastroprojetos', $scope.model).success(function(data){
 				//$scope.read();
-			window.location="perfilorient.html";	
+				$scope.uploadFile();
+				
 			});	
 		};
 
@@ -144,6 +145,7 @@
 				headers:{'Content-Type':undefined}
 			})
 			.success(function(d){
+				window.location="perfilorient.html";
 		})
 		};
 

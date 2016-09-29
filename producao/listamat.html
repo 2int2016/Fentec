@@ -1,0 +1,105 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/material.js"></script>
+	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/escola.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
+	
+</head>
+<body>
+	<header>
+	
+	</header>
+	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
+		<div id="desconect">
+			<a id="logout1" href="conta.html">
+			<img id="logout" src="assets/images/logout.png">
+			
+			
+			</a>
+				<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+		</div>
+	
+
+	<div id="planodefundo">
+	<div id="lado-esquerdo">
+		<div id="meuperfil">
+			<a><img src="assets/images/tools2.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
+			<a href="dadosorient.html" class="menuopcao" style="margin-left:70px; font-size:20px; font-family:'Segoe UI'; margin-top:60px;">Cadastro</a>
+		</div>
+		
+		<div id="tuts" style="background-color:#036; margin-left:110px; margin-top:115px; width:240px; height:auto; position:absolute; border:0px solid black; border-radius:5px;">
+			<h1 style="margin-left:60px; color:white;">Filtrar</h1>
+			<input id="ipt7" style="position:absolute; margin-top:-45px; margin-left:55px;" type="checkbox" class="form-control" >
+			<div id="titv" style="background-color:#036; width:240px; height:auto; position:absolute; border:0px solid black; border-radius:5px;">
+				<input data-type="search"  type="text" ng-model="pesqnome" style="width:205px; margin-top:23px; margin-left:20px; position:absolute;" class="form-control" placeholder="Alterar Nome">
+				<input data-type="search"  type="text" ng-model="pesqmarca" style="width:205px; margin-top:63px; margin-left:20px; position:absolute;" class="form-control" placeholder="Alterar Marca">
+				<select data-type="search"  placeholder="Alterar Tipo" class="form-control"  style="width:205px; margin-top:103px; margin-left:20px; position:absolute;" id="ipt3" ng-model="pesqtipo">
+					<option>Mecanico</option>
+					<option>Logico</option>
+				</select>
+				<textarea data-type="search"  id="ipt4" class="form-control" style="position:absolute; height:50px;	resize:none; margin-left:20px; width:205px; margin-top:144px;" placeholder="Alterar Descrição"  ng-model="pesqdescricao"></textarea>
+				<input data-type="search"  type="text" data-thousands="."  data-decimal="," data-prefix="R$ " onkeypress="return SomenteNumero(event)" maxlength="20" class="form-control" style="position:absolute; margin-left:20px; width:205px; margin-top:200px;" placeholder="Alterar Preço" ng-model="pesqpreco"/>
+				<input data-type="search"  type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:205px; margin-left:20px; margin-top:240px; position:absolute;" placeholder="Alterar Dia da ida" ng-model="pesqida"></input>
+				<input data-type="search"  type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:205px; margin-left:20px; margin-top:280px; position:absolute;" placeholder="Alterar Dia de retorno " ng-model="pesqretorno"></input>
+			</div>
+		</div>
+	</div>
+		<div  ng-controller="MatController" id="miolo">
+			<div id="Projeto">
+				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Materiais</p>
+			</div>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="material in arr">
+				<div id="divlist">
+				</br>
+				<div id="atributos">
+					<img ng-src="assets/uploads/{{material.arquivo}}" style="width:100px; border-radius:200px;">
+					<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
+						<h3 style="color:#4365B9;">{{material.nome}}</h3>
+						<h4 style="color:#58585E; font-size:15px;">Descrição: {{material.descricao}}</h4>
+					</div>
+				</div>
+					<!-- <h4>Cidade: {{projeto.cidade}}</h4> -->
+					<div id="butsaltdel">
+					<input type="image" href="altermat.html" title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(material)"/>
+					
+					<input type="image" ng-click="delete(material.id)" src="assets/images/delete-black.png" title="Deletar" id="remover"/>
+					</div>
+					<hr id="hrlist">
+				</div>
+			</li>
+		</ul>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function () {
+ $('#titv').fadeOut('slow');
+    $('#ipt7').change(function () {
+        if (!this.checked) 
+        //  ^
+           $('#titv').fadeOut('slow');
+		   
+        else 
+            $('#titv').fadeIn('slow');
+            $('#tuts').height('420px');
+			
+			
+			
+			  
+    });
+});
+
+</script>
+</html>

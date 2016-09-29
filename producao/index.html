@@ -84,7 +84,7 @@
 		color:white;
 		}
 		#imput11{
-	
+			width:250px
 		}
 		#imput22{
 	
@@ -98,13 +98,16 @@
 			margin-top:80px;
 		}
 		#btn{
-			margin-left: 210px;
+			margin-left: 280px;
 			position: absolute;
-			margin-top: -32px;
-			width:80px ;
+			margin-top: -34px;
+			width:79px ;
 			height:35px;
 
 		}	
+		#salvar{
+			margin-top:-3px;
+		}
 						
 	
 	</style>
@@ -129,7 +132,8 @@
 				<a href="#projeto" class="option" id="buttonprojetos">Projetos</span></a>
 				<a href="#midia" class="option" id="buttonmidia">Mídia</span></a>
 				<a href="#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
-				<a href="conta.html" class="option" id="buttonmyacount"> Entrar</span></a>
+				<a href="conta.html" class="option" id="buttonmyacount"> 
+				Inscreva-se</span></a>
 			</ul>
 		</nav>
 	</header>
@@ -176,8 +180,8 @@
 					<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
 					<script type="text/javascript" src="js/libs/jquery-1.12.0.js"></script>
 					
-						<h1 id="dia">Dia 3</h1>
-						<h3 id="de"> DE DEZEMBRO</h3>
+						<h1 id="dia">Dia 29</h1>
+						<h3 id="de"> DE OUTUBRO</h3>
 		<div id="cadastrovisi" ng-controller="NavController">
 			<form>
 		
@@ -185,18 +189,18 @@
 			<input  id="imput11" class="form-control" placeholder="email" type="email" ng-model="model.email" required/>
 							
 			
-			<p id="imput2" ">Data de Nascimento</p>
-				<input  id="campoData"   placeholder="2000-12-31" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.idade" required/>
+			<p id="imput2" >Data de Nascimento</p>
+				<input  id="campoData"  minlength="10" placeholder="2000-12-31" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.idade" required/>
 			
 			
 			<p id="imput3">Escola ou Local de trabalho</p>
-		<input  id="imput33" class="form-control" placeholder="instituicao " ng-model="model.instituicao" required/>
+		<input  id="imput33" class="form-control" placeholder="instituição " ng-model="model.instituicao" required/>
 			
 			
 
 
 			
-			<button  id="btn" ng-click="save()" class="btn btn-primary "><a href="cadastroefetuado.html">{{updateMode?'Salvar alterações': 'Salvar'}}</a></button>
+			<button  id="btn" ng-click="save()" class="btn btn-primary "><p id="salvar">{{updateMode?'Salvar alterações': 'Salvar'}}</p></button>
 		</form>
 	</div>
 						<br>
@@ -205,7 +209,7 @@
 						<br>
 						<iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8487199482997!2d-59.98144888598722!3d-3.13464139771749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c04bc00000001%3A0xa7004a8c3bbef1d6!2zRnVuZGHDp8OjbyBOb2tpYQ!5e0!3m2!1spt-BR!2sbr!4v1466303207656" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 						<h3 id="local">Local: Sede da Fundação Matias Machline</h3>
-						<h3 id="hora">Horário: 9h às 18h</h3>
+						<h3 id="hora">Horário: 8h às 15h</h3>
 					</div>
 				</div>
 			<a name="projeto" ></a>
@@ -243,7 +247,7 @@
 												<a href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2>Metas globais</a>
 											</li> 
 											<li>
-												<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Turma</a>
+												<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Turmas</a>
 											</li> 
 										</ul> 
 								</li> 
@@ -596,7 +600,7 @@
 											    <div class="item active">
 											        <div class="row">
 														<div class="col-sm-3" ng-repeat="patrocinador in arr">
-															<a href=""><img  ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" style="width:250px; height:250px;"></a>
+															<a href="{{patrocinador.url}}"><img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" style="width:250px; height:250px;"></a>
 											           	</div>
 													</div>
 												</div>

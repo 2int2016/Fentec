@@ -1,0 +1,69 @@
+<html ng-app="fentec">
+<head>
+	<title>Portal Fentec</title>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=">
+
+	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+
+	<script src="js/jquery/jquery.js"></script>
+	<script src="js/jquery/index.js"></script>
+</head>
+	<style>
+		#miolo{
+			font-family:'Segoe UI';
+			background-image:url('assets/images/abstract-gradient-background-vector.jpg');
+		};
+
+	</style>
+<body>
+	
+	<div  id="oi" ng-controller="MatController">
+	<div id="miolo">
+	<form>
+	
+		<div id="miolo">
+		
+			<form class="ui-filterable">
+				<input id="filterBasic-input" data-type="search">
+			</form>
+			
+		
+			<input type="text" ng-model="model.email"  placeholder="alterar email">
+			<input type="text"  ng-model="model.instituicao"  placeholder="alterar instituição">
+			<button  ng-click="save()"  >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
+			
+					
+			</br>
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">		
+			 <li style="text-decoration:none" ng-repeat="Material in arr">
+			
+			<div>
+				
+			
+				<p>Email:</p>
+				<h4>{{material.email}}</h4>
+				<p>Instituição:</p>
+				<h4>{{material.instituicao}}</h4>
+				<button ng-click="change(material)">Alterar</button>
+				<button ng-click="delete(material.id)">Remover</button>
+			</div>
+			</li>
+			</ul>
+		</div>
+				</br>
+				<a href="cadastrovisitantes.html"><button>ADICIONAR</button></a>
+	</div>
+	</form>
+	
+	
+	</div>
+	</div>
+
+</body>
+</html>

@@ -89,6 +89,13 @@ footer{
 	font-size:22;
 	
 }
+#Projeto>*{
+	display:inline-block;
+}
+#addbottom:hover{
+	opacity:0.8;
+	transition:all 0.8s ease;
+}
 #adicionar{
 	background-color:white;
 	margin-top:100px;
@@ -313,6 +320,9 @@ textarea{
 	display:inline-block;
 }
 #atributos>*{
+	display:inline-block;
+}
+#options>*{
 	display:inline-block;
 }
 

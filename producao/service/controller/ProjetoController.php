@@ -49,6 +49,10 @@ class ProjetoController{
 		$obj['datainicio'] = mb_check_encoding($value->datainicio, 'UTF-8') ? $value->datainicio : utf8_encode($value->datainicio);
 		$obj['datafinal'] = mb_check_encoding($value->datafinal, 'UTF-8') ? $value->datafinal : utf8_encode($value->datafinal);
 		$obj['arquivo'] = mb_check_encoding($value->arquivo, 'UTF-8') ? $value->arquivo : utf8_encode($value->arquivo);
+		obj['problema'] = mb_check_encoding($value->problema, 'UTF-8') ? $value->problema : utf8_encode($value->problema);
+		obj['hipotese'] = mb_check_encoding($value->hipotese, 'UTF-8') ? $value->hipotese : utf8_encode($value->hipotese);
+		obj['descricao'] = mb_check_encoding($value->descricao, 'UTF-8') ? $value->descricao : utf8_encode($value->descricao);
+		obj['arquivo'] = mb_check_encoding($value->arquivo, 'UTF-8') ? $value->arquivo : utf8_encode($value->arquivo);
 
 
 		return $obj;

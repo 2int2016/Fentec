@@ -45,6 +45,7 @@ class PatrocinadorController{
 		$obj['estado'] = mb_check_encoding($value->estado, 'UTF-8') ? $value->estado : utf8_encode($value->estado);
 		$obj['cidade'] = mb_check_encoding($value->cidade, 'UTF-8') ? $value->cidade : utf8_encode($value->cidade);
 		$obj['caminhoimagem'] = mb_check_encoding($value->caminhoimagem, 'UTF-8') ? $value->caminhoimagem : utf8_encode($value->caminhoimagem);
+		$obj['url'] = mb_check_encoding($value->url, 'UTF-8') ? $value->url : utf8_encode($value->url);
 		
 		return $obj;
 	}
