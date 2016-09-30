@@ -78,6 +78,8 @@
 			<input  style="background:#FCF7F7 none repeat scroll 0% ;" name="confsenha" type="password" placeholder="Confirmar senha" ></input>
 			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>País</h4>
 			<input style="background:#FCF7F7 none repeat scroll 0% ;" name="pais" placeholder="País" ng-model="model.pais"></input>
+			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>URL</h4>
+			<input style="background:#FCF7F7 none repeat scroll 0% ;" name="url" placeholder="www.exemplo.com" ng-model="model.url"></input>
 			<h4 id="h"><img style= "height:10px; width:10px; margin-right:3px;" id="seta" src="assets/images/seta.png"/>Estado</h4>
 			<select id="sestado" ng-model="model.estado" ng-change="setcidades(document.getElementById('sestado').value)">
 				<option ng-repeat="estado in arrestados" value="{{estado}}">{{estado.nome}}</option>

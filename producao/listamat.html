@@ -38,8 +38,8 @@
 		</div>
 		
 		<div id="tuts" style="background-color:#036; margin-left:110px; margin-top:115px; width:240px; height:auto; position:absolute; border:0px solid black; border-radius:5px;">
-			<h1 style="margin-left:60px; color:white;">Filtrar</h1>
-			<input id="ipt7" style="position:absolute; margin-top:-45px; margin-left:55px;" type="checkbox" class="form-control" >
+			<h1 style="margin-top:10px; font-size:25px; margin-left:75px; color:white;">Filtrar</h1>
+			<input id="ipt7" style="position:absolute; margin-top:-37px; margin-left:150px; width:2px;" type="checkbox" class="form-control" >
 			<div id="titv" style="background-color:#036; width:240px; height:auto; position:absolute; border:0px solid black; border-radius:5px;">
 				<input data-type="search"  type="text" ng-model="pesqnome" style="width:205px; margin-top:23px; margin-left:20px; position:absolute;" class="form-control" placeholder="Alterar Nome">
 				<input data-type="search"  type="text" ng-model="pesqmarca" style="width:205px; margin-top:63px; margin-left:20px; position:absolute;" class="form-control" placeholder="Alterar Marca">
@@ -88,16 +88,11 @@ $(document).ready(function () {
  $('#titv').fadeOut('slow');
     $('#ipt7').change(function () {
         if (!this.checked) 
-        //  ^
            $('#titv').fadeOut('slow');
 		   
         else 
             $('#titv').fadeIn('slow');
-            $('#tuts').height('420px');
-			
-			
-			
-			  
+            $('#tuts').height('400px');  
     });
 });
 

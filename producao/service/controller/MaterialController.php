@@ -57,15 +57,16 @@ class MaterialController{
 		$obj['marca'] = mb_check_encoding($value->marca, 'UTF-8') ? $value->marca : utf8_encode($value->marca);
 		$obj['posse'] = mb_check_encoding($value->posse, 'UTF-8') ? $value->posse : utf8_encode($value->posse);
 		$obj['preco'] = mb_check_encoding($value->preco, 'UTF-8') ? $value->preco : utf8_encode($value->preco);
-		$obj['tipo'] = mb_check_encoding($value->tipo, 'UTF-8') ? $value->tipo : utf8_encode($value->tipo);
 		$obj['numerodoativo'] = mb_check_encoding($value->numerodoativo, 'UTF-8') ? $value->numerodoativo : utf8_encode($value->numerodoativo);
-
+		$obj['projeto'] = mb_check_encoding($value->projeto, 'UTF-8') ? $value->projeto : utf8_encode($value->projeto);
 		$obj['arquivo'] = mb_check_encoding($value->arquivo, 'UTF-8') ? $value->arquivo : utf8_encode($value->arquivo);
 		if(isset($value->ida))
 			$obj['ida'] = $value->ida;
 		
 		if(isset($value->retorno))
 			$obj['retorno'] = $value->retorno;
+		
+		
 		
 		
 		return $obj;

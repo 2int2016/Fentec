@@ -83,6 +83,7 @@
 		};
 
 		$scope.save = function(){
+			$scope.model.projeto = document.getElementById("ipt9").value;
 			if($scope.updateMode){
 				$scope.update();
 				

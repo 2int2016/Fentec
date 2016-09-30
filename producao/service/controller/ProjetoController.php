@@ -49,11 +49,15 @@ class ProjetoController{
 		$obj['datainicio'] = mb_check_encoding($value->datainicio, 'UTF-8') ? $value->datainicio : utf8_encode($value->datainicio);
 		$obj['datafinal'] = mb_check_encoding($value->datafinal, 'UTF-8') ? $value->datafinal : utf8_encode($value->datafinal);
 		$obj['arquivo'] = mb_check_encoding($value->arquivo, 'UTF-8') ? $value->arquivo : utf8_encode($value->arquivo);
-		obj['problema'] = mb_check_encoding($value->problema, 'UTF-8') ? $value->problema : utf8_encode($value->problema);
-		obj['hipotese'] = mb_check_encoding($value->hipotese, 'UTF-8') ? $value->hipotese : utf8_encode($value->hipotese);
-		obj['descricao'] = mb_check_encoding($value->descricao, 'UTF-8') ? $value->descricao : utf8_encode($value->descricao);
-		obj['arquivo'] = mb_check_encoding($value->arquivo, 'UTF-8') ? $value->arquivo : utf8_encode($value->arquivo);
-
+		$obj['problema'] = mb_check_encoding($value->problema, 'UTF-8') ? $value->problema : utf8_encode($value->problema);
+		$obj['hipotese'] = mb_check_encoding($value->hipotese, 'UTF-8') ? $value->hipotese : utf8_encode($value->hipotese);
+		$obj['descricao'] = mb_check_encoding($value->descricao, 'UTF-8') ? $value->descricao : utf8_encode($value->descricao);
+		$obj['bibliografia'] = mb_check_encoding($value->bibliografia, 'UTF-8') ? $value->bibliografia : utf8_encode($value->bibliografia);
+		$obj['resumo'] = mb_check_encoding($value->resumo, 'UTF-8') ? $value->resumo : utf8_encode($value->resumo);
+		$obj['primeirapalavra'] = mb_check_encoding($value->primeirapalavra, 'UTF-8') ? $value->primeirapalavra : utf8_encode($value->primeirapalavra);
+		$obj['segundapalavra'] = mb_check_encoding($value->segundapalavra, 'UTF-8') ? $value->segundapalavra : utf8_encode($value->segundapalavra);
+		$obj['terceirapalavra'] = mb_check_encoding($value->terceirapalavra, 'UTF-8') ? $value->terceirapalavra : utf8_encode($value->terceirapalavra);
+		$obj['relatorio'] = mb_check_encoding($value->relatorio, 'UTF-8') ? $value->relatorio : utf8_encode($value->relatorio);
 
 		return $obj;
 	}

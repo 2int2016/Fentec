@@ -55,7 +55,7 @@
 		#campussecundarios{
 			margin-left: 400px;
 			position:absolute;
-			margin-top:-410px;
+			margin-top:-475px;
 						
 		}
 		vr{
@@ -109,11 +109,10 @@
 		}
 		input{
 			width:200px;
-			height:30px;
+			height:27px;
 			border-radius:2px;
 			
 		}
-		
 		
 		#foto{
 			
@@ -484,10 +483,7 @@
 		<div id="quasetudo">
 		
 			<div id="campusprimarios">
-			<div id="wrapper">
-			<input id="fileUpload" type="file"/><br/>
-			<!--<div id="image-holder"></div>-->
-			</div>
+			
 			<p>Nome</p>
 			<input name="nome" type="name" placeholder="Ex: joao da silva neves" ng-model="model.nome"></input>
 			<p>Email</p>
@@ -498,9 +494,14 @@
 			<input name="cnpj" maxlength="15" onkeypress=" return SomenteNumero(event)" type="name" placeholder="Ex:123456789012345" ng-model="model.cnpj"></input>
 			<p>CEP</p>
 			<input name="cep" id="cep" size="20" maxlength="9" onkeypress="maskara(this); return SomenteNumero(event)" type="text" placeholder="Ex: 12345-678" ng-model="model.cep"></input>
+			<p>Foto</p>
+			<input id="fileUpload" type="file"/><br/>
+
 			</div>
 			<center><vr/></center>
 			<div id="campussecundarios">
+			<p>URL<p>
+			<input name="url" type="name" placeholder="www.exemplo.com" ng-model="model.url"></input>
 			<p>Telefone</p>
 			<input name="telefone" id="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone"></input>
 			<p>Telefone(2)</p>
@@ -515,6 +516,7 @@
 			<select ng-model="model.cidade">
 				<option ng-repeat="cidade in arrcidades">{{cidade}}</option>
 			</select>
+			
 			
 			<input id="salvar" type="submit" ng-value="{{updateMode?'Salvar alterações': 'Salvar'}}" ng-click="save()" />
 			</div>

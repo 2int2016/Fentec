@@ -19,7 +19,7 @@
 			width:580px;
 			border-radius:5px;
 			position: absolute;
-			height: 711px;
+			height: 772px;
 			margin-left: 310px;
 			box-shadow: 0px 0px 0.7px grey;
 			background-color:#DBDBEA;
@@ -88,18 +88,18 @@
 		}
 		header{
 			width:100%;
-			height:98px;
+			height: 110px;
 			background-color: #036;
 			margin-left: -8px;
 			position:absolute;
-			margin-top: -20px;
+			margin-top: -43px;
 		}
 		#logo{
 			margin-left:;
 			position:absolute;
 			width:150;
 			height:150;
-			margin-top: -17px;
+			margin-top: -45px;
 		}
 		#cadastro{
 			margin-left:320px;
@@ -446,12 +446,13 @@
 			}
 			#escola{
 				margin-left: 42px;
-				margin-top:11px;
+				margin-top: 133px;
+				position:absolute;
 			
 			}
 			#escola1{
 				margin-left: 42px;
-				margin-top: -11px;
+				margin-top: 160px;
 				position:absolute;
 				width: 500px;
 				height: 30px;
@@ -468,50 +469,52 @@
 				border:1px solid grey; 
 				width:234px;
 				height:30px;
-				margin-top: 50px;
+				margin-top: 222px;
 				position:absolute;
 			}
 			#size{
 				margin-left: 42px;
-				margin-top:43px;
+				margin-top: 200px;
+				position:absolute;
 			
 			}
 			#size1{
 				margin-left: 42px;
-				margin-top:-11px;
+				margin-top: 222px;
 				border-radius: 6px;
-				border:1px solid grey; 
+				border:1px solid grey;
+				height: 30px;				
 			}
 			#cargo{
 				
-				margin-top:25px;
+				margin-top: 196px;
 				position:absolute;
-				margin-left: 307;
+				margin-left: 308px;
 				
 			}
 			#ad1{
 				border-radius: 6px;
 				border:1px solid grey; 
-				margin-top: 103px;
+				margin-top: 63px;
 				position:absolute;
 				width:500px;
 				height:30px;
-				margin-left:-46px;
+				margin-left: -500px;
 			}
 			#ad{
-				margin-top: 70px;
+				margin-top: 10px;
 				position:absolute;
 				margin-left: 42px;
 				
 			}
 			#city{
-				margin-top: 10px;
+				margin-top: 70px;
 				position:absolute;
 				margin-left: 306px;
 			}
 			#city1{
-				margin-top: 47px;
-				margin-left: 221px;
+				margin-top: 130px;
+				margin-left: -236px;
 				border-radius: 6px;
 				border:1px solid grey; 
 				position:absolute;
@@ -519,26 +522,25 @@
 				height: 30px;
 			}
 			#sexo{
-				   margin-top: 130px;
-				    position: absolute;
-				   margin-left: 42px;
+				 margin-top: -205px;
+				 position: absolute;
+				 margin-left: 415px;
 				    
 }
 			#sexo1{
 				border-radius: 6px;
-				border:1px solid grey; 
-				position:absolute;
-				width: 50px;
-				margin-left: -45px;
-				margin-top: 165px;
-				height: 25px;
-			
+				border: 1px solid #808080;
+				position: absolute;
+				width: 128px;
+				margin-left: 412px;
+				margin-top: -171px;
+				height: 28px;
 			
 			}
 			#telefone{
-				   margin-top: 130px;
+					margin-top: 8px;
 				    position: absolute;
-				    margin-left: 307px;
+					margin-left: 44px;
 				    position:absolute;
 			
 			}
@@ -547,9 +549,10 @@
 				height: 30px;
 				border-radius: 6px;
 				border: 1px solid #808080;
-				margin-left: 221px;
-				margin-top: 165px;
+				margin-left: -46px;
 				position:absolute;
+				margin-top: 284px;
+				
 			
 			
 			}
@@ -564,7 +567,7 @@
 				    margin-bottom: 0px;
 				    font-size: 18px;
 				    border: 2px solid #036;
-				    margin-top: 200px;
+					margin-top: 109px;
 				    margin-left: 195px;
 			
 			
@@ -577,13 +580,13 @@
 			
 			}
 			#am{
-				margin-top:10px;
+				margin-top: 70px;
 				position:absolute;
-				margin-left: 40px;
+				margin-left: 43px;
 			}
 			#am1{
-				margin-top: 47px;
-				margin-left: -44px;
+				margin-top: 130px;
+				margin-left: -500px;
 				border-radius: 6px;
 				border:1px solid grey; 
 				position:absolute;
@@ -602,9 +605,61 @@
 				    margin-left: 1230px;
 				    width: 30px;
 				    position: absolute;
-				   margin-top: 16px;
-}
+					margin-top: 16px;
+				}
+				#imput2{
+					color:black;
+					margin-top: -11px;
+					margin-left: 40px;
+					
+					
+			}	
+			#campoData{
+				width: 130px;
+				height: 30px;
+				border-radius: 6px;
+				border: 1px solid #808080;
+				margin-left: 42px;
+			}
+			#telefone2{
+					margin-top: 286px;
+					position: absolute;
+					margin-left: 219px;
+					width: 234px;
+					height: 30px;
+					border-radius: 6px;
+					border: 1px solid #808080;
+				   
+			
+			}
+			#telefone3{
+				margin-left: 309px;
+				margin-top: 8px;
+				position: absolute;
+			}
 	</style>
+	<script>
+			function mascaraData( campo, e )
+{
+	var kC = (document.all) ? event.keyCode : e.keyCode;
+	var data = campo.value;
+	
+	if( kC!=8 && kC!=46 )
+	{
+		if( data.length==4 )
+		{
+			campo.value = data += '-';
+		}
+		else if( data.length==7 )
+		{
+			campo.value = data += '-';
+		}
+		else
+			campo.value = data;
+	}
+}
+
+ 	</script>
 </head>
 		
 <body>
@@ -625,12 +680,28 @@
 		<form>		
 				<p id="nome1">Nome</p>
 				<input id="nome" name="nome" type="name" placeholder="Nome" ng-model="model.nome"></input>
+				<br>
+				<br>
+				<p id="imput2" >Data de Nascimento</p>
+				<input  id="campoData"  minlength="10" placeholder="2000-12-31" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.data" required/>
+				<br>
 				<p id="email1">Email</p>
 			<input id="email" name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>
 			<p id="senha1">Senha</p>
 			<input id="senha" name="senha" type="password" placeholder="Senha"  ng-model="model.senha"></input>
 			<p id="senha11">Confirmar senha</p>
 			<input id="senha2" name="confsenha" type="password" placeholder="Confirmar senha" ></input>
+			<p id="ad">Endereço</p>
+			<input  id="ad1" name="end"  placeholder="Endereço" ng-model="model.endereco"></input>
+			<p id="city">Cidade</p>
+			<select id="city1" ng-model="model.cidade">
+				<option ng-repeat="cidade in arrcidades">{{cidade.cidades}}</option>
+			</select>
+			<p id="am">Estado</p>
+			<select id="am1" ng-model="model.estado" ng-change="setcidades(model.estado)">
+				<option ng-repeat="estado in arrestados" value="{{estado.nome}}">{{estado.nome}}</option>
+			</select>
+			<br>
 			<p id="escola">Escola</p>
 			<select id="escola1" ng-controller="escolaController as escolaCtrl" ng-model="orientadorCtrl.model.idescola">
 				<option ng-value="escola.id" ng-repeat="escola in arrEscolas">
@@ -639,6 +710,11 @@
 			</select>
 			<p id="cargo">Cargo</p>
 			<input id="cargo1" name="cargo" placeholder="Cargo" ng-model="model.cargo"></input>
+			<p id="sexo">Sexo</p>
+			<select id="sexo1"  ng-model="model.sexo">
+				<option>Masculino</option>
+				<option>Femenino</option>
+			</select>
 			<p id="size">Tamanho da camisa</p>
 			<select id="size1" ng-model= "model.tamanho">
 				<option>PP</option>
@@ -646,29 +722,14 @@
 				<option>M</option>
 				<option>G</option>
 				<option>GG</option>
-			</select>	
-			<p id="city">Cidade</p>
-			<select id="city1" ng-model="model.cidade">
-				<option ng-repeat="cidade in arrcidades">{{cidade}}</option>
 			</select>
-			<p id="am">Estado</p>
-			<select id="am1" ng-model="model.estado" ng-change="setcidades(model.estado)">
-				<option ng-repeat="estado in arrestados" value="{{estado.nome}}">{{estado.nome}}</option>
-			</select>
-			<p id="ad">Endereço</p>
-			<input  id="ad1" name="end"  placeholder="Endereço" ng-model="model.endereco"></input>
-			<p id="sexo">Sexo</p>
-			<select id="sexo1"  ng-model="model.sexo">
-				<option>M</option>
-				<option>F</option>
-			</select>
-			<p id="telefone">Telefone</p>
+				<p id="telefone">Telefone</p>
 			<input  id="telefone1" name="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone"></input>
+			<p id="telefone3">Telefone 2</p>
+			<input  id="telefone2" name="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone2"></input>
 			
 		</div>
-		
-			<br>
-		</form>	
+			</form>	
 			<button  id="save" ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
 			</div>
 
@@ -683,7 +744,6 @@
 
 			
 			
-
 
 
 

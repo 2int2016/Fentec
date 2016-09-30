@@ -59,30 +59,30 @@
 			</div>
 			<form>
 				<div  id="campusprimarios">
-					<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Questão ou Problema identificado</p>
-					<textarea ng-model="model.problema" style="width:540px; margin-left:20px; resize:none; height:100px;" name="problema"  placeholder="Problema"></textarea>
+					<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Resumo</p>
+					<textarea ng-model="model.resumo" style="width:540px; margin-left:20px; resize:none; height:100px;" name="resumo"  placeholder="Resumo"></textarea>
 				</div>
 				</br>
 				
-					<div id="campusprimarios">
-						<p id="idest" style=" font-family:'Segoe UI'; margin-left:20px;">Hipótese</p>
-						<textarea ng-model="model.hipotese" style="width:540px; margin-left:20px; resize:none; height:100px;" name="hipotese"  placeholder="Hipótese"></textarea>
+					<div id="campusprimarios"  style=">*display:inline-block;">
+						<p id="idest" style=" font-family:'Segoe UI'; margin-left:20px;">Palavra chave referente ao projeto</p>
+						<input ng-model="model.primeirapalavra" style="width:540px; margin-left:20px;"" name="primeirapalavra" type="name" placeholder="Palavra1" ></input>
 					</div>
 				</br>
 				<div id="campusprimarios">
 					<div id="divcat">
-					<p id="categoria" style=" font-family:'Segoe UI';">Descrição</p>
-					<textarea ng-model="model.descricao" style="width:540px;resize:none; height:100px;" name="descricao"  placeholder="Descrição"></textarea>
+					<p id="categoria" style=" font-family:'Segoe UI';">Palavra chave referente ao projeto</p>
+					<input ng-model="model.terceirapalavra" style="width:540px;"" name="terceirapalavra" type="name" placeholder="Palavra2" ></input>
 					</div>
 	
 				</div>
 				</br>
 			<div id="campusprimarios">
-			<p id="escolap" style=" font-family:'Segoe UI'; margin-left:20px;">Bibliografia</p>
-				<textarea ng-model="model.bibliografia" style="width:540px; margin-left:20px; resize:none; height:100px;" name="bibliografia"  placeholder="Bibliografia"></textarea>
+			<p id="escolap" style=" font-family:'Segoe UI'; margin-left:20px;">Palavra chave referente ao projeto</p>
+				<input ng-model="model.segundapalavra" style="width:540px; margin-left:20px;"" name="segundapalavra" type="name" placeholder="Palavra2" ></input>
 			</div>
 			<div id="savecancel">
-				<button id="salvar" ng-click="save()" window.location="resumoprojeto.html">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
+				<button id="salvar" ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
 			</div>
 			</form>
 		</div>

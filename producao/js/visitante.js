@@ -28,7 +28,8 @@
 					else {
 						window.location = 'listavistantes.html'
 					}
-					window.location="cadastroefetuado.html";
+					window.location="cadastroefetuado.html?email="+data.email;
+
 				}
 				
 			});	

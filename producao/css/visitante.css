@@ -62,13 +62,14 @@ font-size:14;
 #oii{
 	margin-left:480px;
 	text-decoration:none;
-	background-color:white;
+	background-color:#DBDBEA;
 	width:500px;
 	height:auto;
-	border-radius:10px;
+	
+	
 	border:1px solid grey;
 	margin-bottom:30px;
-	margin-top:207px;
+	margin-top:200px;
 	position: absolute;
 	
 	
@@ -78,7 +79,7 @@ font-size:14;
 	list-style:none;
 }
 #oi1{
-	
+	background-color:#DBDBEA;
 	text-decoration:none;
 }
 #volt{
@@ -205,9 +206,11 @@ header{
 		}
 		#ul-tudo>*{
 			list-style:none;
+			background-color:#DBDBEA;
 		}
 		#tudooo{
 			margin-top:-213px;
+			background-color:#DBDBEA;
 		}
 			
 		#white{
@@ -338,12 +341,14 @@ header{
 		#pic{
 			width: 20%;
 			height: 15%;
-			margin-left: 50px;
+			margin-left: 10px;
 			margin-top: 10px;
+			border-radius:200px;
 		}
 		#name1{
 		margin-top:25px;
 		position:absolute;
+		color:#4365B9;
 		}
 		body{
 		
@@ -351,14 +356,18 @@ header{
 		#idd{
 			position: absolute;
 			margin-top: 160px;
-			margin-left: 481px;
+			margin-left: 480px;
 			width:500px;
 			height: 40px;
+			
 		
 		}
+		#name2{
+			color:#4365B9;
+		}
 		#vaiaia{
-			margin-top: -100px;
-			margin-left: 180px;
+			margin-top: -110px;
+			margin-left: 130px;
 		}
 		#white4{
 			width:240px;
