@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="js/data.js"></script>
 	<script type="text/javascript" src="js/visitante.js"></script>
 	<script type="text/javascript" src="js/patrocinador.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
 	<script src="js/inputnumero.js"></script>
 	
 	
@@ -247,6 +248,9 @@
 											</li> 
 											<li>
 												<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Turmas</a>
+											</li> 
+											<li>
+												<a href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4>Todos</a>
 											</li> 
 										</ul> 
 								</li> 
@@ -526,10 +530,37 @@
 										</div>
 									</p>
 								</div> 
+								<div role=tabpanel class="tab-pane fade" id=dropdown4 aria-labelledby=dropdown4-tab> 
+									<p><div class="container">
+											    <div class="col-md-12">
+											        <div class="well">
+											            <div id="myCarousel2" class="carousel slide">
+															 <div class="carousel-inner">
+											                    <div class="item active">
+											                        <div class="row">
+																	 <div class="col-sm-3">
+																		<div ng-controller="ProjetoController as projetoCtrl" >
+																			<li  ng-repeat="projeto in arrProjeto " >
+																				<img style="" ng-src="assets/uploads/{{projeto.arquivo}}"/>
+																			</li>
+																		</div>
+											                         </div>
+																	</div>
+																</div>
+															</div>
+															<a class="left carousel-control" href="#myCarousel2" data-slide="prev">‹</a>
+															<a class="right carousel-control" href="#myCarousel2" data-slide="next">›</a>
+														</div>
+													</div>
+												</div>
+										</div>
+									</p>
+								</div> 
 							</div> 
 						</div>
 					</div>
 				</div>
+				
 			<a name="midia" ></a>
 				<div  id="midia">
 					<div id="contenttopmidia">
@@ -593,23 +624,13 @@
 						</br></br>
 						<div class="container" id="carouselmidia" ng-controller="PatrocinadorController">
 						 <div class="col-md-12">
-								<div class="well">
-									<div id="myCarousel6" class="carousel slide">
-										<div class="carousel-inner">
-											    <div class="item active">
-											        <div class="row">
-														<div class="col-sm-3" ng-repeat="patrocinador in arr">
-															<a href="{{patrocinador.url}}"><img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" style="width:250px; height:250px;"></a>
-											           	</div>
-													</div>
-												</div>
-												 
-										</div>
-										<a class="left carousel-control" href="#myCarousel6" data-slide="prev">‹</a>
-										<a class="right carousel-control" href="#myCarousel6" data-slide="next">›</a>
-									</div>
+								<div id="patrocinador" class="well">
+									
+									<div ng-repeat="patrocinador in arr">
+										<a href="{{patrocinador.url}}"><img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" style="width:150px; height:150px;"></a>
+						           	</div>
 								</div>
-							</div>
+							</div> 
 						</div>
 </body>
 	

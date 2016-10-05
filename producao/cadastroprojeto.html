@@ -4,6 +4,8 @@
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/libs/velocity.min.js"></script>
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
@@ -12,6 +14,7 @@
 	<script type="text/javascript" src="js/mascaradata.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
 	
 	
 </head>
@@ -56,18 +59,12 @@
 				<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs>
 					<div class="nav" id="pagination">
 					  <ul>
-						<li>
-							<a href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1>Dados Gerais</a>
-						</li>
-						<li>
-							<a href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2>Plano de pesquisa</a>
-						</li>
-						<li>
-							<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Resumo</a>
-						</li>
-						<li>
-							<a href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4>Relatório</a>
-						</li>
+						<div id="arrows">
+							<a  id="buttonarrow" style="margin-left:-1%;" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1><img style="width:15rem;" src="assets/images/bluearrow.fw.png"/></a>
+							<a id="buttonarrow" style="margin-left:-7%;" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2><img  style="width:15rem;  " src="assets/images/bluearrow.fw.png"/></a>
+							<a id="buttonarrow" style="margin-left:-7%;" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3><img  style="width:15rem;  " src="assets/images/bluearrow.fw.png"/></a>
+							<a id="buttonarrow" style="margin-left:-7%;" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4><img  style="width:15rem;" src="assets/images/bluearrow.fw.png"/></a>
+						</div>
 					  </ul>
 					</div>
 					<div id=myTabContent class=tab-content> 
@@ -144,9 +141,7 @@
 											<input placeholder="DD/MM/AA" type="text" name="datafinal" style="width:250px;" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" ng-model="model.datafinal"></input>
 									</div>
 								</div>
-								<div id="savecancel">
-									<button id="salvar" ng-click="save()" >{{updateMode?'Salvar': 'Salvar'}}</button>
-								</div>
+								
 							</form>
 							</p> 
 						</div> 
@@ -223,9 +218,7 @@
 											<input placeholder="DD/MM/AA" type="text" name="datafinal" style="width:250px;" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" ng-model="model.datafinal"></input>
 									</div>
 								</div>
-								<div id="savecancel">
-									<button id="salvar" ng-click="save()" >{{updateMode?'Salvar': 'Salvar'}}</button>
-								</div>
+								
 							</form>
 							</p>
 						</div> 
@@ -233,47 +226,78 @@
 							<p>
 								<form>
 									<div  id="campusprimarios">
-										<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Questão ou Problema identificado</p>
+										<div id="descricao"><p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Questão ou Problema identificado</p><h6 style="margin-left:23%; color:green;">máximo 300 caracteres*</h6></div>
 										<textarea ng-model="model.problema" style="width:540px; margin-left:20px; resize:none; height:100px;" name="problema"  placeholder="Problema"></textarea>
 									</div>
 									</br>
 									
 										<div id="campusprimarios">
-											<p id="idest" style=" font-family:'Segoe UI'; margin-left:20px;">Hipótese</p>
+											<div id="descricao"><p id="idest" style=" font-family:'Segoe UI'; margin-left:20px;">Hipótese</p><h6 style="margin-left:58%; color:green;">máximo 300 caracteres*</h6></div>
 											<textarea ng-model="model.hipotese" style="width:540px; margin-left:20px; resize:none; height:100px;" name="hipotese"  placeholder="Hipótese"></textarea>
 										</div>
 									</br>
 									<div id="campusprimarios">
 										<div id="divcat">
-										<p id="categoria" style=" font-family:'Segoe UI';">Descrição</p>
+										<div id="descricao"><p id="categoria" style=" font-family:'Segoe UI';">Descrição</p><h6 style="margin-left:58%; color:green;">máximo 300 caracteres*</h6></div>
 										<textarea ng-model="model.descricao" style="width:540px;resize:none; height:100px;" name="descricao"  placeholder="Descrição"></textarea>
 										</div>
 						
 									</div>
 									</br>
 								<div id="campusprimarios">
-								<p id="escolap" style=" font-family:'Segoe UI'; margin-left:20px;">Bibliografia</p>
+								<div id="descricao"><p id="escolap" style=" font-family:'Segoe UI'; margin-left:20px;">Bibliografia</p><h6 style="margin-left:54%; color:green;">máximo 300 caracteres*</h6></div>
 									<textarea ng-model="model.bibliografia" style="width:540px; margin-left:20px; resize:none; height:100px;" name="bibliografia"  placeholder="Bibliografia"></textarea>
 								</div>
-								<div id="savecancel">
-									<button id="salvar" ng-click="save()" window.location="resumoprojeto.html">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
-								</div>
+								
 							</form>
 							</p>
 						</div> 
 						<div role=tabpanel class="tab-pane fade" id=dropdown3 aria-labelledby=dropdown3-tab> 
 							<p>
-							
+								<form>
+									<div  id="campusprimarios">
+										<div id="descricao"><p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Resumo</p><h6 style="margin-left:58%; color:green;">Máximo 2000 caracteres*</h6></div>
+										<textarea ng-model="model.resumo" style="width:540px; margin-left:20px; resize:none; height:100px;" name="resumo"  placeholder="Resumo"></textarea>
+									</div>
+									</br>
+									
+										<div id="campusprimarios"  style=">*display:inline-block;">
+											<p id="idest" style=" font-family:'Segoe UI'; margin-left:20px;">Palavra chave referente ao projeto</p>
+											<input ng-model="model.primeirapalavra" style="width:540px; margin-left:20px;"" name="primeirapalavra" type="name" placeholder="Palavra1" ></input>
+										</div>
+									</br>
+									<div id="campusprimarios">
+										<div id="divcat">
+										<p id="categoria" style=" font-family:'Segoe UI';">Palavra chave referente ao projeto</p>
+										<input ng-model="model.terceirapalavra" style="width:540px;"" name="terceirapalavra" type="name" placeholder="Palavra2" ></input>
+										</div>
+						
+									</div>
+									</br>
+								<div id="campusprimarios">
+								<p id="escolap" style=" font-family:'Segoe UI'; margin-left:20px;">Palavra chave referente ao projeto</p>
+									<input ng-model="model.segundapalavra" style="width:540px; margin-left:20px;"" name="segundapalavra" type="name" placeholder="Palavra2" ></input>
+								</div>
+								
+								</form>
 							</p>
 						</div> 
 						<div role=tabpanel class="tab-pane fade" id=dropdown4 aria-labelledby=dropdown4-tab> 
 							<p>
-								
+								<form>
+									<div id="wrapper" style="width: 100%; margin-top: 5%; margin-left: 3%;">
+										<input id="fileUpload" type="file"  style="width: 100%;"/></br>
+										<div id="image-holder"></div>
+									</div>
+								</form>
 									
 							</p>
 						</div> 
 					</div>	
 				</div>
+			<div id="savecancel">
+				<button id="salvar" ng-click="save()">{{updateMode?'Salvar': 'Salvar'}}</button>
+			</div>	
 		</div>
 		
 		

@@ -96,6 +96,12 @@ footer{
 	opacity:0.8;
 	transition:all 0.8s ease;
 }
+#addbottom:focus{
+	outline:none;
+}
+#descricao>*{
+	display:inline-block;
+}
 #adicionar{
 	background-color:white;
 	margin-top:100px;
@@ -325,5 +331,28 @@ textarea{
 #options>*{
 	display:inline-block;
 }
+#escola-estado>*{
+	display:inline-block;
+}
+#arrows>*{
+	display:inline-block;
+}
+
+#buttonarrow{
+	opacity:0.2;
+}
+#buttonarrow:hover{
+	outline:none;
+	opacity:1;
+}
+#buttonarrow:focus{
+	outline:none;
+	opacity:1;
+}
+#textbutton>*{
+	display:inline-block;
+}
+
+
 
 /*css meu perfil */

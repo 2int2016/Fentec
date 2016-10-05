@@ -53,7 +53,7 @@ $(document).ready(function () {
 			width:500px;
 			border-radius:5px;
 			position: absolute;
-			height: 630px;
+			height: 680px;
 			margin-left:480px;
 			border:1px solid grey;
 		}
@@ -445,7 +445,7 @@ $(document).ready(function () {
 		<p id="titulo" style="color:white">Cadastro de Avaliadores</p>
 		</div>
 		<form>
-			<div id="campusprimarios">
+			<div  id="campusprimarios">
 				<p>Nome</p>
 				<input style="width:94%" name="nome" ng-model="model.nome"/>
 				<p>Email</p>
@@ -460,11 +460,24 @@ $(document).ready(function () {
 					<input type="password" name="nome" id="input2"/>
 					</div>
 				</div>
+				
+				
 					<p>Profissão</p>
 					<input style="width:94%" name="nome" ng-model="model.profissao"/>
 					<p>Empresa</p>
 					<input style="width:94%" name="nome" ng-model="model.empresa"/>
+					<div style="display:inline-flex;" >
+					<div style="width:40%" >
+					<p>Telefone</p>
+					<input name="tel" id="input2" ng-model="model.senha"/>
+					</div>
+					<div style="float:right; margin-left:15%" >
+					<p>Telefone(2)</p>
+					<input  name="tel" id="input2"/>
+					</div>
+				</div>
 				<div style="display:inline-flex;" >
+					
 					<div style="width:40%" >
 					<p>RG</p>
 					<input maxlength="8" name="nome" id="input2" ng-model="model.rg"/>
@@ -489,7 +502,7 @@ $(document).ready(function () {
 				</div>
 			
 			
-			<button id="salvar" type="submit" value="Enviar arquivo" href="index.html" ng-click="save()" >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
+				<button id="salvar" type="submit" value="Enviar arquivo" href="index.html" ng-click="save()" >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
 			
 			</div>
 		</form>

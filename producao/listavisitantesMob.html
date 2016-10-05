@@ -80,7 +80,9 @@
 				
 				</br>
 			<ul data-role="listview"  data-filter="true" data-input="#filterBasic-input">
-			 <li style="text-decoration:none" ng-repeat="Visitante in arr | filter:pesquisa"">
+			
+			 <li style="text-decoration:none" ng-repeat="Visitante in arr | filter:pesquisa">
+			 
 				<div id="teste" >
 				
 					<p style="margin-left:20px;">Email:</p>
@@ -90,7 +92,7 @@
 					<h4 style="margin-left:20px;">{{Visitante.idade}}</h4>
 					<p style="margin-left:20px;">Instituição:</p>
 					<h4 style="margin-left:20px;">{{Visitante.instituicao}}</h4>
-					</hr>
+					<hr style="color:white; width:320px;"/>
 					</br>
 					
 				</div>
