@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
 	<script type="text/javascript" src="js/orientador.js"></script>
-	<script type="text/javascript" src="js/escola.js"></script>
+	<script type="text/javascript" src="js/avaliador.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	
 	
@@ -21,10 +21,11 @@
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
 		<div id="desconect">
 			<a id="logout1" href="conta.html">
-			<img id="logout" title="Sair" src="assets/images/logout.png">
+			<img id="logout" src="assets/images/logout.png">
+			
 			
 			</a>
-			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
+				<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
 		</div>
 	
 
@@ -50,11 +51,40 @@
 			<a href="contateorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
 		</div>
 	</div>
-		<div  ng-controller="OrientadorController" id="miolo">
-			<div id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
-			 
+		<div  ng-controller="avaliadorController" id="miolo">
+			<div id="Projeto">
+				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Avaliadores</p>
+			</div>
+			<ul>
+			<li style="text-decoration:none" ng-repeat="avaliador in arrAvaliador | filter:pesquisa">
+				<div id="divlist">
+				</br>
+				<div id="atributos">
+					<img ng-src="assets/uploads/{{avaliador.arquivo}}" style="width:100px;height:100px; border-radius:200px;">
+					<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
+						<h3 style="color:#4365B9;font-size:160%;">{{avaliador.nome}}</h3>
+						<div id="escola-estado" style="margin-top:-9%;">
+							<h4 style="color:rgb(47, 47, 51); font-size:12px;">{{avaliador.email}}</h4>
+							<h4 style="color:rgb(47, 47, 51); font-size:12px;">{{avaliador.id}}</h4>
+						</div>
+					</div>
+				</div>
+					<!-- <h4>Cidade: {{projeto.cidade}}</h4> -->
+					<div id="butsaltdel">
+					<input type="image" href="alteravaliador.html" title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(avaliador)"/>
+					
+					<input type="image" ng-click="delete(avaliador.id)" src="assets/images/delete-black.png" title="Deletar" id="remover"/>
+					</div>
+					<hr id="hrlist">
+				</div>
+			</li>
+		</ul>
+			<div id="butaoadd">
+			<a href="cadastroavaliador.html" class="btn btn-success">
+				Novo Avaliador  <span class="glyphicon glyphicon-plus"></span> 
+			</a>
+			</div>
 		</div>
-	</div>
 		
 	</div>
 </body>

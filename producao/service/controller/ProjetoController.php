@@ -28,7 +28,9 @@ class ProjetoController{
 	}
 	public function change($id){
 		$model = ProjetoModel::find($id);
-		return $model->to_array();
+		$result = $this->setValue($model);
+		
+		return $result;
 	}
 
 	public function delete($id){

@@ -43,14 +43,21 @@
 		};
 
 		$scope.delete = function($id){
-			aj.delete('./service/tbavaliadors/'+$id).success(function(data){
+			decisao = confirm("Quer mesmo deletar?");
+			if (decisao){
+				aj.delete('./service/tbavaliadors/'+$id).success(function(data){
 				$scope.read();
 			});
+			} else {
+				
+			}
+			
 		};
 
 		$scope.change = function($value){
 			$scope.updateMode = true;
 			$scope.model = $value;
+			window.location="cadastroavaliador.html?id="+$value.id;
 		};
 
 		$scope.cancel = function(){
@@ -67,8 +74,38 @@
 			}
 		};
 
-		$scope.editar = function($id){
-			window.location="AvaliadorEdit.html?id="+$id;
+		$("#fileUpload").on('change', function(){
+			if(typeof (FileReader) !="undefined"){
+				var image_holder = $("#image-holder");
+				image_holder.empty();
+				var reader = new FileReader();
+				reader.onload - function (e) {
+					$("<img/>",{
+						"src": e.target.result,
+						"class": "thumb-image"
+					}).appendTo(image_holder);
+				}
+				image_holder.show();
+				$scope.model.arquivo = $(this) [0].files[0].name;
+				reader.readAsDataURL($(this) [0].files[0]);
+			} else{
+				alert("Este navegador não suporta FileReader.");
+			}
+		});
+		$scope.uploadFile = function(){
+			var fd = new FormData();
+			$scope.files = document.getElementById("fileUpload");
+			
+			fd.append('file', $scope.files.files[0]);
+			
+			$http.post('./upload.php',fd,
+			{
+				transformRequest:angular.identify,
+				headers:{'Content-Type':undefined}
+			})
+			.success(function(d){
+				window.location="listaavaliador.html";
+		})
 		};
 		
 		$scope.init();

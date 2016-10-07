@@ -23,12 +23,22 @@
 			if(id !== undefined){
 				$scope.getitem(id);
 				$scope.updateMode = true;
+				$scope.selecttab("buttonarrow1");
 			}
 			else{
 				$scope.read();
 				$scope.updateMode = false;
 			}
+			
 			$scope.model={};
+		};
+		$scope.selecttab=function($tab){
+			document.getElementById("buttonarrow1").className="buttonarrow";
+			document.getElementById("buttonarrow2").className="buttonarrow";
+			document.getElementById("buttonarrow3").className="buttonarrow";
+			document.getElementById("buttonarrow4").className="buttonarrow";
+			document.getElementById($tab).className+="selecionado";
+			
 		};
 
 		$scope.create = function(){
@@ -53,7 +63,7 @@
 			}
 		};
 		
-		
+
 		
 		$scope.getitem = function($id){
 			try
@@ -69,7 +79,9 @@
 		};
 
 		$scope.update = function(){
+			delete $scope.model.escola;
 			jQuery.ajax({
+				
 				type: 'put',
 				url: './service/tbcadastroprojetos',
 				data: $scope.model,

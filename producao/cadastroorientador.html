@@ -99,7 +99,7 @@
 			position:absolute;
 			width:150;
 			height:150;
-			margin-top: -45px;
+			margin-top: -16px;
 		}
 		#cadastro{
 			margin-left:320px;
@@ -660,6 +660,13 @@
 }
 
  	</script>
+	<script>
+	function confirma() {
+	if(document.NomeDoForm.NomeDoPrimeiorCampo.value != document.NomeDoForm.NomeDoSegundoCampo.value) {
+	alert("Ta diferente, digite um igual!!");
+	}
+	}
+</script>
 </head>
 		
 <body>
@@ -703,8 +710,8 @@
 			</select>
 			<br>
 			<p id="escola">Escola</p>
-			<select id="escola1" ng-controller="escolaController as escolaCtrl" ng-model="orientadorCtrl.model.idescola">
-				<option ng-value="escola.id" ng-repeat="escola in arrEscolas">
+			<select id="escola1" ng-controller="escolaController as escolaCtrl" ng-model="model.escola">
+				<option ng-value="escola.nome" ng-repeat="escola in arrEscolas">
 					{{escola.nome}}
 				</option>
 			</select>
@@ -726,7 +733,7 @@
 				<p id="telefone">Telefone</p>
 			<input  id="telefone1" name="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone"></input>
 			<p id="telefone3">Telefone 2</p>
-			<input  id="telefone2" name="telefone" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone2"></input>
+			<input  id="telefone2" name="telefone2" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone2"></input>
 			
 		</div>
 			</form>	

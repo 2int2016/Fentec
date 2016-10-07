@@ -1,4 +1,4 @@
-<html ng-app="fentec">
+<html>
 <head>
 	<title>Portal Fentec</title>
 	<meta charset="utf-8"/>
@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
 	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/mascaradata.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	
@@ -21,7 +22,7 @@
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
 		<div id="desconect">
 			<a id="logout1" href="conta.html">
-			<img id="logout" title="Sair" src="assets/images/logout.png">
+			<img id="logout" src="assets/images/logout.png">
 			
 			</a>
 			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
@@ -32,30 +33,34 @@
 	<div id="lado-esquerdo">
 		<div id="meuperfil">
 			<a><img src="assets/images/contaicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
-			<a href="dadosorient.html" class="menuopcao" style="margin-left:70px; font-size:20px; font-family:'Segoe UI'; margin-top:60px;">Meu perfil</a>
+			<a href="gerenciamentoavaliador.html" class="menuopcao" style="margin-left:93px; font-size:20px; font-family:'Segoe UI'; margin-top:60px;">Notas</a>
 		</div>
 		
 		<div id="meuprojeto">
 			<a><img src="assets/images/listaproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
-			<a href="perfilorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Projetos</a>
-		</div>
-		
-		<div id="sugerirescola">
-			<a><img src="assets/images/localizacaoicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
-			<a href="cadastroescola.html" class="menuopcao" style="margin-left:58px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Sugerir escola</a>
-		</div>
-		
-		<div id="contato">
-			<a><img src="assets/images/suporteproj.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
-			<a href="contateorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
+			<a href="contatoavaliador.html" class="menuopcao" style="margin-left:85px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
 		</div>
 	</div>
-		<div  ng-controller="OrientadorController" id="miolo">
-			<div id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
-			 
+	<div id="miolo">
+			<div id="Projeto"><p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Contato</p></div>
+			<form>
+		<div id="campusprimarios">
+			</br>
+			<p style="margin-left:20px;">Mande e-mails ou sugestões caso estejam presenciando algum problema ou queiram dar alguma dica</p>
+			  <form action="service/sendemail.php" method="post">
+            <fieldset id="mensagem">
+				</br>
+                <label id="mensag" for="mensagem" style="margin-left:20px; ">Mensagem </label>
+                <textarea required name="mensagem" style="margin-left:20px;"></textarea>
+            </fieldset>
+                <div id="savecancel" style="margin-top:-12%; margin-left:73%;">
+					<button id="salvar" style="width:80px; height:40px; font-size:15.5px;">Enviar</button>
+				</div>
+				</form>
+		</form>
 		</div>
-	</div>
 		
 	</div>
+
 </body>
 </html>

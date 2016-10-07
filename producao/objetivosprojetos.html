@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="fentec">
 <head>
 	<title>Portal Fentec</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/libs/velocity.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	
+	
 	<link rel="stylesheet" href="css/objetivosprojetos.css">
     <link rel="stylesheet" href="css/normalize.css">
  	<link rel="stylesheet" href="css/style.css">
@@ -21,7 +26,7 @@
 </head>
 <body>
 	<header id="menu">
-		<img id="logo" src="assets/images/logo.fw.png"/>
+		<img id="logo" src="assets/images/logoo.fw.png"/>
 		<nav ng-controller="NavController">
 		<div  id="imagesheader">
 			<img id="homeicon" src="assets/images/homeicon.fw.png">
@@ -37,7 +42,7 @@
 				<a href="index.html#projeto" class="option" id="buttonprojetos">Projetos</span></a>
 				<a href="index.html#midia" class="option" id="buttonmidia">Mídia</span></a>
 				<a href="index.html#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
-				<a href="conta.html" class="option" id="buttonmyacount">Minha conta</span></a>
+				<a href="conta.html" class="option" id="buttonmyacount">Inscreva-se</span></a>
 			</ul>
 		</nav>
 	</header>
@@ -89,52 +94,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="ProjetoController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 		</p> 
@@ -171,52 +142,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>
@@ -252,52 +178,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>
@@ -334,52 +215,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>
@@ -416,52 +252,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>
@@ -498,52 +289,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>
@@ -580,52 +326,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>
@@ -662,52 +363,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+						
 						</div> 
 						</section>
 			</p>
@@ -744,52 +400,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							
 						</div> 
 						</section>
 			</p>

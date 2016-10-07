@@ -113,7 +113,7 @@
 		}
 		#privacity{
 			margin-top:150px;
-			color:white;
+			color:black;
 		}
 						
 	
@@ -187,13 +187,13 @@
 					<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
 					<script type="text/javascript" src="js/libs/jquery-1.12.0.js"></script>
 					
-						<h1 id="dia">Dia 29</h1>
-						<h3 id="de"> DE OUTUBRO</h3>
+						<h1 id="dia">Dia 25</h1>
+						<h3 id="de"> DE NOVEMBRO</h3>
 		<div id="cadastrovisi" ng-controller="NavController">
 			<form>
 		
 			<p  id="imput1">Email</p>
-			<input  id="imput11" class="form-control" placeholder="email" type="email" ng-model="model.email" required/>
+			<input  id="imput11" class="form-control" placeholder="E-mail" type="email" ng-model="model.email" required/>
 							
 			
 			<p id="imput2" >Data de Nascimento</p>
@@ -201,7 +201,7 @@
 			
 			
 			<p id="imput3">Escola ou Local de trabalho</p>
-		<input  id="imput33" class="form-control" placeholder="instituição " ng-model="model.instituicao" required/>
+		<input  id="imput33" class="form-control" placeholder="Instituição " ng-model="model.instituicao" required/>
 			
 			
 
@@ -250,7 +250,7 @@
 												<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Turmas</a>
 											</li> 
 											<li>
-												<a href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4>Todos</a>
+												<a href="listatprojetos.html">Todos</a>
 											</li> 
 										</ul> 
 								</li> 
@@ -530,32 +530,6 @@
 										</div>
 									</p>
 								</div> 
-								<div role=tabpanel class="tab-pane fade" id=dropdown4 aria-labelledby=dropdown4-tab> 
-									<p><div class="container">
-											    <div class="col-md-12">
-											        <div class="well">
-											            <div id="myCarousel2" class="carousel slide">
-															 <div class="carousel-inner">
-											                    <div class="item active">
-											                        <div class="row">
-																	 <div class="col-sm-3">
-																		<div ng-controller="ProjetoController as projetoCtrl" >
-																			<li  ng-repeat="projeto in arrProjeto " >
-																				<img style="" ng-src="assets/uploads/{{projeto.arquivo}}"/>
-																			</li>
-																		</div>
-											                         </div>
-																	</div>
-																</div>
-															</div>
-															<a class="left carousel-control" href="#myCarousel2" data-slide="prev">‹</a>
-															<a class="right carousel-control" href="#myCarousel2" data-slide="next">›</a>
-														</div>
-													</div>
-												</div>
-										</div>
-									</p>
-								</div> 
 							</div> 
 						</div>
 					</div>
@@ -620,21 +594,23 @@
 				<div id="patrocinadores">
 					<div id="contenttoppatrocinadores">
 						<h1 id="titlepatrocinadores">Patrocinadores</h1>
-						<h3 id="p3">Para ser um patrocinador de nossa feira<a id="cadas" href="cadastropatrocinador.html"> Clique aqui</a></h3>
+						<h3 id="p3">Para saber como se tornar um patrocinador da nossa feira <a id="cadas" href="">Clique aqui</a></h3>
 						</br></br>
 						<div class="container" id="carouselmidia" ng-controller="PatrocinadorController">
 						 <div class="col-md-12">
 								<div id="patrocinador" class="well">
 									
-									<div ng-repeat="patrocinador in arr">
-										<a href="{{patrocinador.url}}"><img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" style="width:150px; height:150px;"></a>
+									<div id="patro" ng-repeat="patrocinador in arr">
+										<a href="{{patrocinador.url}}"><img id="foto-patrocinador" ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" ></a>
 						           	</div>
 								</div>
 							</div> 
 						</div>
+					</div>
+				</div>
 </body>
 	
-		<p id="privacity">&copy; 2016 FENTEC, Inc. &middot; localizacao&middot; contato</p>
+		<p id="privacity">&copy; 2016 FENTEC, Inc. &middot;<a href="#localizacao"> localizacao&middot </a>; (92) 2129-2991 / 2999</p>
 	
 </html>
 	

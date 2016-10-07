@@ -55,6 +55,11 @@ class OrientadorController{
 		return $result;
 	}
 
+	public function change($email){
+		$model = OrientadorModel::find('all',array('conditions'=> array('email=?', $email)));
+		return $model[0]->to_array();
+	}
+
 	public function update($value){
 		$model = OrientadorModel::find($value['id']);
 		$model->update_attributes($value);

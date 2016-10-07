@@ -17,22 +17,22 @@
 	<div id="geral3" style="background-image:url(assets/galeria/fne.png);">
 		<div id="geral" ng-controller="LogarController">
 			<div id="juncaoDoBv"><h1 id="bv"><strong>Bem-vindo</strong></h1> <h1 id="bv1">ao Portal Fentec</h1></div>
-			<img id="logo" src="assets/images/fmm.png">
+			<a href="index.html"><img id="logo" src="assets/images/fmm.png"/></a>
 			<form >	
 				<div  id="geral2"  >
 					<span><div id="login">
 						<h2 style="color:#0C85BF;">Faça o login</h2>
 							
-							<input  id="email" name="login" class="form-control" placeholder="Login" required>
+							<input  id="email" name="login" class="form-control" placeholder="Login"  ng-model="email" required>
 							
-							<input name="senha" type="password" id="senha" class="form-control" placeholder="Senha" required>
+							<input name="senha" type="password" id="senha" class="form-control" ng-model="senha" placeholder="Senha" required>
 							<div class="checkbox">
 							  <label>
 								<input type="checkbox" value="remember-me" > <p >Mantenha-me conectado</p>
 							  </label>
 							</div>
 							<a id="a" href=""><p >Esqueceu sua senha?</p></a>
-						<button name="entrar" class="btn btn-lg btn-primary " ng-click="logar()" id="bt" >Entrar</button>
+						<button name="entrar" class="btn btn-lg btn-primary " ng-click="autenticar(email,senha)" id="bt" >Entrar</button>
 					</div>	
 				</div>
 			</form>	

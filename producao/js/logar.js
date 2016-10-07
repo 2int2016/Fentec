@@ -7,33 +7,43 @@
 			wi = $window
 	
 		;
-	$scope.logar = function(){
-		if(document.getElementById('email').value == 'material' &&  document.getElementById('senha').value == 'material'){
-			window.location="listamaterialnew.html";
-		}
-		else if(document.getElementById('email').value == 'orientador' &&  document.getElementById('senha').value == 'orientador'){
-			window.location="cadastroorientador.html";
-		}
-		else if(document.getElementById('email').value == 'avaliador' &&  document.getElementById('senha').value == 'avaliador'){
-			window.location="listaavaliadores.html";
-		}
-		else if(document.getElementById('email').value == 'coordenacao' &&  document.getElementById('senha').value == 'coordenacao'){
-			window.location="perfilorient.html";
-		}
-		else if(document.getElementById('email').value == 'visitante' &&  document.getElementById('senha').value == 'visitante'){
-			window.location="listavisitantes.html";
-		}
-		else if(document.getElementById('email').value == 'orientador2' &&  document.getElementById('senha').value == 'orientador2'){
-			window.location="dadosorient.html";
-		}
-		else{
-			alert("Email ou Senha inválida");
-		}
 		
+		$scope.autenticar = function($email,$senha){
+			try
+			{
+				aj.get('./service/tborientadores/'+$email).success(function(data){
+					if (data.senha == $senha  ) {	
+						if (data.email == 'coordenacao@fmm.com') {window.location = 'perfilorient.html?email='+$email;}
+						else if (data.email == 'avaliador@fmm.com') {window.location = 'cadastroavaliador.html?email='+$email;}	
+						else if (data.email == 'monitoria@fmm.com') {window.location = 'cadastromaterial.html?email='+$email;}	
+						else if (data.email == 'orientae@fmm.com') {window.location = 'dadosorient.html?email='+$email;}
+						else if (data.email == 'orientai@fmm.com') {window.location = 'dadosorient.html?email='+$email;}
+						else if (data.email == 'orientam@fmm.com') {window.location = 'dadosorient.html?email='+$email;}
+						else if (data.email == 'orientat@fmm.com') {window.location = 'dadosorient.html?email='+$email;}
+						else if (data.email == 'orientint@fmm.com') {window.location = 'dadosorient.html?email='+$email;}
+						else{
+							window.location = 'dadosorient.html?email='+$email;
+						}
+					}
+					else {
+							alert ('Usuário ou senha inválidos.');
+						}
+				});
+			}
+			catch(err)
+			{	
+			
+				alert(err.message);
+			}
+		};
+
+		
+
+	
 		
 		
 	
-	};
+	
 	
 	});
 	

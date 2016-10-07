@@ -27,7 +27,7 @@
 			window.location = 'listamaterialmob.html'
 				} 
 				else {
-					window.location = 'listamaterialnew.html'
+					window.location = 'listamat.html'
 				}
 				}
 				

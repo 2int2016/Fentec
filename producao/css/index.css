@@ -15,9 +15,7 @@ header{
 	z-index:2;
 	
 }
-#buttonmyacount{
-	margin-left:90px;
-}
+
 
 #main{
 	width:100%;
@@ -79,8 +77,8 @@ nav{
 	margin-left: 9%;
 }
 #contaicon{
-	width:3.5rem;
-	margin-left: 13%;
+	width:3rem;
+	margin-left: 12%;
 	margin-top: 1%;
 }
 #projetoicon{
@@ -90,7 +88,7 @@ nav{
 }
 #midiaicon{
 	width:3.7rem;
-	margin-left: 7.3%;
+	margin-left: 7.2%;
 	margin-top: 0.4%;
 }
 #localizacaoicon{
@@ -121,12 +119,16 @@ nav{
 	margin-top:5%;
 }
 #cadas{
-	color:#D90000;
+	color:#ffffff;
+	text-decoration:underline;
+}
+#cadas:hover{
+	color:#6BBF46;
 }
 #titlelocalizacao{
 	font-family: DK Carte Blanche;
 	color:white;
-	margin-top:10%;
+	margin-top:5%;
 	margin-left:-58%;
 	font-size:500%;
 }
@@ -293,17 +295,29 @@ nav{
 	font-family: DK Carte Blanche;
 	color:white;
 	margin-top:10%;
-	margin-left: 11%;
+	text-align:center;
 	font-size:500%;	
 }
 #p3{
 	color:white;
-	margin-left: 11.3%;
+
+	text-align:center;
 }
 #patrocinador{
-	width:1000px;
-	height:460px;
-
+	width:980px;
+	height:350px;
+	box-shadow:0px 3px 3px 0px #2A2A2A;
 }
 
-
+#foto-patrocinador{
+	width:140px; 
+	height:140px; 
+	border:1px solid grey; 
+	border-radius:2px;
+	margin:5px;
+	display:inline;
+	box-shadow:0px 1px 1px 0px #2A2A2A;
+}
+#patro{
+	display:inline;
+}

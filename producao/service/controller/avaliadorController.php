@@ -43,6 +43,8 @@ class avaliadorController{
 		$obj['profissao'] = mb_check_encoding($value->profissao, 'UTF-8') ? $value->profissao : utf8_encode($value->profissao);
 		$obj['empresa'] = mb_check_encoding($value->empresa, 'UTF-8') ? $value->empresa : utf8_encode($value->empresa);
 		$obj['escolaridade'] = mb_check_encoding($value->escolaridade, 'UTF-8') ? $value->escolaridade : utf8_encode($value->escolaridade);
+		$obj['telefone'] = mb_check_encoding($value->telefone, 'UTF-8') ? $value->telefone : utf8_encode($value->telefone);
+		$obj['telefone2'] = mb_check_encoding($value->telefone2, 'UTF-8') ? $value->telefone2 : utf8_encode($value->telefone2);
 
 		return $obj;
 	}

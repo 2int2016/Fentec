@@ -338,20 +338,35 @@ textarea{
 	display:inline-block;
 }
 
-#buttonarrow{
+.buttonarrow{
 	opacity:0.2;
+	
 }
-#buttonarrow:hover{
-	outline:none;
+
+.buttonarrow:hover{
+	
 	opacity:1;
 }
-#buttonarrow:focus{
+.buttonarrow .selecionado{
 	outline:none;
 	opacity:1;
 }
 #textbutton>*{
 	display:inline-block;
 }
+#buttonarrow1,#buttonarrow2, #buttonarrow3, #buttonarrow4:focus{
+	outline:none;
+}
+.button{
+	background-image: url ('assets/images/bluearrow.fw.png') no-repeat;
+    cursor:pointer;
+}
+
+
+
+
+
+
 
 
 

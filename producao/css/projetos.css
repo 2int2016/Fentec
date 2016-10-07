@@ -25,6 +25,7 @@ header>*{
 }
 #logo{
 	margin-left:2%;
+	margin-top:-7px;
 }
 nav{
 	position:absolute;

@@ -1,0 +1,69 @@
+<html ng-app="fentec" >
+<head>
+	<meta charset="utf-8">
+	<title>Portal Fentec</title>
+	
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+		<script type="text/javascript" src="js/patrocinador.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+ 	<style type="text/css">
+		#img{
+			width:200px;
+			height:200px;
+		}
+	
+		#foto-patrocinador{
+	width:140px; 
+	height:140px; 
+	border:1px solid grey; 
+	border-radius:2px;
+	margin:5px;
+	display:inline;
+	box-shadow:0px 1px 1px 0px #2A2A2A;
+	border:2px solid black;
+	}
+	#patro{
+	display:inline-block;
+	}
+	h1{
+		margin-left:7em;
+		color:white;
+	}
+	#nome{
+		margin-left:4em;
+		position:absolute;
+	}
+	#btn{
+			margin-left: 1160px;
+		
+			margin-top: 340px;
+			width:79px ;
+			height:35px;
+			color:white;
+			
+			
+
+		}	
+		
+    </style>
+</head>	
+<body style="background-image: url('assets/images/patrocinadores.fw.png'); width:100%; height:100%;" >
+	<h1 >Todos os Projetos cadastrados na Fentec.</h1>
+	<div class="container" id="carouselmidia" ng-controller="ProjetoController">
+						 <div class="col-md-12">
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
+					<a href="index.html"><button  id="btn" class="btn btn-primary "><p id="salvar">Voltar</p></button></a>
+</body>		
+</html>

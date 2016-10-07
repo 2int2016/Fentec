@@ -144,6 +144,10 @@ $app->get('/tborientadores', function() use ($orientadorcontroller){
 	echo json_encode($orientadorcontroller->read());
 });
 
+$app->get('/tborientadores/:email', function($email) use ($orientadorcontroller){
+	echo json_encode($orientadorcontroller->change($email));
+});
+
 $app->put('/tborientadores', function() use ($orientadorcontroller, $app){
 	$value = $app->request()->put();
 	unset($value['$$hashKey']);
