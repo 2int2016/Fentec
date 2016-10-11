@@ -9,7 +9,9 @@
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/orientador.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
-	<script src="js/masktelefone.js"></script>
+	<script type="text/javascript" src="js/masktelefone.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/cidade-estado.js"></script>	
 	
 	
 	<style>
@@ -512,7 +514,7 @@
 				position:absolute;
 				margin-left: 306px;
 			}
-			#city1{
+			#cidades{
 				margin-top: 130px;
 				margin-left: -236px;
 				border-radius: 6px;
@@ -584,7 +586,7 @@
 				position:absolute;
 				margin-left: 43px;
 			}
-			#am1{
+			#estados{
 				margin-top: 130px;
 				margin-left: -500px;
 				border-radius: 6px;
@@ -660,13 +662,6 @@
 }
 
  	</script>
-	<script>
-	function confirma() {
-	if(document.NomeDoForm.NomeDoPrimeiorCampo.value != document.NomeDoForm.NomeDoSegundoCampo.value) {
-	alert("Ta diferente, digite um igual!!");
-	}
-	}
-</script>
 </head>
 		
 <body>
@@ -701,12 +696,11 @@
 			<p id="ad">Endereço</p>
 			<input  id="ad1" name="end"  placeholder="Endereço" ng-model="model.endereco"></input>
 			<p id="city">Cidade</p>
-			<select id="city1" ng-model="model.cidade">
-				<option ng-repeat="cidade in arrcidades">{{cidade.cidades}}</option>
+			<select id="cidades" ng-model="model.cidade">
 			</select>
 			<p id="am">Estado</p>
-			<select id="am1" ng-model="model.estado" ng-change="setcidades(model.estado)">
-				<option ng-repeat="estado in arrestados" value="{{estado.nome}}">{{estado.nome}}</option>
+			<select id="estados" ng-model="model.estado">
+				<option value=""></option>
 			</select>
 			<br>
 			<p id="escola">Escola</p>

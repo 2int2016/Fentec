@@ -84,14 +84,28 @@
 
 		$scope.save = function(){
 			$scope.model.projeto = document.getElementById("ipt9").value;
-			if($scope.updateMode){
-				$scope.update();
+			
+			$agora = new Date();
+			$ano=$scope.model.ida.substr(0,4);
+			$mes=$scope.model.ida.substr(5,2);
+			$dia=$scope.model.ida.substr(8,10);
+			
+			if( $ano>= $agora.getFullYear () || $mes > '12'  || $dia > '31'   ){
+					alert("Data inv?lida");
+				}
 				
-			}
-			else{
-				$scope.create();
-				
-			}
+				else{
+			
+						if($scope.updateMode){
+							$scope.update();
+							
+						}
+						else{
+							$scope.model.idade = $agora.getFullYear () - $ano;
+							$scope.create();
+							
+						}
+				}
 		};
 		
 		

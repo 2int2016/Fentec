@@ -9,9 +9,9 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/mascaradata.js"></script>
 	<script type="text/javascript" src="js/avaliador.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
-	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
-	
+	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>	
 <style>
 	#projimg{
 		margin-left:20px;
@@ -22,7 +22,14 @@
 		margin-top:-188px;
 	}
 	#miolo{
-		height:400px;
+		height:auto;
+	}
+	#atributos{
+		margin-top:
+	}
+	#texto{
+		width:280px;
+		text-align:justify;
 	}
 </style>
 </head>
@@ -51,38 +58,34 @@
 			<a href="contatoavaliador.html" class="menuopcao" style="margin-left:85px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
 		</div>
 	</div>
-		<div  id="miolo" ng-controller="avaliadorController as avaliador">
+		<div  ng-controller="ProjetoController" id="miolo">
 			<div id="Projeto">
-				<p style="margin-left:200px; font-size:22px; font-family:'Segoe UI';" >Projetos</p>
+				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Projetos</p>
 			</div>
-			</br>
-			
-			<div class="bs-example bs-example-tabs" >
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="projeto in arrProjeto">
 				<div id="divlist">
-			</br>
-			<div id="atributos">
-				<img ng-src="assets/images/teacher.png" style="width:140px;height:140px;margin-left:20px;">
-				<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
-					<h3 style="color:#4365B9;font-size:160%;">Cutia</h3>
-					<br>
-					<div id="escola-estado" style="margin-top:-9%;">
-						<h4 style="color:rgb(47, 47, 51); font-size:12px;">O projeto tem o principal objetivo de tentar fazer com<br> que blabla
-						bla blablabla blablabla blabla blabla bla<br> blablabla blabla blabla bla blablabla bla</h4>
+				</br>
+				<div id="atributos">
+					<img ng-src="assets/uploads/{{projeto.arquivo}}" style="width:100px;height:100px; border-radius:200px;">
+					<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
+						<h3 style="color:#4365B9;font-size:160%;">{{projeto.nome}}</h3>
+						<div id="texto" style="margin-top:-1.5%;">
+							<h4 style="color:rgb(47, 47, 51); font-size:12px;">{{projeto.problema}}</h4>
+						</div>
 					</div>
-					<h4 style="color:rgb(47, 47, 51); font-size:12px;" >Nota</h4>
-					<input maxlength="2" style="width:40px;" >
 				</div>
-			</div>
-			<br><br>
-			<hr id="hrlist">
+					<div id="butsaltdel">
+						<h5><strong>Nota</strong></h5>
+						<input id="nota" type="number" min="0" max="10" style="width:56px;" />
+					</div>
+					<hr id="hrlist">
 				</div>
-			</div>	
+			</li>
+		</ul>
 			<div id="butaoadd">
-			<a style="margin-left:10px;" class="btn btn-success">Salvar </a>
+			<a href="#" class="btn btn-success">Salvar</a>
 			</div>
 		</div>
-		
-		
-
 </body>
 </html>

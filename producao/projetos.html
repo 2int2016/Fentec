@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="fentec">
 <head>
 	<title>Portal Fentec</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/libs/velocity.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<link rel="stylesheet" href="css/projetos.css">
     <link rel="stylesheet" href="css/normalize.css">
  	<link rel="stylesheet" href="css/style.css">
+ 	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/projetofiltro.js"></script>
 
      	<script src="js/respond.js"></script>
  	<style type="text/css">
     	html,body{
     		background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
     	}
+    		#foto-patrocinador{
+	width:240px; 
+	height:240px; 
+	border:1px solid grey; 
+	border-radius:2px;
+	margin:5px;
+	display:inline;
+	box-shadow:0px 1px 1px 0px #2A2A2A;
+	border:2px solid black;
+	}
+	#patro{
+	display:inline-block;
+	}
     </style>
 </head>
 <body>
@@ -73,7 +90,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa"  placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -89,7 +106,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -97,52 +114,19 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="rowg">
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 		</p> 
@@ -155,7 +139,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -171,7 +155,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -179,52 +163,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -236,7 +186,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -252,7 +202,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -260,52 +210,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+						<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -318,7 +234,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -334,7 +250,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -342,52 +258,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -400,7 +282,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -416,7 +298,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -424,52 +306,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+						<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -482,7 +330,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -498,7 +346,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -506,52 +354,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -564,7 +378,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -580,7 +394,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -588,52 +402,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -646,7 +426,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -662,7 +442,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -670,52 +450,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -728,7 +474,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -744,7 +490,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -752,52 +498,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -810,7 +522,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -826,7 +538,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -834,52 +546,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -892,7 +570,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -908,7 +586,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -916,52 +594,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -974,7 +618,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -990,7 +634,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -998,52 +642,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -1056,7 +666,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -1072,7 +682,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -1080,52 +690,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -1138,7 +714,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -1154,7 +730,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -1162,53 +738,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
-						</div> 
+						<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>						</div> 
 						</section>
 			</p>
 		</div> 
@@ -1220,7 +761,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -1236,7 +777,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -1244,52 +785,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -1302,7 +809,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -1318,7 +825,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -1326,52 +833,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -1384,7 +857,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -1400,7 +873,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -1408,52 +881,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<ul id="ul">
-								<a href="#" class="close"></a>
-								<li>
-									<a href="perfilprojeto.html">
-										<img class="images" src="assets/projetos/ifood.fw.png" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item02">
-										<img class="images" src="assets/projetos/fullsize_2015_03_03_13_WDL-Logo-50705_6769_071604543_92821581.jpg" alt="">
-									</a>
-								</li>
-
-								<li>
-									<a href="#item03">
-										<img class="images" src="assets/projetos/hellofoodlogo.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item04">
-										<img class="images" src="assets/projetos/mcdonald-s.s.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item05">
-										<img class="images" src="assets/projetos/logo2.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item06">
-										<img class="images" src="assets/projetos/Socomida-Logotipo-1.fw.png" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item07">
-										<img class="images" src="assets/projetos/trio gourmet logomarca (1).jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a class="image" href="#item08">
-										<img class="images" src="assets/projetos/tweetdeck-logo-aplicativo.jpg" alt="">
-									</a>
-								</li>
-								
-							</ul>
+							<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>

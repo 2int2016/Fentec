@@ -9,8 +9,9 @@
 	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/libs/velocity.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>	
+	<script type="text/javascript" src="js/projetofiltro.js"></script>
+	
 	
 	
 	<link rel="stylesheet" href="css/objetivosprojetos.css">
@@ -22,6 +23,20 @@
     	html,body{
     		background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
     	}
+    	#foto-patrocinador{
+	width:240px; 
+	height:240px; 
+	border:1px solid grey; 
+	border-radius:2px;
+	margin:5px;
+	display:inline;
+	box-shadow:0px 1px 1px 0px #2A2A2A;
+	border:2px solid black;
+	}
+	#patro{
+	display:inline-block;
+	
+	}
     </style>
 </head>
 <body>
@@ -70,10 +85,11 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
+
 								</form>
 							</div>    
 						</div>					    
@@ -86,7 +102,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -94,11 +110,11 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="ProjetoController">
+							<div class="container" ng-controller="NavController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
 											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -118,7 +134,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -134,7 +150,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -142,7 +158,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -154,7 +181,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -170,7 +197,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -178,7 +205,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -191,7 +229,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'   ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -207,7 +245,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -215,7 +253,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -228,7 +277,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -244,7 +293,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -252,7 +301,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -265,7 +325,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -281,7 +341,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -289,7 +349,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -302,7 +373,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa " placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -318,7 +389,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -326,7 +397,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -339,7 +421,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -355,7 +437,7 @@
 				   <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -363,7 +445,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-						
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>
@@ -376,7 +469,7 @@
 						<div class='col-md-6'>
 							<div class='search-box'>
 								<form class='search-form'>
-									<input class='form-control' placeholder='Busque projetos aqui...' type='text'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
 										<button class='btn btn-link search-btn'>
 											<i class='glyphicon glyphicon-search'></i>
 										</button>
@@ -392,7 +485,7 @@
 				  <ul class="dropdown-menu">
 				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
 				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="turmas.html">Turmas</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
 				  </ul>
 				</div>	
 				<hr>					
@@ -400,7 +493,18 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							
+								<div class="container" ng-controller="NavController">
+						 <div >
+								<div id="patrocinador" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
 						</div> 
 						</section>
 			</p>

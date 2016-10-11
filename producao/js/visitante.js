@@ -81,8 +81,8 @@
 			$mes=$scope.model.idade.substr(5,2);
 			$dia=$scope.model.idade.substr(8,10);
 			
-				if( $ano>= $agora.getFullYear () || $mes > '12'  || $dia > '31'   ){
-					alert("data invalida");
+				if( $ano>= $agora.getFullYear ()|| $ano< '1900' || $mes > '12'  || $dia > '31'   ){
+					alert("Data inv?lida");
 				}
 				
 				else{

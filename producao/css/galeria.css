@@ -93,30 +93,35 @@ nav{
 #patrocinadoresicon{
 	width:2.5rem;
 	margin-left: 9%;
+	margin-top:2px;
 }
 #contaicon{
 	width:1.8rem;
 	margin-left: 12%;
-	margin-top: 1%;
+	margin-top:2px;
 }
 #projetoicon{
 	width:2.3rem;
 	margin-left: 9.5%;
-	margin-top: 0.5%;
+	margin-top:2px;
+}
+#buttonhome{
+	margin-left:60px;
+	margin-top:-5px;
 }
 #midiaicon{
 	width:2.3rem;
 	margin-left: 7.3%;
-	margin-top: 0.4%;
+	margin-top:2px;
 }
 #localizacaoicon{
 	width:1.8rem;
 	margin-left:9%;
-	margin-top: 1%;
+	margin-top:2px;
 }
 #homeicon{
-	margin-top: 1%;
-	width:1.8rem;
+	margin-top:2px;
+	width:1.85rem;
 	margin-left:9%;
 }
 #imagesheader{
