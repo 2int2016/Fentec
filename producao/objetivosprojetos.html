@@ -11,6 +11,8 @@
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>	
 	<script type="text/javascript" src="js/projetofiltro.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+
 	
 	
 	
@@ -32,17 +34,27 @@
 	display:inline;
 	box-shadow:0px 1px 1px 0px #2A2A2A;
 	border:2px solid black;
+	
 	}
 	#patro{
 	display:inline-block;
-	
+	margin-left:20px;
 	}
+	hr{
+		width:84.5%;
+		margin-left:85px;
+	}
+	#nome{
+		margin-left:100px;
+		color:black
+	}
+	
     </style>
 </head>
 <body>
 	<header id="menu">
 		<img id="logo" src="assets/images/logoo.fw.png"/>
-		<nav ng-controller="NavController">
+		<nav ng-controller="FiltroController">
 		<div  id="imagesheader">
 			<img id="homeicon" src="assets/images/homeicon.fw.png">
 			<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
@@ -66,7 +78,7 @@
 	<div class="nav" id="pagination">
       <ul>
         <li class="nav--btn nav--btn-1 active" data-page="1" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1></li>
-        <li class="nav--btn nav--btn-2" data-page="2" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2></li>
+        <li class="nav--btn nav--btn-2" data-page="2" href=#dropdown2 role=tab id="dropdown2-tab" data-toggle=tab aria-controls=dropdown2></li>
         <li class="nav--btn nav--btn-3" data-page="3" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3></li>
         <li class="nav--btn nav--btn-4" data-page="4" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4></li>
         <li class="nav--btn nav--btn-5" data-page="5" href=#dropdown5 role=tab id=dropdown5-tab data-toggle=tab aria-controls=dropdown5></li>
@@ -110,7 +122,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -158,7 +170,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+						<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -205,7 +217,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -253,7 +265,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -301,7 +313,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -349,7 +361,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -397,7 +409,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -445,7 +457,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -493,7 +505,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-								<div class="container" ng-controller="NavController">
+								<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									

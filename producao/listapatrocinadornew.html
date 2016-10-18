@@ -69,10 +69,10 @@ font-size:14;
 }
 
 #oii{
-	margin-left:464px;
+	margin-left:465px;
 	text-decoration:none;
-	background-color:white;
-	width:500px;
+	background-color: #DBDBEA;
+	width:501px;
 	height:auto;
 	border-radius:10px;
 	border:1px solid grey;
@@ -367,19 +367,19 @@ text-decoration:underline;
 			margin-top:0px;
 		}
 		#butao-alterar{
-			margin-top: -100px;
-			margin-left: 15px;
-			position:absolute;
-			width: 20px;
-			height:20px;
-		
+			width:45px; 
+			height:40px; 
+			margin-top:160px;
+			margin-left: 80px;
+
 		}
 		#butao-remover{
-			margin-top: -60px;
-			position:absolute;
-			margin-left: 15px;
-			width: 90px;
-			float:right;
+			width:45px; 
+			height:40px; 
+			margin-left: 10px;
+			margin-top: -100px;
+			border-radius:20px;
+			background-color:white;
 		}
 		#white4{
 			width:240px;
@@ -398,17 +398,29 @@ text-decoration:underline;
 			font-size:20;
 		}
 		#log{
-			margin-left:1294px;
+			margin-left:1265px;
 			width:3.5rem;
 			position:absolute;
 			margin-top:46px;
 			
 		}
 		#log2{
-			margin-left:1230px;
+			margin-left:1200px;
 			width:3rem;
 			position:absolute;
 			margin-top:45px;
+		}
+		#patrocinadorheader{
+		width:501px;
+		height:50px;
+		background-color:#036;
+		color:white;
+		margin-top:-10px;
+		margin-left:-1;
+		}
+		
+		h4{
+		text-align:center;
 		}
 </style>
 
@@ -428,17 +440,17 @@ text-decoration:underline;
 	<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
 	</div>
 	<div id="parte-esquerda">
-	<a href="cadastromaterial.html"><div id="white">
+	<a href="orientlistmat.html"><div id="white">
 			<img id="mat1" src="assets/images/tools2.png"/>
-			<a id="ap" href="cadastromaterial.html" style="color:black;"><p id="p6">Materiais</p></a>
+			<a id="ap" href="orientlistmat.html" style="color:black;"><p id="p6">Materiais</p></a>
 	</div></a>
 	<a href="listaavaliadores.html"><div id="white1">
 			<img id="mat1" src="assets/images/grades2.png"/>
 			<a id="ap" href="listaavaliadores.html" style="color:black;"><p id="p7">Avaliadores</p></a>
 	</div></a>
-	<a href="listaorientador.html"><div id="white2">
+	<a href="perfilorient.html"><div id="white2">
 			<img id="mat2" src="assets/images/teacher2.png"/>
-			<a id="ap" href="listaorientador.html" style="color:black;"><p id="p8">Orientadores</p></a>
+			<a id="ap" href="perfilorient.html" style="color:black;"><p id="p8">Orientadores</p></a>
 	</div></a>
 	<a href="conta.html"><div id="white3">
 			<img id="mat3" src="assets/images/person2.png"/>
@@ -454,6 +466,9 @@ text-decoration:underline;
 			
 			
 			<div id="oii">
+			<div id="patrocinadorheader">
+				<h1 style="position:absolute; margin-left:160px; color:white; font-family:Square721 BT; font-size:26;">Patrocinador</h1>
+			</div>
 			<ul id="ul-tudo" data-filter="true" data-input="#filterBasic-input">
 				<li id="oi1" style="text-decoration:none;" ng-repeat="patrocinador in arr" >
 						<div id="miolo-inlne">
@@ -470,8 +485,8 @@ text-decoration:underline;
 								</span>
 							</div>
 						<form id="editar-e-apagar">
-							<input style="width:40px; height:35px; margin-top:-20px;" id="butao-alterar" class="btn btn-default" ng-click="change(patrocinador)" type="image" src="assets/images/edit-black.png"></input>
-							<input style="width:20px; height:20px; margin-left:25px;" id="butao-remover" class="butao" ng-click="delete(patrocinador.id)" type="image" src="assets/images/delete-black.png"></input>
+							<!--<input id="butao-alterar" class="btn btn-default" ng-click="change(patrocinador)" type="image" src="assets/images/edit-black.png"></input>-->
+							<input id="butao-remover" class="btn btn-default" ng-click="delete(patrocinador.id)" type="image" src="assets/images/delete-black.png"></input>
 						</form> 						
 						</div>
 						<br/>

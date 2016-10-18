@@ -648,13 +648,13 @@
 	
 	if( kC!=8 && kC!=46 )
 	{
-		if( data.length==4 )
+		if( data.length==2 )
 		{
-			campo.value = data += '-';
+			campo.value = data += '/';
 		}
-		else if( data.length==7 )
+		else if( data.length==5 )
 		{
-			campo.value = data += '-';
+			campo.value = data += '/';
 		}
 		else
 			campo.value = data;
@@ -685,7 +685,7 @@
 				<br>
 				<br>
 				<p id="imput2" >Data de Nascimento</p>
-				<input  id="campoData"  minlength="10" placeholder="2000-12-31" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.data" required/>
+				<input  id="campoData"  minlength="10" placeholder="dd/mm/aaaa" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.data" required/>
 				<br>
 				<p id="email1">Email</p>
 			<input id="email" name="email" type="email" placeholder="Exemplo@email.com"  ng-model="model.email"></input>

@@ -15,6 +15,8 @@
  	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/projetofiltro.js"></script>
+		<script type="text/javascript" src="js/projeto.js"></script>
+	
 
      	<script src="js/respond.js"></script>
  	<style type="text/css">
@@ -33,13 +35,23 @@
 	}
 	#patro{
 	display:inline-block;
+		margin-left:20px;
 	}
+	hr{
+		width:84.5%;
+		margin-left:85px;
+	}
+	#nome{
+		margin-left:100px;
+		color:black
+	}
+	
     </style>
 </head>
 <body>
 	<header id="menu">
 		<img id="logo" src="assets/images/logoo.fw.png"/>
-		<nav ng-controller="NavController">
+		<nav ng-controller="FiltroController">
 		<div  id="imagesheader">
 			<img id="homeicon" src="assets/images/homeicon.fw.png">
 			<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
@@ -62,15 +74,7 @@
 	<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs>
 	<div class="nav" id="pagination">
       <ul>
-        <li class="nav--btn nav--btn-1 active" data-page="1" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1></li>
-        <li class="nav--btn nav--btn-2" data-page="2" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2></li>
-        <li class="nav--btn nav--btn-3" data-page="3" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3></li>
-        <li class="nav--btn nav--btn-4" data-page="4" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4></li>
-        <li class="nav--btn nav--btn-5" data-page="5" href=#dropdown5 role=tab id=dropdown5-tab data-toggle=tab aria-controls=dropdown5></li>
-        <li class="nav--btn nav--btn-6" data-page="6" href=#dropdown6 role=tab id=dropdown6-tab data-toggle=tab aria-controls=dropdown6></li>
-        <li class="nav--btn nav--btn-7" data-page="7" href=#dropdown7 role=tab id=dropdown7-tab data-toggle=tab aria-controls=dropdown7></li>
-        <li class="nav--btn nav--btn-8" data-page="8" href=#dropdown8 role=tab id=dropdown8-tab data-toggle=tab aria-controls=dropdown8></li>
-        <li class="nav--btn nav--btn-9" data-page="9" href=#dropdown9 role=tab id=dropdown9-tab data-toggle=tab aria-controls=dropdown9></li>
+        <li class="nav--btn nav--btn-9 active" data-page="9" href=#dropdown9 role=tab id=dropdown9-tab data-toggle=tab aria-controls=dropdown9></li>
         <li class="nav--btn nav--btn-10" data-page="10" href=#dropdown10 role=tab id=dropdown10-tab data-toggle=tab aria-controls=dropdown10></li>
         <li class="nav--btn nav--btn-11" data-page="11" href=#dropdown11 role=tab id=dropdown11-tab data-toggle=tab aria-controls=dropdown11></li>
         <li class="nav--btn nav--btn-12" data-page="12" href=#dropdown12 role=tab id=dropdown12-tab data-toggle=tab aria-controls=dropdown12></li>
@@ -78,6 +82,14 @@
         <li class="nav--btn nav--btn-14" data-page="14" href=#dropdown14 role=tab id=dropdown14-tab data-toggle=tab aria-controls=dropdown14></li>
         <li class="nav--btn nav--btn-15" data-page="15" href=#dropdown15 role=tab id=dropdown15-tab data-toggle=tab aria-controls=dropdown15></li>
         <li class="nav--btn nav--btn-16" data-page="16" href=#dropdown16 role=tab id=dropdown16-tab data-toggle=tab aria-controls=dropdown16></li>
+        <li class="nav--btn nav--btn-17" data-page="17" href=#dropdown17 role=tab id=dropdown17-tab data-toggle=tab aria-controls=dropdown17></li>
+        <li class="nav--btn nav--btn-18" data-page="18" href=#dropdown18 role=tab id=dropdown18-tab data-toggle=tab aria-controls=dropdown18></li>
+        <li class="nav--btn nav--btn-19" data-page="19" href=#dropdown19 role=tab id=dropdown19-tab data-toggle=tab aria-controls=dropdown19></li>
+        <li class="nav--btn nav--btn-20" data-page="20" href=#dropdown20 role=tab id=dropdown20-tab data-toggle=tab aria-controls=dropdown20></li>
+        <li class="nav--btn nav--btn-21" data-page="21" href=#dropdown21 role=tab id=dropdown21-tab data-toggle=tab aria-controls=dropdown21></li>
+        <li class="nav--btn nav--btn-22" data-page="22" href=#dropdown22 role=tab id=dropdown22-tab data-toggle=tab aria-controls=dropdown22></li>
+        <li class="nav--btn nav--btn-23" data-page="23" href=#dropdown23 role=tab id=dropdown23-tab data-toggle=tab aria-controls=dropdown23></li>
+        <li class="nav--btn nav--btn-24" data-page="24" href=#dropdown24 role=tab id=dropdown24-tab data-toggle=tab aria-controls=dropdown24></li>
       </ul>
     </div>
 	
@@ -114,8 +126,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="rowg">
-							<div class="container" ng-controller="NavController">
+						<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -131,7 +142,7 @@
 						</section>
 		</p> 
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown1 aria-labelledby=dropdown1-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown9 aria-labelledby=dropdown1-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/pobreza.png"/>
 				<div class='containerbar'>
@@ -163,7 +174,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -179,7 +190,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown2 aria-labelledby=dropdown2-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown10 aria-labelledby=dropdown2-tab> 
 			<p><img id="metas" src="assets/metasglobais/fome.fw.png"/>
 				<div class='containerbar'>
 					 <div class='row'>
@@ -210,7 +221,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-						<div class="container" ng-controller="NavController">
+						<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -226,7 +237,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown3 aria-labelledby=dropdown3-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown11 aria-labelledby=dropdown3-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/saude.fw.png"/>
 				<div class='containerbar'>
@@ -258,7 +269,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -274,7 +285,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown4 aria-labelledby=dropdown4-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown12 aria-labelledby=dropdown4-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/educacao.fw.png"/>
 				<div class='containerbar'>
@@ -306,7 +317,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-						<div class="container" ng-controller="NavController">
+						<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -322,7 +333,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown5 aria-labelledby=dropdown5-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown13 aria-labelledby=dropdown5-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/genero.fw.png"/>
 				<div class='containerbar'>
@@ -354,7 +365,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -370,7 +381,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown6 aria-labelledby=dropdown6-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown14 aria-labelledby=dropdown6-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/agua.fw.png"/>
 				<div class='containerbar'>
@@ -402,7 +413,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -418,7 +429,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown7 aria-labelledby=dropdown7-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown15 aria-labelledby=dropdown7-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/energia.fw.png"/>
 				<div class='containerbar'>
@@ -450,7 +461,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -466,7 +477,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown8 aria-labelledby=dropdown8-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown16 aria-labelledby=dropdown8-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/emprego.fw.png"/>
 				<div class='containerbar'>
@@ -498,7 +509,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -514,7 +525,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown9 aria-labelledby=dropdown9-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown17 aria-labelledby=dropdown9-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/infraestrutura.fw.png"/>
 				<div class='containerbar'>
@@ -546,7 +557,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -562,7 +573,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown10 aria-labelledby=dropdown10-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown18 aria-labelledby=dropdown10-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/desigualdade.fw.png"/>
 				<div class='containerbar'>
@@ -594,7 +605,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -610,7 +621,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown11 aria-labelledby=dropdown11-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown19 aria-labelledby=dropdown11-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/cidades.fw.png"/>
 				<div class='containerbar'>
@@ -642,7 +653,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -658,7 +669,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown12 aria-labelledby=dropdown12-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown20 aria-labelledby=dropdown12-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/consumo.fw.png"/>
 				<div class='containerbar'>
@@ -690,7 +701,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -706,7 +717,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown13 aria-labelledby=dropdown13-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown21 aria-labelledby=dropdown13-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/clima.fw.png"/>
 				<div class='containerbar'>
@@ -738,7 +749,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-						<div class="container" ng-controller="NavController">
+						<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -753,7 +764,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown14 aria-labelledby=dropdown14-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown22 aria-labelledby=dropdown14-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/vidaagua.fw.png"/>
 				<div class='containerbar'>
@@ -785,7 +796,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -801,7 +812,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown15 aria-labelledby=dropdown15-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown23 aria-labelledby=dropdown15-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/vidaterra.fw.png"/>
 				<div class='containerbar'>
@@ -833,7 +844,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -849,7 +860,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown16 aria-labelledby=dropdown16-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown24 aria-labelledby=dropdown16-tab> 
 			<p>
 				<img id="metas" src="assets/metasglobais/PAZ.fw.png"/>
 				<div class='containerbar'>
@@ -881,7 +892,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									

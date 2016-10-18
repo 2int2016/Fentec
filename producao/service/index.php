@@ -20,6 +20,11 @@ require_once 'controller/IntegranteController.php';
 
 require_once 'controller/avaliadorController.php';
 
+require_once 'controller/LogarController.php';
+
+require_once 'controller/NotaController.php';
+
+
 
 
 $app = new Slim();
@@ -39,6 +44,10 @@ $projetocontroller = new ProjetoController();
 $integrantecontroller = new IntegranteController();
 
 $avaliadorcontroller = new avaliadorController();
+
+$logarcontroller = new logarController();
+
+$notacontroller = new NotaController();
 
 
 // visitates
@@ -228,6 +237,44 @@ $app->put('/tbavaliadors', function() use ($avaliadorcontroller, $app){
 $app->delete('/tbavaliadors/:id', function($id) use ($avaliadorcontroller){
 	echo $avaliadorcontroller->delete($id);
 });
+
+//logar
+
+
+$app->post('/tborientadores/autenticar', function() use ($logarcontroller, $app){
+	$value = json_decode(file_get_contents("php://input"));
+	echo json_encode($logarcontroller->autenticar($value));
+});
+
+$app->get('/tborientadores/buscar', function() use ($logarcontroller){
+	echo json_encode($logarcontroller->buscar());
+});
+
+$app->get('/tborientadores/sair', function() use ($logarcontroller){
+	echo json_encode($logarcontroller->sair());
+});
+
+//Nota
+
+$app->post('/tbprojetoavaliador', function() use ($notacontroller, $app){
+	$value = json_decode(file_get_contents("php://input"));
+	echo json_encode($notacontroller->create($value));
+});
+
+$app->get('/tbprojetoavaliador', function() use ($notacontroller){
+	echo json_encode($notacontroller->read());
+});
+
+$app->put('/tbprojetoavaliador', function() use ($notacontroller, $app){
+	$value = $app->request()->put();
+	unset($value['$$hashKey']);
+	echo json_encode($notacontroller->update($value));
+});
+
+$app->delete('/tbprojetoavaliador/:id', function($id) use ($notacontroller){
+	echo $notacontroller->delete($id);
+});
+
 
 $app->run();
 

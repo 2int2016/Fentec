@@ -1,6 +1,6 @@
 <html ng-app="fentec">
 <head>
-	<title>Portal Fentec</title>
+	<title>Perfil Orientador</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="js/projeto.js"></script>
 	<script type="text/javascript" src="js/orientador.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
+	<script type="text/javascript" src="js/logorient.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	
 	
@@ -20,15 +21,15 @@
 	</header>
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
 		<div id="desconect">
-			<a id="logout1" href="conta.html">
-			<img id="logout" title="Sair" src="assets/images/logout.png">
+			<a id="logout1" ng-click="sair()" >
+			<img id="logout"    title="Sair" src="assets/images/logout.png">
 			
 			</a>
 			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
 		</div>
 	
 
-	<div id="planodefundo">
+	<div id="planodefundo" ng-controller="LogarController">
 	<div id="lado-esquerdo">
 		<div id="meuperfil">
 			<a><img src="assets/images/contaicon.fw.png" style="width:27px; height:27px; position:absolute; margin-left:105px; margin-top:25px;"/></a>
@@ -50,8 +51,9 @@
 			<a href="contateorient.html" class="menuopcao" style="margin-left:80px; font-size:20px; font-family:'Segoe UI';  margin-top:60px;">Contato</a>
 		</div>
 	</div>
-		<div  ng-controller="OrientadorController" id="miolo">
-			<div id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
+		<div  ng-controller="LogarController" id="miolo">
+			<div  ng-controller="LogarController" id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
+			  <p>{{usu.email}}</p>
 			 
 		</div>
 	</div>

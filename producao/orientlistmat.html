@@ -207,7 +207,7 @@
 		}
 		#p8{
 			position:absolute;
-			margin-left:60px;
+			margin-left:80px;
 			margin-top:57px;
 			font-size:20;
 			
@@ -292,14 +292,20 @@
 			margin-top:25px;
 		}
 		#mat2{
-			margin-left:100px;
-			width:3rem;
+			margin-left:105px;
+			width:2.5rem;
 			position:absolute;
 			margin-top:25px;
 		}
 		#mat3{
 			margin-left:105px;
 			width:3.5rem;
+			position:absolute;
+			margin-top:25px;
+		}
+		#mat4{
+			margin-left:105px;
+			width:2.5rem;
 			position:absolute;
 			margin-top:25px;
 		}
@@ -528,6 +534,16 @@
 			margin-left:30px;
 			border:1px solid grey;
 		}
+		#white5{
+			width:240px;
+			height:100px;
+			background-color:#036;
+			position:absolute;
+			border-radius:5px;
+			margin-top:710px;
+			margin-left:30px;
+			border:1px solid grey;
+		}
 		#p10{
 			position:absolute;
 			margin-left:65px;
@@ -535,6 +551,15 @@
 			font-size:20;
 		}
 		#p10:hover{
+			text-decoration:underline;
+		}
+		#p11{
+			position:absolute;
+			margin-left:83px;
+			margin-top:57px;
+			font-size:20;
+		}
+		#p11:hover{
 			text-decoration:underline;
 		}
 	</style>
@@ -557,13 +582,13 @@
 		</div>
 		
 		<div id="white1">
-				<a href="listaavaliadores.html"><img id="mat1" src="assets/images/grades2.png"/></a>
-				<a id="ap" href="listaavaliadores.html" style="color:black;"><p style="color:white" id="p7">Avaliadores</p></a>
+				<a href="listaavaliador.html"><img id="mat1" src="assets/images/grades2.png"/></a>
+				<a id="ap" href="listaavaliador.html" style="color:black;"><p style="color:white" id="p7">Avaliadores</p></a>
 		</div>
 		
 		<div id="white2">
-			<a href="perfilorient.html">	<img id="mat2" src="assets/images/teacher2.png"/></a>
-				<a id="ap" href="perfilorient.html" style="color:black;"><p style="color:white" id="p8">Orientadores</p></a>
+			<a href="perfilorient.html">	<img id="mat2" src="assets/images/listaproj.fw.png"/></a>
+				<a id="ap" href="perfilorient.html" style="color:black;"><p style="color:white" id="p8">Projetos</p></a>
 		</div>
 		
 		<div id="white3">
@@ -574,6 +599,7 @@
 			<a href="listapatrocinadornew.html">	<img id="mat3" src="assets/images/patrocinadoricon.png" /></a>
 				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p style="color:white" id="p10">Patrocinador</p></a>
 		</div>
+		
 	</div>	
 	<input style="width:500px; height:40px; margin-top:160px; margin-left:480px; position:absolute;" ng-model="pesquisa" class="form-control" data-type="search"/>
 	<div id="miolo">

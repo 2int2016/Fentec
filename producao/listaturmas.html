@@ -14,13 +14,15 @@
  	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/projetofiltro.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	
 
      	<script src="js/respond.js"></script>
  	<style type="text/css">
     	html,body{
     		background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
     	}
-    			#foto-patrocinador{
+    		#foto-patrocinador{
 	width:240px; 
 	height:240px; 
 	border:1px solid grey; 
@@ -32,13 +34,23 @@
 	}
 	#patro{
 	display:inline-block;
+		margin-left:20px;
 	}
+	hr{
+		width:84.5%;
+		margin-left:85px;
+	}
+	#nome{
+		margin-left:100px;
+		color:black
+	}
+	
     </style>
 </head>
 <body>
 	<header id="menu">
 		<img id="logo" src="assets/images/logoo.fw.png"/>
-		<nav ng-controller="NavController">
+		<nav ng-controller="FiltroController">
 		<div  id="imagesheader">
 			<img id="homeicon" src="assets/images/homeicon.fw.png">
 			<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
@@ -61,10 +73,10 @@
 	<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs>
 	<div class="nav" id="pagination">
       <ul>
-        <li class="nav--btn nav--btn-1 active" data-page="1" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1></li>
-        <li class="nav--btn nav--btn-2" data-page="2" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2></li>
-        <li class="nav--btn nav--btn-3" data-page="3" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3></li>
-        <li class="nav--btn nav--btn-4" data-page="4" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4></li>
+        <li class="nav--btn nav--btn-25 active" data-page="25" href=#dropdown25 role=tab id=dropdown25-tab data-toggle=tab aria-controls=dropdown25></li>
+        <li class="nav--btn nav--btn-26" data-page="26" href=#dropdown26 role=tab id=dropdown26-tab data-toggle=tab aria-controls=dropdown26></li>
+        <li class="nav--btn nav--btn-27" data-page="27" href=#dropdown27 role=tab id=dropdown27-tab data-toggle=tab aria-controls=dropdown27></li>
+        <li class="nav--btn nav--btn-28" data-page="28" href=#dropdown28 role=tab id=dropdown28-tab data-toggle=tab aria-controls=dropdown28></li>
       </ul>
     </div>
 	
@@ -101,8 +113,8 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+						
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -118,7 +130,7 @@
 						</section>
 		</p> 
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown1 aria-labelledby=dropdown1-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown25 aria-labelledby=dropdown25-tab> 
 			<p>
 				<img id="metas" src="assets/turmas/mecatronica.fw.png"/>
 				<div class='containerbar'>
@@ -150,7 +162,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -165,7 +177,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown2 aria-labelledby=dropdown2-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown26 aria-labelledby=dropdown26-tab> 
 			<p><img id="metas" src="assets/turmas/informatica.fw.png"/>
 				<div class='containerbar'>
 					 <div class='row'>
@@ -196,7 +208,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 					<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -211,7 +223,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown3 aria-labelledby=dropdown3-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown27 aria-labelledby=dropdown27-tab> 
 			<p>
 				<img id="metas" src="assets/turmas/telecomunicacoes.fw.png"/>
 				<div class='containerbar'>
@@ -243,7 +255,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 					<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									
@@ -258,7 +270,7 @@
 						</section>
 			</p>
 		</div> 
-		<div role=tabpanel class="tab-pane fade" id=dropdown4 aria-labelledby=dropdown4-tab> 
+		<div role=tabpanel class="tab-pane fade" id=dropdown28 aria-labelledby=dropdown28-tab> 
 			<p>
 				<img id="metas" src="assets/turmas/eletronica.fw.png"/>
 				<div class='containerbar'>
@@ -290,7 +302,7 @@
 				<div id="top"></div>
 					<section class="gallery">
 						<div class="rowg">
-							<div class="container" ng-controller="NavController">
+							<div class="container" ng-controller="ProjetoController">
 						 <div >
 								<div id="patrocinador" class="well">
 									

@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="js/visitante.js"></script>
 	<script type="text/javascript" src="js/patrocinador.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/projetofiltro.js"></script>
 	<script src="js/inputnumero.js"></script>
 	
 	
@@ -37,13 +38,13 @@
 	
 	if( kC!=8 && kC!=46 )
 	{
-		if( data.length==4 )
+		if( data.length==2 )
 		{
-			campo.value = data += '-';
+			campo.value = data += '/';
 		}
-		else if( data.length==7 )
+		else if( data.length==5 )
 		{
-			campo.value = data += '-';
+			campo.value = data += '/';
 		}
 		else
 			campo.value = data;
@@ -112,8 +113,10 @@
 			margin-top:-3px;
 		}
 		#privacity{
-			margin-top:150px;
-			color:black;
+			color:white;
+			margin-top:80px;
+			
+			
 		}
 						
 	
@@ -197,7 +200,7 @@
 							
 			
 			<p id="imput2" >Data de Nascimento</p>
-				<input  id="campoData"  minlength="10" placeholder="2000-12-31" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.idade" required/>
+				<input  id="campoData"  minlength="10" placeholder="31/12/2000" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.idade" required/>
 			
 			
 			<p id="imput3">Escola ou Local de trabalho</p>
@@ -271,17 +274,17 @@
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a  href="objetivosprojetos.html?objetivo=2">
 																			<img  src="assets/objmilenio/objetivo2.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=3">
 																			<img  src="assets/objmilenio/objetivo3.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=4">
 																			<img  src="assets/objmilenio/objetivo4.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -290,22 +293,22 @@
 																 <div class="item">
 											                        <div class="row">
 																		<div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=5">
 																			<img  src="assets/objmilenio/objetivo5.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=6">
 																			<img  src="assets/objmilenio/objetivo6.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=7">
 																			<img  src="assets/objmilenio/objetivo7.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=8">
 																			<img  src="assets/objmilenio/objetivo8.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -329,22 +332,22 @@
 											                    <div class="item active">
 											                        <div class="row">
 																	 <div class="col-sm-3">
-																		<a href="objetivosprojetos.html">
+																		<a href="objetivosprojetos.html?objetivo=2">
 																			<img  src="assets/objmilenio/objetivo1.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html#dropdown2">
+																		<a href="objetivosprojetos.html?objetivo=2">
 																			<img  src="assets/objmilenio/objetivo2.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=3">
 																			<img  src="assets/objmilenio/objetivo3.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=4">
 																			<img  src="assets/objmilenio/objetivo4.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -353,22 +356,22 @@
 																 <div class="item">
 											                        <div class="row">
 																		<div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=5">
 																			<img  src="assets/objmilenio/objetivo5.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=6">
 																			<img  src="assets/objmilenio/objetivo6.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=7">
 																			<img  src="assets/objmilenio/objetivo7.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="objetivosprojetos.html?objetivo=8">
 																			<img  src="assets/objmilenio/objetivo8.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -392,22 +395,22 @@
 											                    <div class="item active">
 											                        <div class="row">
 																	 <div class="col-sm-3">
-																		<a href="projetos.html">
+																		<a href="projetos.html?objetivo=9">
 																			<img src="assets/metasglobais/gg-1nopoverty-portuguese.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=10">
 																			<img src="assets/metasglobais/gg-2nohunger-portuguese.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=11">
 																			<img src="assets/metasglobais/gg-3goodhealth-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=12">
 																			<img src="assets/metasglobais/gg-4qualityeducation-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -416,22 +419,22 @@
 																 <div class="item">
 											                        <div class="row">
 																		<div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=13">
 																			<img src="assets/metasglobais/gg-5genderequality-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=14">
 																			<img src="assets/metasglobais/gg-6cleanwaterandsanitation-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=15">
 																			<img src="assets/metasglobais/gg-7renewableenergy-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=16">
 																			<img src="assets/metasglobais/gg-8goodjobseconomicgrowth-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -440,22 +443,22 @@
 																 <div class="item">
 											                        <div class="row">
 																		<div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=17">
 																			<img src="assets/metasglobais/gg-9innovationandinfrastructure-portuguese1.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=18">
 																			<img src="assets/metasglobais/gg-10recucedinequalities-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=19">
 																			<img src="assets/metasglobais/gg-11sustainablecitiesandcommunities-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=20">
 																			<img src="assets/metasglobais/gg-12responsibleconsumption-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -464,22 +467,22 @@
 																 <div class="item">
 											                        <div class="row">
 																		<div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=21">
 																			<img src="assets/metasglobais/gg-13climateaction-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=22">
 																			<img src="assets/metasglobais/gg-14lifebelowwater-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=23">
 																			<img src="assets/metasglobais/gg-15lifeonland-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="projetos.html?objetivo=24">
 																			<img src="assets/metasglobais/gg-16peaceandjustice-portuguese.png"  alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -502,22 +505,22 @@
 											                    <div class="item active">
 											                        <div class="row">
 																	 <div class="col-sm-3">
-																		<a href="listaturmas.html">
+																		<a href="listaturmas.html?objetivo=25">
 																			<img src="assets/turmas/3am.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="listaturmas.html?objetivo=26">
 																			<img src="assets/turmas/3ai.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	  <div class="col-sm-3">
-																		<a href="">
+																		<a href="listaturmas.html?objetivo=27">
 																			<img src="assets/turmas/3at.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
 																	   <div class="col-sm-3">
-																		<a href="">
+																		<a href="listaturmas.html?objetivo=28">
 																			<img src="assets/turmas/3ae.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -550,9 +553,9 @@
 										<div class="carousel-inner">
 											    <div class="item active">
 											        <div class="row">
-														<div class="col-sm-3">
-															<a href=""><img  src="assets/midia/91733_697x437_crop_5419f57f2233f.jpg" alt="Image" class="img-responsive"></a>
-											           	</div>
+													<div class="col-sm-3">
+															<a href=""><img  src="assets/midia/Abertura-FNE.jpg" alt="Image" class="img-responsive"></a>
+											            </div>
 														<div class="col-sm-3">
 															<a href=""><img  src="assets/midia/Abertura-FNE.jpg" alt="Image" class="img-responsive"></a>
 											            </div>
@@ -607,10 +610,15 @@
 							</div> 
 						</div>
 					</div>
+					<p id="privacity">&copy; 2016 FENTEC, Inc &middot;     <a style="color:white;"href="#localizacao"> Localização&middot </a>     (92) 2129-2991 / 2999 &middot; </p>
 				</div>
+				
+				<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+        <script src="js/galeria.js"></script>
+		
 </body>
 	
-		<p id="privacity">&copy; 2016 FENTEC, Inc. &middot;<a href="#localizacao"> localizacao&middot </a>; (92) 2129-2991 / 2999</p>
+	
 	
 </html>
 	

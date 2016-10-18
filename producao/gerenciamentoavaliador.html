@@ -6,10 +6,10 @@
 	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/mascaradata.js"></script>
+	<script type="text/javascript" src="js/nota.js"></script>
 	<script type="text/javascript" src="js/avaliador.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>	
 <style>
@@ -63,7 +63,7 @@
 				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Projetos</p>
 			</div>
 			<ul>
-			 <li style="text-decoration:none" ng-repeat="projeto in arrProjeto">
+			<li style="text-decoration:none" ng-repeat="projeto in arrProjeto">
 				<div id="divlist">
 				</br>
 				<div id="atributos">
@@ -75,16 +75,16 @@
 						</div>
 					</div>
 				</div>
-					<div id="butsaltdel">
+					<div ng-controller="NotaController" id="butsaltdel">
 						<h5><strong>Nota</strong></h5>
-						<input id="nota" type="number" min="0" max="10" style="width:56px;" />
+						<input id="nota" type="number" min="0" max="10" style="width:56px;" ng-model="model.nota" />
 					</div>
 					<hr id="hrlist">
 				</div>
 			</li>
 		</ul>
 			<div id="butaoadd">
-			<a href="#" class="btn btn-success">Salvar</a>
+			<a ng-click="save()" class="btn btn-success">Salvar</a>
 			</div>
 		</div>
 </body>
