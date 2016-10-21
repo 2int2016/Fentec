@@ -86,12 +86,16 @@
 			$scope.model.projeto = document.getElementById("ipt9").value;
 			
 			$agora = new Date();
-			$ano=$scope.model.ida.substr(0,4);
-			$mes=$scope.model.ida.substr(5,2);
-			$dia=$scope.model.ida.substr(8,10);
+			$ano=$scope.model.ida.substr(6,9);
+			$mes=$scope.model.ida.substr(3,2);
+			$dia=$scope.model.ida.substr(0,2);
+			$anoo=$scope.model.retorno.substr(6,9);
+			$mess=$scope.model.retorno.substr(3,2);
+			$diaa=$scope.model.retorno.substr(0,2);
 			
-			if( $ano>= $agora.getFullYear () || $mes > '12'  || $dia > '31'   ){
-					alert("Data inv?lida");
+			
+			if(  $ano != '2016'  || $mes > '12'  || $dia > '31' || $anoo != '2016'  || $mess > '12'  || $diaa > '31'   ){
+					alert("Data invalida");
 				}
 				
 				else{
@@ -101,7 +105,7 @@
 							
 						}
 						else{
-							$scope.model.idade = $agora.getFullYear () - $ano;
+							
 							$scope.create();
 							
 						}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html ng-app="fentec">
   <head>
     <meta charset="UTF-8">
     <title>Portal Fentec</title>
@@ -8,9 +8,14 @@
 	
     <link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
     <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular.min.js"></script>
     <script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/libs/velocity.min.js"></script>
+    <script type="text/javascript" src="js/fentec.js"></script>
+    <script type="text/javascript" src="js/projeto.js"></script>
+    <script type="text/javascript" src="js/visitante.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    
     <script src="js/galeria.js"></script>
      <style type="text/css">
        div.fundo {
@@ -23,7 +28,7 @@
      </style>
   </head>
 
-  <body>
+  <body >
     <header id="menu">
     <img id="logo" src="assets/images/logoo.fw.png"/>
     <nav id="menuheader" ng-controller="NavController">
@@ -45,12 +50,12 @@
       </ul>
     </nav>
   </header>
-
+<div ng-controller="ProjetoController">
     <div class="codepen">
     <div class="fundo"></div>
 <div class="posicao circulo">
-    <span>
-      <img id="profile" src="assets/projetos/logo-snippet.png"/>
+    <span >
+      <img id="profile" ng-src="assets/uploads/{{model.arquivo}}"  class="img-responsive" style="height:100%;"/>
     </span>
   </div>
 </div>
@@ -59,7 +64,7 @@
 
 
   <ul class="tabs">
-    <li class="active">Sobre</li>
+    <li class="active">{{model.nome}}</li>
 
   
   </ul>
@@ -70,11 +75,11 @@
        <br>
       <br>
       <h2>Problemática</h2>  
-      <p id="paragrafo"><h4>Será que todas as pessoas do mundo se alimentam diariamente?</h4></p>
+      <p id="paragrafo"><h4>{{model.problema}}</h4></p>
       <br>
       <br>
       <h2>Descrição</h2>  
-      <p id="paragrafo"><h4 id="descricao">Pedir comida pelo telefone é coisa do passado. Depois do iFood, você não precisa depender de imãs de geladeira e toneladas de papel para encontrar o que pedir, pode dispensar o telefone e deve esquecer as filas de espera intermináveis até receber sua comida. O iFood veio para deixar tudo mais simples.</h4></p>
+      <p id="paragrafo"><h4 id="descricao">{{model.descricao}}</h4></p>
       <br>
       <br>
       <h2>Categoria</h2> 

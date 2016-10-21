@@ -23,7 +23,8 @@
 	margin:5px;
 	display:inline;
 	box-shadow:0px 1px 1px 0px #2A2A2A;
-	border:2px solid black;
+
+	margin-top:20px;
 	}
 	#patro{
 	display:inline-block;
@@ -37,19 +38,18 @@
 		position:absolute;
 	}
 	#btn{
-			margin-left: 1160px;
-		
-			margin-top: 340px;
+			margin-left: 20px;
+			position:fixed;
+			margin-top: 150px;
 			width:79px ;
 			height:35px;
-			color:white;
-			
-			
-
+			color:white;		
 		}	
+	
 		
     </style>
 </head>	
+
 <body style="background-image: url('assets/images/patrocinadores.fw.png'); width:100%; height:100%;" >
 	<h1 >Todos os Projetos cadastrados na Fentec.</h1>
 	<div class="container" id="carouselmidia" ng-controller="ProjetoController">
@@ -64,6 +64,6 @@
 								</div>
 							</div>
 						</div>
-					<a href="index.html"><button  id="btn" class="btn btn-primary "><p id="salvar">Voltar</p></button></a>
+					<a href="index.html"><button  id="btn" class="btn btn-danger "><p id="salvar">Voltar</p></button></a>
 </body>		
 </html>

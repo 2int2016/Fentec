@@ -54,7 +54,15 @@ class OrientadorController{
 		
 		return $result;
 	}
+	public function buscar(){
+		if (isset($_SESSION['id_user'])) {
+			$model = OrientadorModel::find($_SESSION['id_user']);
+			
+			return $model->to_array();
+		}
 
+		return 0;
+	}
 	public function change($email){
 		$model = OrientadorModel::find('all',array('conditions'=> array('email=?', $email)));
 		return $model[0]->to_array();

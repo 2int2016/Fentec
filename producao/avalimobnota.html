@@ -1,6 +1,7 @@
 <html ng-app="fentec">
 <head>
 	<meta charset="utf-8">
+	<title>Portal Fentec</title>
 	<meta name="viewport" content="width=device-width, initial-scale=">
 	<link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
 	<link rel="stylesheet" href="js/jquery/jquery.mobile.datepicker.css"/>
@@ -9,7 +10,8 @@
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
-	<script type="text/javascript" src="js/avaliador.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/visitante.js"></script>
 	
 	
 
@@ -41,12 +43,14 @@
 	background-color:#0A56AD;
 
 	}
-	#miolo{
-
+	#teste{
+		margin-left:100px;
+	}
+	
 
 	</style>
 <body>
-	<div  ng-controller="avaliadorController">
+	<div  ng-controller="ProjetoController">
 		<form>
 		<div >
 		<div data-role="page" id="fotoprin" data-quicklinks="true" class="jqm-demos">
@@ -64,32 +68,31 @@
 					<li data-filtertext="avaliadores" ><a href="listaavaliadormob.html" data-ajax="false">Avaliadores</a></li>
 					<li data-filtertext="orientadores" ><a href="cadastroorientadormob.html" data-ajax="false">Orientadores</a></li>
 					<li data-filtertext="visitantes" ><a href="#"data-ajax="false" >Visitantes</a></li>
+						<li data-filtertext="patrocinadores" ><a href="#"data-ajax="false" >Patrocinadores</a></li>
 				</ul>
 			</div>
 	</div>	
 
-	
-		<div id="miolo">
-			<form class="ui-filterable">
-				<input id="filterBasic-input" data-type="search">
-			</form>
-				</br>
-			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
-			 <li style="text-decoration:none" ng-repeat="Avaliador in arrAvaliador">
-				<div >
-					<p>Nome:</p>
-					
-					<a  ng-click="editarMob(Avaliador.id)" ><h4>{{Avaliador.nome}}</h4></a>
-				</div>
-			</li>
-		</ul>
-		</div>
-		</br>
-		
-	</div>
-		</form>
-		
-	
+	<div id="miolo" ng-controller="ProjetoController">
+		<center><img ng-src="assets/uploads/{{model.arquivo}}" style="width:200px;height:200px;"></center>
+		<h2 style="text-align:center;color:#036" >{{model.nome}}</h2>
+		<h3 style="text-align:center" >Categoria</h3>
+		<p style="text-align:center;" >{{model.categoria}}</p>
+		<h3 style="text-align:center">Meta</h3>
+		<p style="text-align:center;" >{{model.metaobj}}</p>
+		<h3 style="text-align:center">Problemática</h3>
+		<p style="text-align:center;" >{{model.problema}}</p>
+		<h3 style="text-align:center">Descrição</h3>
+		<p style="text-align:center;" >{{model.descricao}}</p>
+		<h3 style="text-align:center">Problemática</h3>
+		<p style="text-align:center;" >{{model.problema}}</p>
+		<h3 style="text-align:center">Bibliografia</h3>
+		<p style="text-align:center;" >{{model.bibliografia}}</p>
+		<br>
+		<h3 style="text-align:center">Nota do Projeto</h3>
+		<input step="0.01" type="number" min="0" max="10"  >
+		<br>
+		<button>Salvar</button>
 	</div>
 	</div>
 

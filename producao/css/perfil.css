@@ -82,7 +82,26 @@ footer{
 	background-color:#DBDBEA;
 	
 }
+#mioloo{
+	margin-top: 180px;
+	background-color: white;
+	width:580px;
+	height:180px;
+	border-radius:5px;
+	margin-left:460px;
+	box-shadow: 0px 0px 0.7px grey;
+	background-color:#DBDBEA;
+	
+}
 #projeto{
+	color:white;
+	background-color:#036;
+	padding-top:10px;
+	padding-bottom:2px;
+	font-size:22;
+	
+}
+#projetoo{
 	color:white;
 	background-color:#036;
 	padding-top:10px;
@@ -124,10 +143,55 @@ footer{
 	margin-left:110px;
 	margin-top:-3px;
 }
+#meuperfil2{
+	border-radius:5px;
+	background-color:#036;
+	position:absolute;
+	width:240px;
+	height:100px;
+	margin-left:110px;
+	margin-top:2px;
+}
+#meuperfil3{
+	border-radius:5px;
+	background-color:#036;
+	position:absolute;
+	width:240px;
+	height:100px;
+	margin-left:110px;
+	margin-top:110px;
+}
+#meuperfil4{
+	border-radius:5px;
+	background-color:#036;
+	position:absolute;
+	width:240px;
+	height:100px;
+	margin-left:110px;
+	margin-top:226px;
+}
+#meuperfil5{
+	border-radius:5px;
+	background-color:#036;
+	position:absolute;
+	width:240px;
+	height:100px;
+	margin-left:110px;
+	margin-top:342px;
+}
+#meuperfil6{
+	border-radius:5px;
+	background-color:#036;
+	position:absolute;
+	width:240px;
+	height:100px;
+	margin-left:110px;
+	margin-top:457px;
+}
 #meuprojeto{
 	
 	border-radius:5px;
-	margin-top:114px;
+	margin-top:105px;
 	background-color:#036;
 	position:absolute;
 	width:240px;
@@ -136,7 +200,7 @@ footer{
 }
 #sugerirescola{
 	border-radius:5px;
-	margin-top:224px;
+	margin-top:215px;
 	background-color:#036;
 	position:absolute;
 	width:240px;
@@ -147,12 +211,31 @@ footer{
 #contato{
 	
 	border-radius:5px;
-	margin-top:334px;
+	margin-top:325px;
 	background-color:#036;
 	position:absolute;
 	width:240px;
 	height:100px;
 	margin-left:110px;
+}
+#patrocinio{
+	
+	border-radius:5px;
+	margin-top:444px;
+	background-color:#036;
+	position:absolute;
+	width:240px;
+	height:100px;
+	margin-left:110px;
+}
+#use{
+	position:absolute;
+	font-size:30px;
+	margin-top:68px;
+	margin-left:160px;
+	color:white;
+	font-family:Square721 BT;
+
 }
 .menuopcao{
 	color:white;
@@ -326,8 +409,13 @@ textarea{
 #estcid>*{
 	display:inline-block;
 }
+
 #atributos>*{
 	display:inline-block;
+}
+#atributoss>*{
+	display:inline-block;
+	margin-left:40px;
 }
 #options>*{
 	display:inline-block;

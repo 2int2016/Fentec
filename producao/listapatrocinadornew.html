@@ -147,7 +147,7 @@ text-decoration:underline;
 			position:absolute;
 			width:150;
 			height:150;
-			margin-top:-150px;
+			margin-top:-154px;
 		}
 		#plus{
 			margin-left:270px;
@@ -271,9 +271,8 @@ text-decoration:underline;
 			margin-top:25px;
 		}
 		#mat2{
-			margin-left:100px;
-			width:35px;
-			height:40px;
+			margin-left:105px;
+			width:2.5rem;
 			position:absolute;
 			margin-top:25px;
 		}
@@ -322,11 +321,12 @@ text-decoration:underline;
 		}
 		#p8{
 			position:absolute;
-			margin-left:60px;
-			margin-top:61px;
-			font-size:20;
-			font-family:Segoe UI;
-			color:white;
+			margin-left:80px;
+			margin-top:60px;
+			font-size:20px;
+			font-weight:5px;
+			font-family: Segoe UI;
+			
 		}
 		#parte-esquerda{
 			position:absolute;
@@ -367,20 +367,20 @@ text-decoration:underline;
 			margin-top:0px;
 		}
 		#butao-alterar{
-			width:45px; 
-			height:40px; 
-			margin-top:160px;
-			margin-left: 80px;
+			width:40px; 
+			height:30px; 
+			margin-top:170px;
+			margin-left: 40px;
 
 		}
 		#butao-remover{
-			width:45px; 
-			height:40px; 
-			margin-left: 10px;
-			margin-top: -100px;
-			border-radius:20px;
-			background-color:white;
+			width:38px; 
+			height:28px; 
+			border-radius:10px;
+			background-color:#DBDBEA;
+			
 		}
+
 		#white4{
 			width:240px;
 			height:100px;
@@ -396,6 +396,11 @@ text-decoration:underline;
 			margin-left:65px;
 			margin-top:57px;
 			font-size:20;
+			font-family:Segoe UI;
+			color:white;
+		}
+		#p10:hover{
+			text-decoration:underline;
 		}
 		#log{
 			margin-left:1265px;
@@ -422,6 +427,51 @@ text-decoration:underline;
 		h4{
 		text-align:center;
 		}
+		#text{
+		width:205px;
+		height:200px;
+		border-radius:5px;
+		}
+		#text:hover{
+		background-color:#036;
+		border-radius:9px;
+		font-size:40px;
+		}
+		#pic{
+		width:205px;
+		height:200px;
+		border-radius:10px;
+		background-color:white;
+		margin:15px;
+		float:left;
+		}
+		#butao-remover-p{
+		font-size:12px;
+		float:right;
+		margin-top:6px;
+		margin-right:5px;
+		}
+		#remover{
+		width:98px;
+		height:28px;
+		border-radius:16px 20px 20px 16px;
+		cursor:pointer;
+		}
+		#remover:hover{
+		background-color:red;
+		color:white;
+		}
+		#name{
+		width:250px;
+		color:#424242;
+		float:left;
+		font-size:25px;
+		}
+		#nome{
+		color:#878585;
+		font-size:16px;
+		margin-top:15px;
+		}
 </style>
 
 <body>
@@ -430,7 +480,7 @@ text-decoration:underline;
 	
 	<div id="tudooo" ng-controller="PatrocinadorController" data-role="page" class="jqm-demos" data-quicklinks="true">
 	<header>
-	<h1 style="position:absolute; margin-top:60px; margin-left:160px; color:white; font-family:Square721 BT; font-size:26;">Coordenação</h1>
+	<h1 style="position:absolute; margin-top:60px; margin-left:160px; color:white; font-family:Square721 BT; font-size:25;">Coordenação</h1>
 	<a id="ap" href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
 	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
 	</header>
@@ -448,17 +498,17 @@ text-decoration:underline;
 			<img id="mat1" src="assets/images/grades2.png"/>
 			<a id="ap" href="listaavaliadores.html" style="color:black;"><p id="p7">Avaliadores</p></a>
 	</div></a>
-	<a href="perfilorient.html"><div id="white2">
-			<img id="mat2" src="assets/images/teacher2.png"/>
-			<a id="ap" href="perfilorient.html" style="color:black;"><p id="p8">Orientadores</p></a>
-	</div></a>
+	<div id="white2">
+			<a href="listprojetos.html">	<img id="mat2" src="assets/images/listaproj.fw.png"/></a>
+				<a id="ap" href="listprojetos.html" style="color:black;"><p style="color:white" id="p8">Projetos</p></a>
+		</div>
 	<a href="conta.html"><div id="white3">
 			<img id="mat3" src="assets/images/person2.png"/>
 			<a id="ap" href="listavisitantes.html" style="color:black;"><p id="p9">Visitantes</p></a>
 	</div></a>
 	<div id="white4">
 			<a href="listapatrocinadornew.html">	<img id="mat3" src="assets/images/patrocinadoricon.png" /></a>
-				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p style="color:white" id="p10">Patrocinador</p></a>
+				<a id="ap" href="listapatrocinadornew.html" style="color:black;"><p id="p10">Patrocinador</p></a>
 		</div>
 	</div>
 		<div id="tudo" role="main" class="ui-content jqm-content">
@@ -471,31 +521,33 @@ text-decoration:underline;
 			</div>
 			<ul id="ul-tudo" data-filter="true" data-input="#filterBasic-input">
 				<li id="oi1" style="text-decoration:none;" ng-repeat="patrocinador in arr" >
-						<div id="miolo-inlne">
-							<div id="goods" class="goods">
-								<span id="info" class="info">
-					            	<div id="index">
-					            		<img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Picture" id="pic">
-					            	</div>
-									<span id="text" class="text">
-										<h2 id="name" >{{patrocinador.nome}}</h2>
-										<p class="description">{{patrocinador.descricao}}</p>
-								    </span>
-							
-								</span>
-							</div>
-						<form id="editar-e-apagar">
-							<!--<input id="butao-alterar" class="btn btn-default" ng-click="change(patrocinador)" type="image" src="assets/images/edit-black.png"></input>-->
-							<input id="butao-remover" class="btn btn-default" ng-click="delete(patrocinador.id)" type="image" src="assets/images/delete-black.png"></input>
-						</form> 						
-						</div>
-						<br/>
-						<hr>
-						<br/>
-						<br/>
+					<div id="miolo-inlne">
+							<div id="goods" >
+								<div id="index">
+									<img ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Picture" id="pic">
+								
+								
+								
+								<h2 id="name" >  {{patrocinador.nome}} </h2>
+								<p id="nome" class="description"> País: {{patrocinador.pais}}</p>
+								<p id="nome" class="description"> Estado: {{patrocinador.estado}}</p>
+								<p id="nome" class="description"> Cidade: {{patrocinador.cidade}}</p>
+								<p id="nome" class="description"> Telefone: {{patrocinador.telefone}}</p>
+								
+								</div>
+							<!--<form id="editar-e-apagar">
+								<input id="butao-alterar" class="btn btn-default" ng-click="change(patrocinador)" type="image" src="assets/images/edit-black.png"></input>
+								<div id="remover" ng-click="delete(patrocinador.id)">
+								<input id="butao-remover" class="btn btn-default"  type="image" src="assets/images/delete-black.png"></input>
+								<p id="butao-remover-p">DELETAR</p>
+								</div>
+							</form> -->						
+							</div>							
+							<hr>
+					</div>
 				</li>
 			</ul>
-			</div>
+			
 				
 		</div>	
 		

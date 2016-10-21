@@ -40,16 +40,7 @@
 			width:100%;
 			height:50px;
 		}
-		#miolo{
-			margin-top: 207px;
-			background-color:#DBDBEA;
-			width:500px;
-			border-radius:5px;
-			position: absolute;
-			height: auto;
-			margin-left:480px;
-			border:1px solid grey;
-		}
+		
 		#campusprimarios{
 			margin-left:-45px;
 			padding-top:20px;
@@ -208,7 +199,7 @@
 		#p8{
 			position:absolute;
 			margin-left:80px;
-			margin-top:57px;
+			margin-top:60px;
 			font-size:20;
 			
 		}
@@ -459,7 +450,7 @@
 				margin-top:45px;
 				margin-left:160px;
 				color:white;
-				font-family:Square721 BT;
+				font-family: Square721 BT;
 			}
 			#cp{
 				margin-top:505px;
@@ -497,22 +488,7 @@
 				margin-left:55px;
 				position:absolute;
 			}
-			#remover{
-				opacity:0.6;
-				width:15px;
-				border:none;
-				margin-left:10px;
-				height:15px;
-			}
-			#remove{
-					opacity:0.6;
-					width:15px;
-					border:none;
-					height:15px;
-			}
-			#remove:hover{
-					opacity:0.8;
-			}
+			
 			#form-top{
 				margin-left:70px;
 				margin-top:15px;
@@ -577,8 +553,8 @@
 		</div>
 		
 		<div id="white">
-				<a href="orientmaterial.html"><img id="mat1" src="assets/images/tools2.png"/></a>
-				<a id="ap" href="orientmaterial.html" style="color:black;"><p style="color:white" id="p6">Cadastro</p></a>
+				<a href="orientlistmat.html"><img id="mat1" src="assets/images/tools2.png"/></a>
+				<a id="ap" href="orientlistmat.html" style="color:black;"><p style="color:white" id="p6">Materiais</p></a>
 		</div>
 		
 		<div id="white1">
@@ -587,8 +563,8 @@
 		</div>
 		
 		<div id="white2">
-			<a href="perfilorient.html">	<img id="mat2" src="assets/images/listaproj.fw.png"/></a>
-				<a id="ap" href="perfilorient.html" style="color:black;"><p style="color:white" id="p8">Projetos</p></a>
+			<a href="listprojetos.html">	<img id="mat2" src="assets/images/listaproj.fw.png"/></a>
+				<a id="ap" href="listprojetos.html" style="color:black;"><p style="color:white" id="p8">Projetos</p></a>
 		</div>
 		
 		<div id="white3">
@@ -601,56 +577,27 @@
 		</div>
 		
 	</div>	
-	<input style="width:500px; height:40px; margin-top:160px; margin-left:480px; position:absolute;" ng-model="pesquisa" class="form-control" data-type="search"/>
-	<div id="miolo">
-		<ul id="ul-tudo" data-filter="true" data-input="#filterBasic-input">
-				<li id="oi1" style="text-decoration:none;" ng-repeat="material in arr | filter:pesquisa" >
-						<div id="miolo-inlne">
-							<div id="goods" class="goods">
-								<span id="info" class="info">
-					            	<div id="index">
-					            		<img ng-src="assets/images/{{material.caminhoimagem}}" alt="Picture" id="pic">
-					            	</div>
-									<span id="text" class="text">
-										<h2 id="name" >{{material.nome}}</h2>
-										<p class="description">{{material.descricao}}</p>
-								    </span>
-							
-								</span>
-							</div>
-						<form>
-							<div id="butsaltdel">
-								<input type="image" href="alterProjet.html" title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(material)"/>
-								<input type="image" ng-click="delete(material.id)" src="assets/images/delete-black.png" title="Deletar" id="remover"/>
-							</div>	
-						</form> 
-						
-						</div>
-						<br/>
-						<hr>
-						<br/>
-						<br/>
-				</li>
-				<form id="form-top" >
-							<nav class="nav-background" ng-hide="true">
-								<input type="text" ng-model="model.nome" style="width:315px;" class="form-control" placeholder="Alterar nome">
-								<input type="text" ng-model="model.marca" style="width:315px; margin-top:5px;" class="form-control" placeholder="Alterar Marca">
-								<select placeholder="Alterar Tipo" class="form-control"  style="width:315px; margin-top:5px;" id="ipt3" ng-model="model.tipo">
-									<option>Mecanico</option>
-									<option>Logico</option>
-								</select>
-								<textarea id="ipt4" class="form-control" style="	resize:none; width:315px; margin-top:5px;" placeholder="Alterar Descrição"  ng-model="model.descricao"></textarea>
-								<input type="text" class="form-control" style="width:315px; margin-top:5px;" placeholder="Alterar Preço" ng-model="model.preco"></input>
-								<input type="text" class="form-control" style="width:315px; margin-top:5px;" placeholder="Alterar Dia da ida" ng-model="model.ida"></input>
-								<input type="text" class="form-control" style="width:315px; margin-top:5px;" placeholder="Alterar Dia de retorno" ng-model="model.retorno"></input>
-								</br>
-								</br>
-								<button  ng-click="save()"  style="margin-left:100px;" >{{updateMode?'Salvar alterações': 'Salvar'}}</button>
-							</nav>	
-				</form>
-			</ul>
-	
-</div>
+	<div  ng-controller="MatController" id="mioloo">
+			<div id="Projeto">
+				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Materiais</p>
+			</div>
+			<ul>
+			 <li style="text-decoration:none" ng-repeat="material in arr">
+				<div id="divlist">
+				</br>
+				<div id="atributoss">
+					<img ng-src="assets/uploads/{{material.arquivo}}" style="width:100px; border-radius:200px;">
+					<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
+						<h3 style="color:#4365B9;">{{material.nome}}</h3>
+						<h4 style="color:#58585E; font-size:15px;">Descrição: {{material.descricao}}</h4>
+					</div>
+				</div>
+					<!-- <h4>Cidade: {{projeto.cidade}}</h4> -->
+					
+				</div>
+			</li>
+		</ul>
+		</div>
 
 </body>
 </html>

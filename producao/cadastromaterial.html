@@ -187,6 +187,7 @@
 			margin-left:78px;
 			margin-top:56px;
 			font-size:20;
+			font-family: Segoe UI;
 		}
 		#p7{
 			position:absolute;
@@ -237,7 +238,7 @@
 			border-radius:5px;
 			margin-top:160px;
 			margin-left:30px;
-			border:1px solid grey;
+			
 		}
 		#white1{
 			width:240px;
@@ -568,13 +569,13 @@
 							<p id="ida">Dia da ida</p>
 							
 							<form>
-								<input class="form-control" type="text" minlength="10" id="ipt8" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10"  placeholder="dd-mm-AAAA"  ng-model="model.ida" name="data" />
+								<input class="form-control" type="text" minlength="10" id="ipt8" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10"  placeholder="dd/mm/AAAA"  ng-model="model.ida" name="data" />
 							</form>
 							
 							
 							<p id="volta">Dia da volta</p>
 							<form>
-								<input class="form-control" minlength="10" placeholder="dd-mm-AAAA" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" ng-model="model.retorno"  id="ipt9"/>
+								<input class="form-control" minlength="10" placeholder="dd/mm/AAAA" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" ng-model="model.retorno"  id="ipt9"/>
 							</form>
 						</div>	
 						

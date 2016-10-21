@@ -29,18 +29,20 @@
 	                    var opt = document.createElement('option');
 	                    opt.appendChild(document.createTextNode(itens[j][1]));
 	                    opt.value = itens[j][0];
-	                    document.getElementById('cidade1').appendChild(opt);
-
+			    if (document.getElementById('cidade1') !== null ){
+				document.getElementById('cidade1').appendChild(opt);
+			    }
 	                    if (opt.value === $scope.model.cidade) {cit = ind;};
 	        			ind++;
 	        		}
 	                
                 };
-                document.getElementById('cidade1').selectedIndex = cit;
+		if (document.getElementById('cidade1') !== null )
+			document.getElementById('cidade1').selectedIndex = cit;
         }
 
 		$scope.init = function(){
-
+			$scope.o = $scope.getUrlVars()["objetivo"];
 			$scope.arrestados=arrestados;
 			
 			var id = $scope.getUrlVars()["id"];
@@ -57,11 +59,13 @@
 			$scope.model={};
 		};
 		$scope.selecttab=function($tab){
+			if (document.getElementById('buttonarrow1') !== null ){
 			document.getElementById("buttonarrow1").className="buttonarrow";
 			document.getElementById("buttonarrow2").className="buttonarrow";
 			document.getElementById("buttonarrow3").className="buttonarrow";
 			document.getElementById("buttonarrow4").className="buttonarrow";
 			document.getElementById($tab).className+="selecionado";
+			}
 			
 		};
 

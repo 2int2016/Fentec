@@ -81,9 +81,11 @@
 		}
 		#imput2{
 		color:white;
+		margin-top:10px;
 		}	
 		#imput3{
 		color:white;
+			margin-top:10px;
 		}
 		#imput11{
 			width:250px
@@ -269,7 +271,7 @@
 											                    <div class="item active">
 											                        <div class="row">
 																	 <div class="col-sm-3">
-																		<a href="objetivosprojetos.html">
+																		<a href="objetivosprojetos.html?objetivo=1">
 																			<img src="assets/objmilenio/objetivo1.fw.png" alt="Image" class="img-responsive">
 																		</a>
 											                         </div>
@@ -601,7 +603,7 @@
 						</br></br>
 						<div class="container" id="carouselmidia" ng-controller="PatrocinadorController">
 						 <div class="col-md-12">
-								<div id="patrocinador" class="well">
+								<div id="patrocinador" >
 									
 									<div id="patro" ng-repeat="patrocinador in arr">
 										<a href="{{patrocinador.url}}"><img id="foto-patrocinador" ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" ></a>

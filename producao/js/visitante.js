@@ -78,7 +78,7 @@
 		$scope.save = function(){
 			$agora = new Date();
 			$ano=$scope.model.idade.substr(6,9);
-			$mes=$scope.model.idade.substr(3,1);
+			$mes=$scope.model.idade.substr(3,2);
 			$dia=$scope.model.idade.substr(0,2);
 			
 				if( $ano>= $agora.getFullYear ()|| $ano< '1900' || $mes > '12'  || $dia > '31'   ){

@@ -11,7 +11,7 @@
 		$scope.autenticar = function($email,$senha){
 			try
 			{
-				aj.get('./service/tborientadores/'+$email).success(function(data){
+				aj.get('./service/tborientadores/buscar').success(function(data){
 					if (data.senha == $senha  ) {	
 						if (data.email == 'coordenacao@fmm.com') {window.location = 'perfilorient.html?email='+$email;}
 						else if (data.email == 'avaliador@fmm.com') {window.location = 'cadastroavaliador.html?email='+$email;}	

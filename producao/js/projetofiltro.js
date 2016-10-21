@@ -15,18 +15,20 @@
 			});
 			return vars;
 		}
-
+		
 		$scope.init = function(){
 
 			
-			var o = $scope.getUrlVars()["objetivo"];
-			switch (o) {
+			$scope.o = $scope.getUrlVars()["objetivo"];
+			switch ($scope.o) {
 				
 				case '1':
 					document.getElementById("dropdown1-tab").click();
+					
 				break;
 				case '2':
 				document.getElementById("dropdown2-tab").click();
+				
 				break;
 				case '3':
 				document.getElementById("dropdown3-tab").click();
