@@ -12,16 +12,30 @@
 			$scope.updateMode = false;
 			$scope.read();
 		};
-		
+		 
+		 $scope.sair = function(){
+			try
+			{
+				aj.get('./service/tborientadores/sair').success(function(data){
+					window.location = "conta.html";
+				});
+			}
+			catch(err)
+			{
+				alert(err.message);
+			}
+		}
 		
 		$scope.create = function(){
 			$http.post('./service/tborientadores', $scope.model).success(function(data){
 				
 				if(data==0){
-					alert("email já cadastrado");
+					alert("email j? cadastrado");
 				}
 				else{
-					window.location="dadosorient.html";
+					alert('cadastro efetuado com sucesso');
+					window.location="conta.html";
+					
 				}
 				
 			});	
@@ -72,6 +86,8 @@
 			}
 			else{
 				$scope.create();
+				alert('cadastro efetuado com sucesso');
+				$scope.sair();
 			}
 		};
 		
@@ -84,6 +100,7 @@
 			
 			$scope.arrcidades=$estado["cidades"];
 		};
+		
 
 		$scope.init();
 

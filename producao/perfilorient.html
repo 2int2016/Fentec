@@ -1,7 +1,8 @@
 <html ng-app="fentec">
 <head>
-	<title>Portal Fentec</title>
+	<title>Administração Fentec | Orientador</title>
 	<meta charset="utf-8"/>
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
@@ -11,6 +12,8 @@
 	<script type="text/javascript" src="js/orientador.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/logorient.js"></script>
+	
 	
 	
 </head>
@@ -18,9 +21,10 @@
 	<header>
 	
 	</header>
+	
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
-		<div id="desconect">
-			<a id="logout1" href="conta.html">
+		<div id="desconect"  ng-controller="LogarController" >
+			<a id="logout1"  ng-click="sair()">
 			<img id="logout" title="Sair" src="assets/images/logout.png">
 			
 			

@@ -36,13 +36,41 @@
 		
 		$scope.autenticar = function(){
 			$http.post('./service/tborientadores/autenticar', $scope.usu).success(function(data){
-				if(data !== "0" && window.location.pathname == "/fentec/producao/conta.html"){
-					window.location = "dadosorient.html";
+				if(data == "34" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "cadastroorientador.html";
+				}
+				else if(data == "30" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "dadosorient.html?email=+$email";
+				}
+				else if(data == "35" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "dadosorient.html?email=+$email";
+				}
+				else if(data == "36" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "dadosorient.html?email=+$email";
+				}
+				else if(data == "37" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "dadosorient.html?email=+$email";
+				}
+				else if(data == "38" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "dadosorient.html?email=+$email";
+				}
+				else if(data == "39" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "cadastromaterial.html?email=+$email";
+				}
+				else if(data == "40" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "cadastroavaliador.html?email=+$email";
+				}
+				else if(data == "41" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "perfilorient.html?email=+$email";
+				}
+				else if(data !== "0" && window.location.pathname == "/fentec/producao/conta.html"){
+					window.location = "dadosorient.html?email=+$email";
 				}
 				
 				
+				
 				else if(window.location.pathname == "/fentec/producao/conta.html"){
-					alert('usuario ou senha incorretos');
+					alert('Usuário ou senha incorretos');
 				};
 			});
 		};

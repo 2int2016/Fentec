@@ -10,6 +10,7 @@
 	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/material.js"></script>
+	<script type="text/javascript" src="js/logorient.js"></script>
 </head>
 <style>
 #divTop{
@@ -348,9 +349,9 @@ header{
 	<header></header>
 	<a href=""><img id="logo" src="assets/images/logoo.fw.png"/></a>
 	
-	<div id="Sairt">
-	<a id="ap" href="conta.html"><p id="p5">Sair</p></a>
-	<img id="log" src="assets/images/loggout.jpg"/>
+	<div id="Sairt" ng-controller="LogarController" >
+	<a id="ap" ng-click="sair()"><p id="p5">Sair</p></a>
+	<img id="log" ng-click="sair()" src="assets/images/loggout.jpg"/>
 	</div>
 	<div id="parte-esquerda">
 	<div id="white">

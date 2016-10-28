@@ -2,9 +2,9 @@
 <html ng-app="fentec">
 <head>
 	<meta charset="utf-8">
-	<title>Portal Fentec</title>
+	<title>Fentec | Feira Norte de Tecnologia e Ciência</title>
 	
-	
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
 	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
@@ -75,549 +75,544 @@
 		#patrocinadores{
 			background-image: url('assets/images/patrocinadores.fw.png');
 		}
-		#imput1{
-		color:white;
-		border:1px solid transparent;
-		}
-		#imput2{
-		color:white;
-		margin-top:10px;
-		}	
-		#imput3{
-		color:white;
-			margin-top:10px;
-		}
 		#imput11{
-			width:250px
-		}
-		#imput22{
-	
-		}	
-		#imput33{
-	
+			width:300px
 		}
 		#cadastrovisi{
 			position:absolute;
-			margin-left:175px;
-			margin-top:80px;
+			margin-left:12%;
+			margin-top: 5%;
+			background: rgba(255,255,255, 0.5);
 		}
 		#btn{
-			margin-left: 280px;
-			position: absolute;
-			margin-top: -34px;
-			width:79px ;
+			width:91% ;
 			height:35px;
-			color:black;
-			
-
+			color:white;
+			background-color:#584380;
+			border:none;
 		}	
+		#btn:hover{
+			background-color:rgba(111, 81, 126, 0.94);
+			transition: all 0.5s ease 0s;
+		}
 		#salvar{
 			margin-top:-3px;
 		}
-		#privacity{
-			color:white;
-			margin-top:80px;
-			
-			
-		}
-						
+		
+					
 	
 	</style>
 </head>
 
 	
 <body>
-	<header id="menu">
-		<img id="logo" src="assets/images/logoo.fw.png"/>
-		<nav ng-controller="NavController">
-		<div  id="imagesheader">
-			<img id="homeicon" src="assets/images/homeicon.fw.png">
-			<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
-			<img id="projetoicon" src="assets/images/projetoicon.fw.png">
-			<img id="midiaicon" src="assets/images/midiaicon.fw.png">
-			<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
-			<img id="contaicon" src="assets/images/contaicon.fw.png">
-		</div>
-			<ul>
-				<a href="#home" class="option" id="buttonhome">Home</span></a>
-				<a href="#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
-				<a href="#projeto" class="option" id="buttonprojetos">Projetos</span></a>
-				<a href="#midia" class="option" id="buttonmidia">Mídia</span></a>
-				<a href="#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
-				<a href="conta.html" class="option" id="buttonmyacount"> 
-				Inscreva-se</span></a>
-			</ul>
-		</nav>
-	</header>
-	<div id="main">
-		<div id="center">
-			<a name="home"></a>
-				<div id="principal">
-					
+	<div id="tudo">
+		<header id="menu">
+			<img id="logo" src="assets/images/logoo.fw.png"/>
+			<nav id="buttons" ng-controller="NavController">
+				<div>
+					<img id="homeicon" src="assets/images/homeicon.fw.png">
+					<a href="#home" class="option" id="buttonhome">Home</span></a>
 				</div>
-			<a name="localizacao"></a>
-				<div id="localizacao">
-					<div id="conteudolocalizacao">
-						<h1 id="titlelocalizacao">Visite-nos</h1>
-						<h3 id="p">Para receber informações<br>sobre tudo que acontece na<br>FENTEC faça o cadastro abaixo:
-						<div id="modal" class="popupContainer" style="display:none;">
-							<header class="popupHeader">
-									<span class="header_title">Login</span>
-									<span class="modal_close"><i class="fa fa-times"></i></span>
-							</header>
-
-							<section class="popupBody">
-									<!-- Social Login -->
-									<div class="social_login">
-											<div class="">
-													
-													<label>Email / Username</label>
-														<input type="text" />
-														<br />
-														<a href="#" class="social_box fb">
-															<span class="icon"><i class="fa fa-facebook"></i></span>
-															<span class="icon_title">Connect with Facebook</span>
-
-														</a>
-													
-											</div>
-
-											<div class="action_btns">
-													<div class="one_half"><a href="#" id="login_form" class="btn">Cadastrar</a></div>
-											</div>
-									</div>
-
-							</section>
-					</div>
-					<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
-					<script type="text/javascript" src="js/libs/jquery-1.12.0.js"></script>
-					
-						<h1 id="dia">Dia 25</h1>
-						<h3 id="de"> DE NOVEMBRO</h3>
-		<div id="cadastrovisi" ng-controller="NavController">
-			<form>
-		
-			<p  id="imput1">Email</p>
-			<input  id="imput11" class="form-control" placeholder="E-mail" type="email" ng-model="model.email" required/>
-							
-			
-			<p id="imput2" >Data de Nascimento</p>
-				<input  id="campoData"  minlength="10" placeholder="31/12/2000" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.idade" required/>
-			
-			
-			<p id="imput3">Escola ou Local de trabalho</p>
-		<input  id="imput33" class="form-control" placeholder="Instituição " ng-model="model.instituicao" required/>
-			
-			
-
-
-			
-			<button  id="btn" ng-click="save()" class="btn btn-primary "><p id="salvar">{{updateMode?'Salvar alterações': 'Salvar'}}</p></button>
-		</form>
-	</div>
-						<br>
-						<br>
-						<br>
-						<br>
-						<iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8487199482997!2d-59.98144888598722!3d-3.13464139771749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c04bc00000001%3A0xa7004a8c3bbef1d6!2zRnVuZGHDp8OjbyBOb2tpYQ!5e0!3m2!1spt-BR!2sbr!4v1466303207656" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-						<h3 id="local">Local: Sede da Fundação Matias Machline</h3>
-						<h3 id="hora">Horário: 8h às 15h</h3>
-					</div>
+				<div>
+					<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+					<a href="#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
 				</div>
-			<a name="projeto" ></a>
-				<div id="projeto">
-					<div id="conteudoprojeto">
-						<div id="contenttop">
-							<h1 id="titleprojeto">Projetos</h1>
-							
-        					  <div class='containerbar'>
-								  <div class='row'>
-								    <div class='col-md-6'>
-								     
-								    </div>
-								  </div>
-								</div>
-        				</div>
-        				<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
-
-        				<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs id="carousel">
-							<ul id=myTabs class="nav nav-tabs" role=tablist>
-								<li role=presentation class=dropdown> 
-									<a href=# id="myTabDrop1" class=dropdown-toggle data-toggle=dropdown aria-controls=myTabDrop1-contents>Filtrar por...<span class=caret></span></a> 
-										<ul class=dropdown-menu aria-labelledby=myTabDrop1 id=myTabDrop1-contents>
-											<li>
-												<a href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1>Objetivos do milênio</a>
-											</li> 
-											<li>
-												<a href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2>Metas globais</a>
-											</li> 
-											<li>
-												<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Turmas</a>
-											</li> 
-											<li>
-												<a href="listatprojetos.html">Todos</a>
-											</li> 
-										</ul> 
-								</li> 
-							</ul> 
-							<div id=myTabContent class=tab-content> 
-								<div role=tabpanel class="tab-pane fade in active"> 
-									<p>
-										<div class="container">
-											    <div class="col-md-12">
-											        <div class="well">
-											            <div id="myCarousel" class="carousel slide">
-															 <div class="carousel-inner">
-											                    <div class="item active">
-											                        <div class="row">
-																	 <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=1">
-																			<img src="assets/objmilenio/objetivo1.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a  href="objetivosprojetos.html?objetivo=2">
-																			<img  src="assets/objmilenio/objetivo2.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=3">
-																			<img  src="assets/objmilenio/objetivo3.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=4">
-																			<img  src="assets/objmilenio/objetivo4.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-																 <div class="item">
-											                        <div class="row">
-																		<div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=5">
-																			<img  src="assets/objmilenio/objetivo5.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=6">
-																			<img  src="assets/objmilenio/objetivo6.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=7">
-																			<img  src="assets/objmilenio/objetivo7.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=8">
-																			<img  src="assets/objmilenio/objetivo8.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-															</div>
-															<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-															<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-														</div>
-													</div>
-												</div>
-										</div>
-									</p> 
-								</div> 
-								<div role=tabpanel class="tab-pane fade" id=dropdown1 aria-labelledby=dropdown1-tab> 
-									<p><div class="container">
-											    <div class="col-md-12">
-											        <div class="well">
-											            <div id="myCarousel2" class="carousel slide">
-															 <div class="carousel-inner">
-											                    <div class="item active">
-											                        <div class="row">
-																	 <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=2">
-																			<img  src="assets/objmilenio/objetivo1.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=2">
-																			<img  src="assets/objmilenio/objetivo2.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=3">
-																			<img  src="assets/objmilenio/objetivo3.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=4">
-																			<img  src="assets/objmilenio/objetivo4.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-																 <div class="item">
-											                        <div class="row">
-																		<div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=5">
-																			<img  src="assets/objmilenio/objetivo5.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=6">
-																			<img  src="assets/objmilenio/objetivo6.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=7">
-																			<img  src="assets/objmilenio/objetivo7.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="objetivosprojetos.html?objetivo=8">
-																			<img  src="assets/objmilenio/objetivo8.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-															</div>
-															<a class="left carousel-control" href="#myCarousel2" data-slide="prev">‹</a>
-															<a class="right carousel-control" href="#myCarousel2" data-slide="next">›</a>
-														</div>
-													</div>
-												</div>
-										</div>
-									</p>
-								</div> 
-								<div role=tabpanel class="tab-pane fade" id=dropdown2 aria-labelledby=dropdown2-tab> 
-									<p><div class="container">
-											    <div class="col-md-12">
-											        <div class="well">
-											            <div id="myCarousel3" class="carousel slide">
-															 <div class="carousel-inner">
-											                    <div class="item active">
-											                        <div class="row">
-																	 <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=9">
-																			<img src="assets/metasglobais/gg-1nopoverty-portuguese.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=10">
-																			<img src="assets/metasglobais/gg-2nohunger-portuguese.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=11">
-																			<img src="assets/metasglobais/gg-3goodhealth-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=12">
-																			<img src="assets/metasglobais/gg-4qualityeducation-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-																 <div class="item">
-											                        <div class="row">
-																		<div class="col-sm-3">
-																		<a href="projetos.html?objetivo=13">
-																			<img src="assets/metasglobais/gg-5genderequality-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=14">
-																			<img src="assets/metasglobais/gg-6cleanwaterandsanitation-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=15">
-																			<img src="assets/metasglobais/gg-7renewableenergy-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=16">
-																			<img src="assets/metasglobais/gg-8goodjobseconomicgrowth-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-																 <div class="item">
-											                        <div class="row">
-																		<div class="col-sm-3">
-																		<a href="projetos.html?objetivo=17">
-																			<img src="assets/metasglobais/gg-9innovationandinfrastructure-portuguese1.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=18">
-																			<img src="assets/metasglobais/gg-10recucedinequalities-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=19">
-																			<img src="assets/metasglobais/gg-11sustainablecitiesandcommunities-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=20">
-																			<img src="assets/metasglobais/gg-12responsibleconsumption-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-																 <div class="item">
-											                        <div class="row">
-																		<div class="col-sm-3">
-																		<a href="projetos.html?objetivo=21">
-																			<img src="assets/metasglobais/gg-13climateaction-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=22">
-																			<img src="assets/metasglobais/gg-14lifebelowwater-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=23">
-																			<img src="assets/metasglobais/gg-15lifeonland-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="projetos.html?objetivo=24">
-																			<img src="assets/metasglobais/gg-16peaceandjustice-portuguese.png"  alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-															</div>
-															<a class="left carousel-control" href="#myCarousel3" data-slide="prev">‹</a>
-															<a class="right carousel-control" href="#myCarousel3" data-slide="next">›</a>
-														</div>
-													</div>
-												</div>
-										</div></p>
-								</div> 
-								<div role=tabpanel class="tab-pane fade" id=dropdown3 aria-labelledby=dropdown3-tab> 
-									<p><div class="container">
-											    <div class="col-md-12">
-											        <div class="well">
-											            <div id="myCarousel4" class="carousel slide">
-															 <div class="carousel-inner">
-											                    <div class="item active">
-											                        <div class="row">
-																	 <div class="col-sm-3">
-																		<a href="listaturmas.html?objetivo=25">
-																			<img src="assets/turmas/3am.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="listaturmas.html?objetivo=26">
-																			<img src="assets/turmas/3ai.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	  <div class="col-sm-3">
-																		<a href="listaturmas.html?objetivo=27">
-																			<img src="assets/turmas/3at.fw.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	   <div class="col-sm-3">
-																		<a href="listaturmas.html?objetivo=28">
-																			<img src="assets/turmas/3ae.png" alt="Image" class="img-responsive">
-																		</a>
-											                         </div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-										</div>
-									</p>
-								</div> 
-							</div> 
-						</div>
-					</div>
+				<div>
+					<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+					<a href="#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+				</div>
+				<div>
+					<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+					<a href="#midia" class="option" id="buttonmidia">Portfólio</span></a>
+				</div>
+				<div>
+					<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+					<a href="#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
 				</div>
 				
-			<a name="midia" ></a>
-				<div  id="midia">
-					<div id="contenttopmidia">
-						<h1 id="titlemidia">Mídia</h1>
-						<iframe id="video" width="400" height="315" src="https://www.youtube.com/embed/0NlNwJvM-eg" frameborder="0" allowfullscreen></iframe>
+			<!-- <div  id="imagesheader">
+				<img id="homeicon" src="assets/images/homeicon.fw.png">
+				<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+				<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+				<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+				<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+				<!-- <img id="contaicon" src="assets/images/contaicon.fw.png"> -->
+			<!-- </div>
+				<ul>
+					<a href="#home" class="option" id="buttonhome">Home</span></a>
+					<a href="#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
+					<a href="#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+					<a href="#midia" class="option" id="buttonmidia">Mídia</span></a>
+					<a href="#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a> -->
+					<!-- <a href="conta.html" class="option" id="buttonmyacount"> 
+					Inscreva-se</span></a> -->
+				<!-- </ul>  -->
+			</nav>
+		</header>
+		<div id="main">
+			<div id="center">
+				<a name="home"></a>
+					<div id="principal">
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 					</div>
-					<h3 id="p2">Confira fotos e videos interessantes sobre  tudo  o  que  acontece  na FENTEC, dando destaque aos projetos de nossos alunos.</h3>
-					<br><br><br>
-					<div class="container" id="carouselmidia">
-						 <div class="col-md-12">
-								<div class="well">
-									<div id="myCarousel5" class="carousel slide">
-										<div class="carousel-inner">
-											    <div class="item active">
-											        <div class="row">
-													<div class="col-sm-3">
-															<a href=""><img  src="assets/midia/Abertura-FNE.jpg" alt="Image" class="img-responsive"></a>
-											            </div>
-														<div class="col-sm-3">
-															<a href=""><img  src="assets/midia/Abertura-FNE.jpg" alt="Image" class="img-responsive"></a>
-											            </div>
-														 <div class="col-sm-3">
-															<a href=""><img  src="assets/midia/RTEmagicC_incricoes_fundacao_nokia (2).jpg" alt="Image" class="img-responsive"></a>
-											           	</div>
-														<div class="col-sm-3">
-															<a href=""><img  src="assets/midia/dsc_0131_1.jpg" alt="Image" class="img-responsive"></a>
-											           	</div>
-													</div>
+				<a name="localizacao"></a>
+					<div id="localizacao">
+						<div id="conteudolocalizacao">
+							<h1 id="titlelocalizacao">Visite-nos</h1>
+							<h3 id="p" style="text-align:justify; width:25%;">Para receber informações sobre tudo que acontece na FENTEC faça o cadastro abaixo:</h3>
+							<div id="modal" class="popupContainer" style="display:none;">
+								<header class="popupHeader">
+										<span class="header_title">Login</span>
+										<span class="modal_close"><i class="fa fa-times"></i></span>
+								</header>
+
+								<section class="popupBody">
+										<!-- Social Login -->
+										<div class="social_login">
+												<div class="">
+														
+														<label>Email / Username</label>
+															<input type="text" />
+															<br />
+															<a href="#" class="social_box fb">
+																<span class="icon"><i class="fa fa-facebook"></i></span>
+																<span class="icon_title">Connect with Facebook</span>
+
+															</a>
+														
 												</div>
-												 <div class="item">
-											            <div class="row">
-															<div class="col-sm-3">
-																<a href=""><img  src="assets/midia/Brasil-Pais-diferente-Artur-Neto_ACRIMA20131122_0040_15.jpg" alt="Image" class="img-responsive"></a>
-											                </div>
-															<div class="col-sm-3">
-																<a href=""><img  src="assets/midia/Alunos-desenvolveram-projeto-longo_ACRIMA20141206_0028_15.jpg" alt="Image" class="img-responsive"></a>
-												            </div>
-															<div class="col-sm-3">
-																<a href=""><img  src="assets/midia/Fundação-Nokia-Mapingua-Nerd.jpg" alt="Image" class="img-responsive"></a>
-												            </div>
-															<div class="col-sm-3">
-																<a href=""><img  src="assets/midia/Fundacao_MatheusMonte.jpg" alt="Image" class="img-responsive"></a>
-												            </div>
-														</div>
+
+												<div class="action_btns">
+														<div class="one_half"><a href="#" id="login_form" class="btn">Cadastrar</a></div>
 												</div>
-											</div>
-										<a class="left carousel-control" href="#myCarousel5" data-slide="prev">‹</a>
-										<a class="right carousel-control" href="#myCarousel5" data-slide="next">›</a>
+										</div>
+
+								</section>
+							</div>
+							<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+							<script type="text/javascript" src="js/libs/jquery-1.12.0.js"></script>
+							
+							<h1 id="dia">Dia 25</h1>
+							<h3 id="de"> DE NOVEMBRO</h3>
+							<div id="cadastrovisi" ng-controller="NavController">
+								<br>
+								<br>
+								<form id="campus">
+									<p  id="imput1">Email</p>
+									<input  id="imput11" class="form-control" placeholder="E-mail" type="email" ng-model="model.email" required/>
+									</br>
+									<p id="imput1" >Data de Nascimento</p>
+									<input  id="imput11"  minlength="10" placeholder="31/12/2000" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" ng-model="model.idade" required/>
+									</br>
+									<p id="imput1">Escola ou Local de trabalho</p>
+									<input  id="imput11" class="form-control" placeholder="Instituição " ng-model="model.instituicao" required/>
+									</br>
+									<button id="btn" ng-click="save()" class="btn btn-primary "><p id="salvar">{{updateMode?'Salvar alterações': 'Salvar'}}</p></button>
+								</form>
+							</div>
+							<br>
+							<iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8487199482997!2d-59.98144888598722!3d-3.13464139771749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c04bc00000001%3A0xa7004a8c3bbef1d6!2zRnVuZGHDp8OjbyBOb2tpYQ!5e0!3m2!1spt-BR!2sbr!4v1466303207656" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<div id="local">
+								<h3>Local: Sede da Fundação Matias Machline</h3>
+								<h3>Horário: 8h às 15h</h3>
+							</div>
+							
+						</div>
+					</div>
+				<a name="projeto" ></a>
+					<div id="projeto">
+						<div id="conteudoprojeto">
+							<div id="contenttop">
+								<h1 id="titleprojeto">Projetos</h1>
+								
+									<div class='containerbar'>
+									  <div class='row'>
+										<div class='col-md-6'>
+										 
+										</div>
+									  </div>
 									</div>
-								</div>
+							</div>
+							<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+							<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs id="carousel">
+								<ul id=myTabs class="nav nav-tabs" role=tablist>
+									<li role=presentation class=dropdown> 
+										<a href=# id="myTabDrop1" class=dropdown-toggle data-toggle=dropdown aria-controls=myTabDrop1-contents>Filtrar por...<span class=caret></span></a> 
+											<ul class=dropdown-menu aria-labelledby=myTabDrop1 id=myTabDrop1-contents>
+												<li>
+													<a href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1>Objetivos do milênio</a>
+												</li> 
+												<li>
+													<a href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2>Metas globais</a>
+												</li> 
+												<li>
+													<a href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3>Turmas</a>
+												</li> 
+												<li>
+													<a href="listatprojetos.html">Todos</a>
+												</li> 
+											</ul> 
+									</li> 
+								</ul> 
+								<div id=myTabContent class=tab-content> 
+									<div role=tabpanel class="tab-pane fade in active"> 
+										<p>
+											<div class="container">
+													<div class="col-md-12">
+														<div class="well">
+															<div id="myCarousel" class="carousel slide">
+																<div class="carousel-inner">
+																	<div class="item active">
+																		<div class="row">
+																		 <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=1">
+																				<img src="assets/objmilenio/objetivo1.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a  href="objetivosprojetos.html?objetivo=2">
+																				<img  src="assets/objmilenio/objetivo2.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=3">
+																				<img  src="assets/objmilenio/objetivo3.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=4">
+																				<img  src="assets/objmilenio/objetivo4.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="row">
+																			<div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=5">
+																				<img  src="assets/objmilenio/objetivo5.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																			</div>
+																			<div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=6">
+																				<img  src="assets/objmilenio/objetivo6.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																			</div>
+																		  <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=7">
+																				<img  src="assets/objmilenio/objetivo7.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=8">
+																				<img  src="assets/objmilenio/objetivo8.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																</div>
+																<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+																<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+															</div>
+														</div>
+													</div>
+											</div>
+										</p> 
+									</div> 
+									<div role=tabpanel class="tab-pane fade" id=dropdown1 aria-labelledby=dropdown1-tab> 
+										<p><div class="container">
+													<div class="col-md-12">
+														<div class="well">
+															<div id="myCarousel2" class="carousel slide">
+																 <div class="carousel-inner">
+																	<div class="item active">
+																		<div class="row">
+																		 <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=2">
+																				<img  src="assets/objmilenio/objetivo1.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=2">
+																				<img  src="assets/objmilenio/objetivo2.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=3">
+																				<img  src="assets/objmilenio/objetivo3.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=4">
+																				<img  src="assets/objmilenio/objetivo4.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																	 <div class="item">
+																		<div class="row">
+																			<div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=5">
+																				<img  src="assets/objmilenio/objetivo5.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=6">
+																				<img  src="assets/objmilenio/objetivo6.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=7">
+																				<img  src="assets/objmilenio/objetivo7.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="objetivosprojetos.html?objetivo=8">
+																				<img  src="assets/objmilenio/objetivo8.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																</div>
+																<a class="left carousel-control" href="#myCarousel2" data-slide="prev">‹</a>
+																<a class="right carousel-control" href="#myCarousel2" data-slide="next">›</a>
+															</div>
+														</div>
+													</div>
+											</div>
+										</p>
+									</div> 
+									<div role=tabpanel class="tab-pane fade" id=dropdown2 aria-labelledby=dropdown2-tab> 
+										<p><div class="container">
+													<div class="col-md-12">
+														<div class="well">
+															<div id="myCarousel3" class="carousel slide">
+																 <div class="carousel-inner">
+																	<div class="item active">
+																		<div class="row">
+																		 <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=9">
+																				<img src="assets/metasglobais/gg-1nopoverty-portuguese.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=10">
+																				<img src="assets/metasglobais/gg-2nohunger-portuguese.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=11">
+																				<img src="assets/metasglobais/gg-3goodhealth-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=12">
+																				<img src="assets/metasglobais/gg-4qualityeducation-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																	 <div class="item">
+																		<div class="row">
+																			<div class="col-sm-3">
+																			<a href="projetos.html?objetivo=13">
+																				<img src="assets/metasglobais/gg-5genderequality-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=14">
+																				<img src="assets/metasglobais/gg-6cleanwaterandsanitation-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=15">
+																				<img src="assets/metasglobais/gg-7renewableenergy-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=16">
+																				<img src="assets/metasglobais/gg-8goodjobseconomicgrowth-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																	 <div class="item">
+																		<div class="row">
+																			<div class="col-sm-3">
+																			<a href="projetos.html?objetivo=17">
+																				<img src="assets/metasglobais/gg-9innovationandinfrastructure-portuguese1.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=18">
+																				<img src="assets/metasglobais/gg-10recucedinequalities-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=19">
+																				<img src="assets/metasglobais/gg-11sustainablecitiesandcommunities-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=20">
+																				<img src="assets/metasglobais/gg-12responsibleconsumption-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																	 <div class="item">
+																		<div class="row">
+																			<div class="col-sm-3">
+																			<a href="projetos.html?objetivo=21">
+																				<img src="assets/metasglobais/gg-13climateaction-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=22">
+																				<img src="assets/metasglobais/gg-14lifebelowwater-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=23">
+																				<img src="assets/metasglobais/gg-15lifeonland-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="projetos.html?objetivo=24">
+																				<img src="assets/metasglobais/gg-16peaceandjustice-portuguese.png"  alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																</div>
+																<a class="left carousel-control" href="#myCarousel3" data-slide="prev">‹</a>
+																<a class="right carousel-control" href="#myCarousel3" data-slide="next">›</a>
+															</div>
+														</div>
+													</div>
+											</div></p>
+									</div> 
+									<div role=tabpanel class="tab-pane fade" id=dropdown3 aria-labelledby=dropdown3-tab> 
+										<p><div class="container">
+													<div class="col-md-12">
+														<div class="well">
+															<div id="myCarousel4" class="carousel slide">
+																 <div class="carousel-inner">
+																	<div class="item active">
+																		<div class="row">
+																		 <div class="col-sm-3">
+																			<a href="listaturmas.html?objetivo=25">
+																				<img src="assets/turmas/3am.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="listaturmas.html?objetivo=26">
+																				<img src="assets/turmas/3ai.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		  <div class="col-sm-3">
+																			<a href="listaturmas.html?objetivo=27">
+																				<img src="assets/turmas/3at.fw.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		   <div class="col-sm-3">
+																			<a href="listaturmas.html?objetivo=28">
+																				<img src="assets/turmas/3ae.png" alt="Image" class="img-responsive">
+																			</a>
+																		 </div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+											</div>
+										</p>
+									</div> 
+								</div> 
 							</div>
 						</div>
-					<a id="vermais" href="galeria.html"><h3>Ver mais...</h3></a>
-				</div>
-				</div>
-			<a name="patrocinadores" ></a>
-				<div id="patrocinadores">
-					<div id="contenttoppatrocinadores">
-						<h1 id="titlepatrocinadores">Patrocinadores</h1>
-						<h3 id="p3">Para saber como se tornar um patrocinador da nossa feira <a id="cadas" href="">Clique aqui</a></h3>
-						</br></br>
-						<div class="container" id="carouselmidia" ng-controller="PatrocinadorController">
-						 <div class="col-md-12">
-								<div id="patrocinador" >
-									
-									<div id="patro" ng-repeat="patrocinador in arr">
-										<a href="{{patrocinador.url}}"><img id="foto-patrocinador" ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" ></a>
-						           	</div>
-								</div>
-							</div> 
-						</div>
 					</div>
-					<p id="privacity">&copy; 2016 FENTEC, Inc &middot;     <a style="color:white;"href="#localizacao"> Localização&middot </a>     (92) 2129-2991 / 2999 &middot; </p>
-				</div>
-				
-				<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
-        <script src="js/galeria.js"></script>
-		
+					
+				<a name="midia" ></a>
+					<div  id="midia">
+						<div id="contenttopmidia">
+							<h1 id="titlemidia">Portfólio</h1>
+							<iframe id="video" width="400" height="315" src="https://www.youtube.com/embed/0NlNwJvM-eg" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<h3 id="p2">Confira fotos e videos interessantes sobre  tudo  o  que  acontece  na FENTEC, dando destaque aos projetos de nossos alunos.</h3>
+						<br><br><br>
+						<div class="container" id="carouselmidia">
+							<div class="col-md-12">
+									<div class="well">
+										<div id="myCarousel5" class="carousel slide">
+											<div class="carousel-inner">
+													<div class="item active">
+														<div class="row">
+															<div class="col-sm-3">
+																<a href=""><img  src="assets/midia/Abertura-FNE.jpg" alt="Image" class="img-responsive"></a>
+															</div>
+															<div class="col-sm-3">
+																<a href=""><img  src="assets/midia/Abertura-FNE.jpg" alt="Image" class="img-responsive"></a>
+															</div>
+															 <div class="col-sm-3">
+																<a href=""><img  src="assets/midia/RTEmagicC_incricoes_fundacao_nokia (2).jpg" alt="Image" class="img-responsive"></a>
+															</div>
+															<div class="col-sm-3">
+																<a href=""><img  src="assets/midia/dsc_0131_1.jpg" alt="Image" class="img-responsive"></a>
+															</div>
+														</div>
+													</div>
+													 <div class="item">
+															<div class="row">
+																<div class="col-sm-3">
+																	<a href=""><img  src="assets/midia/Brasil-Pais-diferente-Artur-Neto_ACRIMA20131122_0040_15.jpg" alt="Image" class="img-responsive"></a>
+																</div>
+																<div class="col-sm-3">
+																	<a href=""><img  src="assets/midia/Alunos-desenvolveram-projeto-longo_ACRIMA20141206_0028_15.jpg" alt="Image" class="img-responsive"></a>
+																</div>
+																<div class="col-sm-3">
+																	<a href=""><img  src="assets/midia/Fundação-Nokia-Mapingua-Nerd.jpg" alt="Image" class="img-responsive"></a>
+																</div>
+																<div class="col-sm-3">
+																	<a href=""><img  src="assets/midia/Fundacao_MatheusMonte.jpg" alt="Image" class="img-responsive"></a>
+																</div>
+															</div>
+													</div>
+											</div>
+											<a class="left carousel-control" href="#myCarousel5" data-slide="prev">‹</a>
+											<a class="right carousel-control" href="#myCarousel5" data-slide="next">›</a>
+										</div>
+									</div>
+							</div>
+						</div>
+						<a id="vermais" href="galeria.html"><h3>Ver mais...</h3></a>
+					</div>
+					<a name="patrocinadores" ></a>
+					<div id="patrocinadores">
+						<div id="contenttoppatrocinadores">
+							<h1 id="titlepatrocinadores">Patrocinadores</h1>
+							<h3 id="p3">Para saber como se tornar um patrocinador da nossa feira <a id="cadas" href="">Clique aqui</a></h3>
+							</br></br>
+							<div class="container" id="carouselmidia" ng-controller="PatrocinadorController">
+								<div class="col-md-12">
+									<div id="patrocinador" >
+											
+										<div id="patro" ng-repeat="patrocinador in arr">
+											<a href="{{patrocinador.url}}"><img id="foto-patrocinador" ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" ></a>
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<p id="privacity">&copy; 2016 FENTEC, Inc &middot;     <a style="color:white;"href="#localizacao"> Localização&middot </a>     (92) 2129-2991 / 2999 &middot; </p>
+					</div>
+			</div>
+		</div>				
+	</div>	
+		<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+		<script src="js/galeria.js"></script>
 </body>
 	
 	

@@ -1,14 +1,17 @@
 <html ng-app="fentec" >
 <head>
 	<meta charset="utf-8">
-	<title>Portal Fentec</title>
+	<title>Fentec Administração</title>
 	
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/todosprojetos.css">
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
-		<script type="text/javascript" src="js/patrocinador.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
-	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	
  	<style type="text/css">
 		#img{
 			width:200px;
@@ -16,54 +19,79 @@
 		}
 	
 		#foto-patrocinador{
-	width:140px; 
-	height:140px; 
-	border:1px solid grey; 
-	border-radius:2px;
-	margin:5px;
-	display:inline;
-	box-shadow:0px 1px 1px 0px #2A2A2A;
+			width:180px; 
+			height:170px; 
+			border:1px solid grey; 
+			border-radius:2px;
+			margin:5px;
+			display:inline;
+			box-shadow:0px 1px 1px 0px #2A2A2A;
 
-	margin-top:20px;
-	}
-	#patro{
-	display:inline-block;
-	}
-	h1{
-		margin-left:7em;
-		color:white;
-	}
-	#nome{
-		margin-left:4em;
-		position:absolute;
-	}
-	#btn{
-			margin-left: 20px;
-			position:fixed;
-			margin-top: 150px;
-			width:79px ;
-			height:35px;
-			color:white;		
-		}	
-	
+			margin-top:20px;
+		}
+		#patro{
+			display:inline-block;
+			
+		}
+
+
+		h1{
+			margin-left:7em;
+			color:white;
+		}
+		#nome{
+			margin-left:4em;
+		}
+		#btn{
+				margin-left: 20px;
+				position:fixed;
+				margin-top: 150px;
+				width:79px ;
+				height:35px;
+				color:white;		
+			}	
+		html,body{
+			background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
+			width:100%;
+			height:100%;
+			padding:0;
+		  }
 		
     </style>
 </head>	
+<body>
+	<header id="menu">
+			<img id="logo" src="assets/images/logoo.fw.png"/>
+			<nav id="buttons">
+				<div>
+					<img id="homeicon" src="assets/images/homeicon.fw.png">
+					<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
+				</div>
+				<div>
+					<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+					<a href="#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
+				</div>
+				<div>
+					<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+					<a href="#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+				</div>
+				<div>
+					<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+					<a href="#midia" class="option" id="buttonmidia">Mídia</span></a>
+				</div>
+				<div>
+					<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+					<a href="#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
+				</div>
+				
+			</nav>
+		</header>
+		<div class="container" id="todos-projetos" ng-controller="ProjetoController">
+				<div id="patro" ng-repeat="projeto in arrProjeto">
+					<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+					<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+				</div>
 
-<body style="background-image: url('assets/images/patrocinadores.fw.png'); width:100%; height:100%;" >
-	<h1 >Todos os Projetos cadastrados na Fentec.</h1>
-	<div class="container" id="carouselmidia" ng-controller="ProjetoController">
-						 <div class="col-md-12">
-								<div id="patrocinador" class="well">
-									
-									<div id="patro" ng-repeat="projeto in arrProjeto">
-											<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
-										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
-						           	</div>
-									
-								</div>
-							</div>
-						</div>
-					<a href="index.html"><button  id="btn" class="btn btn-danger "><p id="salvar">Voltar</p></button></a>
+		</div>
 </body>		
 </html>

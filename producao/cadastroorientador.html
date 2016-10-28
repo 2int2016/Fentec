@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/masktelefone.js"></script>
 	<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="js/cidade-estado.js"></script>	
+	<script type="text/javascript" src="js/logorient.js"></script>	
 	
 	
 	<style>
@@ -672,8 +673,8 @@
 		<h2 id="user">Orientadores</h2>
 		<img id="log2" src="assets/images/engr.fw.png"></img>
 		<div id="allwhite">
-		<div id="Sairt">
-			<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+		<div id="Sairt" ng-controller="LogarController">
+			<a ng-click="sair()"><img id="log" src="assets/images/logout.png"/></a>
 		</div>
 	
 	<div id="miolo" >
@@ -730,7 +731,7 @@
 			<input  id="telefone2" name="telefone2" size="20" maxlength="15" onkeypress="mascara(this); return SomenteNumero(event)"  type="text" placeholder="Tel" ng-model="model.telefone2"></input>
 			
 		</div>
-			</form>	
+		</form>	
 			<button  id="save" ng-click="save()">{{updateMode?'Salvar as alteracoes': 'Salvar'}}</button>
 			</div>
 

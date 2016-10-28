@@ -111,6 +111,37 @@
 				
 				
 			}
+			$scope.numero= $scope.getUrlVars()["objetivo"];
+			switch ($scope.numero) {
+				
+				case '1':
+					window.location= 'objetivosprojetos.html?objetivo=1';
+					
+				break;
+				case '2':
+				document.getElementById("dropdown2-tab").click();
+				
+				break;
+				case '3':
+				document.getElementById("dropdown3-tab").click();
+				break;
+				case '4':
+				document.getElementById("dropdown4-tab").click();
+				break;
+				case '5':
+				document.getElementById("dropdown5-tab").click();
+				break;
+				case '6':
+				document.getElementById("dropdown6-tab").click();
+				break;
+				case '7':
+				document.getElementById("dropdown7-tab").click();
+				break;
+				case '8':
+				document.getElementById("dropdown8-tab").click();
+				break;
+			
+			}
 		};
 	
 

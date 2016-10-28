@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="js/material.js"></script>
 	<script type="text/javascript" src="js/orientador.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
+	<script type="text/javascript" src="js/logorient.js"></script>
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	
 	
@@ -21,8 +22,8 @@
 	</header>
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
 		<h2 style="position:absolute; margin-top:-65px; color:white; font-family: Square721 BT; margin-left:160px;">Monitoria</h2>
-		<div id="desconect">
-			<a id="logout1" href="conta.html">
+		<div id="desconect" ng-controller="LogarController" >
+			<a id="logout1" ng-click="sair()">
 			<img id="logout" src="assets/images/logout.png">
 			
 			

@@ -1,7 +1,8 @@
 <html ng-app="fentec">
 <head>
-	<title>Perfil Orientador</title>
+	<title>Administração Fentec | Orientador</title>
 	<meta charset="utf-8"/>
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
@@ -19,10 +20,11 @@
 	<header>
 	
 	</header>
+
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
-		<div id="desconect">
+		<div id="desconect"  ng-controller="LogarController">
 			<a id="logout1" ng-click="sair()" >
-			<img id="logout"    title="Sair" src="assets/images/logout.png">
+			<img id="logout"      title="Sair" src="assets/images/logout.png">
 			
 			</a>
 			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
@@ -53,8 +55,9 @@
 	</div>
 		<div  ng-controller="LogarController" id="miolo">
 			<div  ng-controller="LogarController" id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
-			<h3>Seja bem-vindo, {{usu.nome}}!</h3>
-			 
+			<h3>Bem-vindo, {{usu.nome}}.</h3>
+			<h3>Instituição:{{usu.cargo}}.</h3>
+
 		</div>
 	</div>
 		

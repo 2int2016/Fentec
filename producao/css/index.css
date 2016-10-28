@@ -1,4 +1,7 @@
-@font-face{ font-family: Carte; src: url('http://192.168.4.61/fentec/producao/css/fonts/DK%20Carte%20Blanche.otf'); }
+@font-face{ font-family: DistProTh; src: url('fonts/DistProTh.otf'); }
+@font-face{ font-family: DKCarteBlanche; src: url('fonts/DKCarteBlanche.otf'); }
+
+*{ font-family: DistProTh; }
 
 html, body{
 	width:100%;
@@ -6,17 +9,25 @@ html, body{
 	background-color:white;
 	padding:0;
 	margin:0;
-	font-family: Carte;
 	font-size:;*/
 }
 
 header{
 	position:fixed;
 	z-index:2;
+	min-height:15%;
 	
 }
-
-
+#buttons>*{
+	display:inline-block;
+}
+#buttons{
+	margin-top:1%;
+	max-width:100%;
+	min-width:100%;
+	min-height:-2%;
+	margin:1% 0px 2% 12%;
+}
 #main{
 	width:100%;
 	height:100%;
@@ -25,8 +36,8 @@ header{
 }
 #center{
 	margin:0 auto;
-	width:1348px;
-	height:4240px;
+	width:100%;
+	height:90%;
 }
 
 #principal{
@@ -50,14 +61,13 @@ header>*{
 }
 nav{
 	position:absolute;
-	font-family: "Arvo";
 	color:white;
 	font-size: 170%;
 	width:100%;
 }
 .option{
 	color:white;
-	margin-left: 5%;
+	margin-left: 15%;
 	border-bottom:2px rgba(24,3,34,0.9);
 
 }
@@ -74,7 +84,7 @@ nav{
 }
 #patrocinadoresicon{
 	width:4rem;
-	margin-left: 9%;
+	margin-left: 40%;
 }
 #contaicon{
 	width:3rem;
@@ -83,37 +93,38 @@ nav{
 }
 #projetoicon{
 	width:3.5rem;
-	margin-left: 9.5%;
+	margin-left: 30%;
 	margin-top: 0.5%;
 }
 #midiaicon{
 	width:3.7rem;
-	margin-left: 7.2%;
+	margin-left: 30%;
 	margin-top: 0.4%;
 }
 #localizacaoicon{
 	width:3rem;
-	margin-left:9%;
+	margin-left:40%;
 	margin-top: 1%;
 }
 #homeicon{
 	margin-top: 1%;
 	width:3rem;
-	margin-left:9%;
+	margin-left:25%;
 }
 #imagesheader{
 	width:100%;
 }
 #localizacao{
 	width:100%;
-	height:116%;
+	height:130%;
 	position: absolute;
 	margin-top:-0.5%;
 }
 #maps{
 	width:30%;
 	height: 300px;
-	margin-left:63%;
+	margin-left:60%;
+	margin-top: 3%;
 }
 #conteudo{
 	margin-top:5%;
@@ -126,51 +137,57 @@ nav{
 	color:#6BBF46;
 }
 #titlelocalizacao{
-	font-family: DK Carte Blanche;
+	font-family: DKCarteBlanche, Helvetica, serif;
 	color:white;
-	margin-top:5%;
-	margin-left:-58%;
-	font-size:500%;
+	margin-top:11%;
+	margin-left:-50%;
+	font-size:420%;
 }
 #p{
-	margin-left: 170px;
+	margin-left: 12%;
 	color:white;
 	margin-top: -2%;
 }
 #dia{
-		margin-left: 984px;
-		margin-top: -190px;
+		margin-left: 66.5%;
+		margin-top:-12%;
 		color:white;
 		font-size: 400%;
 	}
 #de{
-	margin-left: 1092px;
+	margin-left: 76.5%;
 	color:white;
 	font-size: 200%;
 	margin-top: -2%;
 }
 #local{
-	margin-left: 13%;
-	margin-top: -6%;
+	margin-left: 60%;
+	margin-top: 2%;
 	color:white;
 	font-size: 180%;
 }
-#hora{
-	margin-left: 13%;
-	color:white;
-	font-size: 180%;
 
-}
 #imglocalizacao{
 	width:35%;
 	margin-left: 52%;
 	margin-top: 4%;
 }
+#cadastrovisi{
+	width:26.5%;
+	height:45%;
+	border-radius:2px;
+}
+#imput1{
+	color:black;
+}
+#campus{
+	margin-left:8%;
+}
 #projeto{
 	width:100%;
 	height:120%;
 	position: absolute;
-	margin-top:49%;
+	margin-top:55%;
 }
 #carousel{
 	margin-top: -2%;
@@ -179,6 +196,14 @@ nav{
 #myTabDrop1{
 	color:black;
 	background-color: white;
+}
+.dropdown-menu{
+	margin-left:91.3%;
+	border-radius:3px;
+}
+#myTabDrop1-contents{
+	margin-top:-1.8%;
+	z-index:1;
 }
 .carousel-control {
   padding-top:10%;
@@ -229,11 +254,11 @@ nav{
 }
 
 #titleprojeto{
-	font-family: DK Carte Blanche;
 	color:white;
 	margin-top:10%;
 	margin-left: 11%;
-	font-size:500%;
+	font-size:420%;
+	font-family: DKCarteBlanche, Helvetica, serif;
 }
 
 #contenttop>*{
@@ -242,16 +267,16 @@ nav{
 #midia{
 	width:100%;
 	height:150%;
-	margin-top:95%;
+	margin-top:100%;
 	margin-bottom:84%;
 	position:absolute;
 }
 #titlemidia{
-	font-family: DK Carte Blanche;
 	color:white;
 	margin-top:10%;
 	margin-left: 11%;
-	font-size:500%;
+	font-size:420%;
+	font-family: DKCarteBlanche, Helvetica, serif;
 	
 }
 #contenttopmidia>*{
@@ -287,50 +312,64 @@ nav{
 }
 #patrocinadores{
 	width:100%;
-	height:120%;
+	height:123%;
 	position:absolute;
-	margin-top: -116%;
+	margin-top:160%;
+}
+#myTabDrop1{
+	border-radius:4px 4px 4px 4px;
+	margin-left:91.3%;
+	margin-top:-5%;
+}
+#myTabs{
+	border-bottom:none;
 }
 #titlepatrocinadores{
-	font-family: DK Carte Blanche;
 	color:white;
 	margin-top:10%;
-	margin-left:-650px;
-	font-size:500%;	
+	margin-left:-37%;
+	font-size:420%;	
+	font-family: DKCarteBlanche, Helvetica, serif;
 }
 #p3{
 	color:white;
-	margin-left:145px;
+	margin-left:11%;
+	margin-top:-2%;
 	
 }
 #patrocinador{
-	width:980px;
+	width:100%;
 	height:350px;
-	box-shadow:0px 2px 2px 0px #000;
-	background-color:#FFF;
+	background-color:none;
 	border-radius:5px;
+	margin-left:-1%;
 }
 
 #foto-patrocinador{
 	
-	width:145px; 
-	height:145px; 
-	border:0.1px solid #999; 
-	border-radius:2px;
+	width:20rem; 
+	height:20rem; 
+	border:3px solid #A22424; 
+	border-radius:5px;
 	margin-top:15px;
 	margin-bottom:10px;
 	margin-right:0px;
 	margin-left:14px;
 	display:inline;
+	background-color:white;
 
 }
 #foto-patrocinador:hover{
-	
-	box-shadow:2px 2px 0px 0px #555;
+	opacity:0.9;
 	border-radius:5px;
+	
 
 
 }
 #patro{
 	display:inline;
+}
+#privacity{
+	margin-top:12%;
+	color:white;
 }

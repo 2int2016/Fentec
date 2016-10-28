@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Portal Fentec</title>
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
 	<link rel="stylesheet" href="css/visitante.css"/>
 	<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
@@ -11,6 +12,7 @@
 	<script type="text/javascript" src="js/visitante.js"></script>
 	<script src="js/hover.js"></script>
 	<script type="text/javascript" src="js/visitantelista.js"></script>
+	<script type="text/javascript" src="js/logorient.js"></script>
 
 	<script src="js/jquery/jquery.js"></script>
 	<script src="js/jquery/index.js"></script>
@@ -24,9 +26,9 @@
 	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"/></a>
 		
 	
-	<div id="Sairt">
+	<div id="Sairt" ng-controller="LogarController" >
 		
-	<a id="ap" href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+	<a id="ap" ng-click="sair()"><img id="log" src="assets/images/logout.png"/></a>
 	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
 	
 	</div>
@@ -73,7 +75,7 @@
 					            	<div id="index">
 									
 					            	
-										<img src="assets/images/img.jpg"  alt="Picture" id="pic">
+										<img src="assets/images/iconvisit.jpg"  alt="Picture" id="pic">
 					            	</div>
 									<div id="vaiaia">
 										<a href="mailto:{{visitante.email}}"><h3 id="name2">{{visitante.email}}</h3></a>

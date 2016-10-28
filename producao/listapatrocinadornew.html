@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script src="js/hover.js"></script>
 	<script type="text/javascript" src="js/patrocinador.js"></script>
+	<script type="text/javascript" src="js/logorient.js"></script>
 	
 </head>
 <style>
@@ -420,7 +421,7 @@ text-decoration:underline;
 		height:50px;
 		background-color:#036;
 		color:white;
-		margin-top:-10px;
+		margin-top:0px;
 		margin-left:-1;
 		}
 		
@@ -486,8 +487,8 @@ text-decoration:underline;
 	</header>
 	<a href=""><img id="logo" src="assets/images/logoo.fw.png"/></a>
 	
-	<div id="Sairt">
-	<a href="conta.html"><img id="log" src="assets/images/logout.png"/></a>
+	<div id="Sairt" ng-controller="LogarController" >
+	<a ng-click="sair()"><img id="log" src="assets/images/logout.png"/></a>
 	</div>
 	<div id="parte-esquerda">
 	<a href="orientlistmat.html"><div id="white">

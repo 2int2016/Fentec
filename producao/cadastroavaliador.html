@@ -8,8 +8,7 @@
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/avaliador.js"></script>
 	<script src="js/masktelefone.js"></script>
-	
-	
+	<script type="text/javascript" src="js/logorient.js"></script>
 	<script type="text/javascript">
 
 
@@ -440,8 +439,8 @@ $(document).ready(function () {
 	<h2 id="user" >Avaliador</h2>
 	<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
 	<div id="allwhite">
-		<div id="Sairt">
-			<a href="conta.html" ><img id="log" src="assets/images/logout.png"/></a>
+		<div id="Sairt" ng-controller="LogarController">
+			<a ng-click="sair()" ><img  id="log" src="assets/images/logout.png"/></a>
 		</div>
 		
 		<div id="white">
@@ -456,6 +455,7 @@ $(document).ready(function () {
 		</div>
 		<form>
 			<div  id="campusprimarios">
+
 				<p>Nome</p>
 				<input class="form-control" style="width:94%" name="nome" ng-model="model.nome"/>
 				<p>Email</p>
