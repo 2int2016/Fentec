@@ -1,13 +1,15 @@
 <html ng-app="fentec">
 <head>
-	<title>Portal Fentec</title>
+	<title>Cadastro Orientador</title>
 	<meta charset="utf-8"/>
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="js/libs/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/orientador.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
 	<script type="text/javascript" src="js/escola.js"></script>
 	<script type="text/javascript" src="js/masktelefone.js"></script>
 	<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
@@ -681,6 +683,7 @@
 		<div id="titulo"><p id="titulop">Cadastro de orientadores</p></div>
 		<div id="2">
 		<form>		
+				<input id="fileUpload" ng-model="model.arquivo" style="width: 100%; outline:none;" type="file"></input>
 				<p id="nome1">Nome</p>
 				<input id="nome" name="nome" type="name" placeholder="Nome" ng-model="model.nome"></input>
 				<br>

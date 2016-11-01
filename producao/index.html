@@ -67,7 +67,7 @@
 			background-image: url('assets/images/projetos.fw.png');
 		}
 		#midia{
-			background-image: url('assets/images/midia2.fw.png');
+			background-image: url('assets/images/midia3.fw.png');
 		}
 		#minhaconta{
 			background-image: url('assets/images/midia.fw.png');
@@ -154,7 +154,6 @@
 			<div id="center">
 				<a name="home"></a>
 					<div id="principal">
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 					</div>
 				<a name="localizacao"></a>
 					<div id="localizacao">
@@ -539,10 +538,10 @@
 					<div  id="midia">
 						<div id="contenttopmidia">
 							<h1 id="titlemidia">Portfólio</h1>
-							<iframe id="video" width="400" height="315" src="https://www.youtube.com/embed/0NlNwJvM-eg" frameborder="0" allowfullscreen></iframe>
+							<!-- iframe id="video" width="400" height="315" src="https://www.youtube.com/embed/0NlNwJvM-eg" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 						<h3 id="p2">Confira fotos e videos interessantes sobre  tudo  o  que  acontece  na FENTEC, dando destaque aos projetos de nossos alunos.</h3>
-						<br><br><br>
+						<!-- <br><br><br><br>
 						<div class="container" id="carouselmidia">
 							<div class="col-md-12">
 									<div class="well">
@@ -586,27 +585,35 @@
 										</div>
 									</div>
 							</div>
-						</div>
-						<a id="vermais" href="galeria.html"><h3>Ver mais...</h3></a>
+						</div> -->
+						<!-- <a id="vermais" href="galeria.html"><h3>Ver mais...</h3></a> -->
+						<div id="redes-sociais" style="position:absolute; margin-left:55%; margin-top:-10%;">
+								<ul>
+									<a id="iconrede" href="https://www.facebook.com/FMatiasMachline/"><img style="width:12%;" src="assets/images/icon-facebook-white-01.png"></a>
+									<a id="iconrede" href="https://www.instagram.com/fmatiasmachline/"><img style="width:11.5%; margin-left:7%;" src="assets/images/instagram1.png"></a>
+									<a id="iconrede" href="galeria.html"><img style="width:10.5%; margin-left:7%;" src="assets/images/gallery-icon-white.png"></a>
+									<h4 style="color:white; margin-left:37%; margin-top:-0.1%;">Ver galeria</h4>
+								<ul>
+							</div>
 					</div>
 					<a name="patrocinadores" ></a>
 					<div id="patrocinadores">
 						<div id="contenttoppatrocinadores">
 							<h1 id="titlepatrocinadores">Patrocinadores</h1>
-							<h3 id="p3">Para saber como se tornar um patrocinador da nossa feira <a id="cadas" href="">Clique aqui</a></h3>
+							<h3 id="p3">Para saber como se tornar um patrocinador da nossa feira <a id="cadas" href="patrocinador-info.html">Clique aqui</a></h3>
 							</br></br>
 							<div class="container" id="carouselmidia" ng-controller="PatrocinadorController">
 								<div class="col-md-12">
 									<div id="patrocinador" >
 											
 										<div id="patro" ng-repeat="patrocinador in arr">
-											<a href="{{patrocinador.url}}"><img id="foto-patrocinador" ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" ></a>
+											<a href="{{patrocinador.url}}" target="_blank"><img id="foto-patrocinador" ng-src="assets/images/{{patrocinador.caminhoimagem}}" alt="Image" class="img-responsive" ></a>
 										</div>
 									</div>
 								</div> 
 							</div>
 						</div>
-						<p id="privacity">&copy; 2016 FENTEC, Inc &middot;     <a style="color:white;"href="#localizacao"> Localização&middot </a>     (92) 2129-2991 / 2999 &middot; </p>
+						<p id="privacity">&copy; 2016 FENTEC, Inc &middot;     <a style="color:white;" href="#localizacao"> Localização&middot </a>     (92) 2129-2991 / 2999 &middot; </p>
 					</div>
 			</div>
 		</div>				

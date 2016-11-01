@@ -1,97 +1,147 @@
-<html ng-app="fentec" >
+<!DOCTYPE html>
+<html ng-app="fentec">
 <head>
-	<meta charset="utf-8">
-	<title>Fentec Administração</title>
+	 <title>Fentec | Feira Norte de Tecnologia e Ciência</title>
 	
 	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
-	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/todosprojetos.css">
-	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/libs/velocity.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>	
+	<script type="text/javascript" src="js/projetofiltro.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
+
 	
+	
+	
+	<link rel="stylesheet" href="css/objetivosprojetos.css">
+    <link rel="stylesheet" href="css/normalize.css">
+ 	<link rel="stylesheet" href="css/style.css">
+
+     	<script src="js/respond.js"></script>
  	<style type="text/css">
-		#img{
-			width:200px;
-			height:200px;
-		}
+    	html,body{
+    		background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
+    	}
+    	#foto-patrocinador{
+	width:18rem; 
+	height:18rem; 
+	border-radius:200px;
+	margin:5px;
+	margin-left: 7%;
+	display:inline;
+
 	
-		#foto-patrocinador{
-			width:180px; 
-			height:170px; 
-			border:1px solid grey; 
-			border-radius:2px;
-			margin:5px;
-			display:inline;
-			box-shadow:0px 1px 1px 0px #2A2A2A;
-
-			margin-top:20px;
-		}
-		#patro{
-			display:inline-block;
-			
-		}
-
-
-		h1{
-			margin-left:7em;
-			color:white;
-		}
-		#nome{
-			margin-left:4em;
-		}
-		#btn{
-				margin-left: 20px;
-				position:fixed;
-				margin-top: 150px;
-				width:79px ;
-				height:35px;
-				color:white;		
-			}	
-		html,body{
-			background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
-			width:100%;
-			height:100%;
-			padding:0;
-		  }
-		
+	}
+	#foto-patrocinador:hover{
+		opacity:0.8;
+	}
+	#patro{
+	display:inline-block;
+	margin-left:20px;
+	}
+	hr{
+		width:84.5%;
+		margin-left:85px;
+	}
+	#nome{
+		margin-left:37.5%;
+		color:black
+	}
+	
+	#myTabContent{
+		margin-top: 10%;
+	}
     </style>
-</head>	
+</head>
 <body>
-	<header id="menu">
-			<img id="logo" src="assets/images/logoo.fw.png"/>
-			<nav id="buttons">
-				<div>
-					<img id="homeicon" src="assets/images/homeicon.fw.png">
-					<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
-				</div>
-				<div>
-					<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
-					<a href="#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
-				</div>
-				<div>
-					<img id="projetoicon" src="assets/images/projetoicon.fw.png">
-					<a href="#projeto" class="option" id="buttonprojetos">Projetos</span></a>
-				</div>
-				<div>
-					<img id="midiaicon" src="assets/images/midiaicon.fw.png">
-					<a href="#midia" class="option" id="buttonmidia">Mídia</span></a>
-				</div>
-				<div>
-					<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
-					<a href="#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
-				</div>
-				
-			</nav>
-		</header>
-		<div class="container" id="todos-projetos" ng-controller="ProjetoController">
-				<div id="patro" ng-repeat="projeto in arrProjeto">
-					<a href=""><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
-					<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
-				</div>
-
+	<header style="margin-top:-10%;" id="menu">
+	
+		<img id="logo" src="assets/images/logoo.fw.png"/>
+		<nav ng-controller="FiltroController">
+		<div id="afastamento">
+		<div  id="imagesheader">
+			<img id="homeicon" src="assets/images/homeicon.fw.png">
+			<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+			<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+			<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+			<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+			
 		</div>
-</body>		
+			<ul>
+				<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
+				<a href="index.html#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
+				<a href="index.html#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+				<a href="index.html#midia" class="option" id="buttonmidia">Portfólio</span></a>
+				<a href="index.html#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
+				
+			</ul>
+			</div>
+		</nav>
+		
+	</header>
+	
+	<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+	
+	
+	<div id="myTabContent" class="tab-content"> 
+		<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab"> 
+			<p>
+				
+				 <div class='containerbar'>
+					 <div class='row'>
+						<div class='col-md-6'>
+							<div class='search-box'>
+								<form class='search-form'>
+									<input class='form-control'  ng-model="pesquisa" placeholder='Busque projetos aqui...' type='text'>
+										<button class='btn btn-link search-btn'>
+											<i class='glyphicon glyphicon-search'></i>
+										</button>
+
+								</form>
+							</div>    
+						</div>					    
+					 </div>						 
+				</div>	
+				<div class="btn-group">
+				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Filtrar por... <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
+				    <li><a href="projetos.html">Metas globais</a></li>
+				    <li><a href="listaturmas.html">Turmas</a></li>
+						<li><a href="listatprojetos.html">Todos</a></li>
+				  </ul>
+				</div>	
+				<hr>					
+
+				<div id="top"></div>
+					<section class="gallery">
+						<div class="rowg">
+							<div class="container" ng-controller="ProjetoController">
+						 <div >
+								<div style="background-color:transparent; border:transparent; border-shadow:transparent;" class="well">
+									
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:pesquisa">
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
+										<br/>
+										<br/>
+										<br/>
+						           	</div>
+									
+								</div>
+							</div>
+						</div>
+						</div> 
+					</section>
+		</p> 
+		</div> 
+
+</div>	
 </html>

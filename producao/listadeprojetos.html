@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="fentec">
 <head>
-	 <title>Fentec | Feira Norte de Tecnologia e Ciência</title>
-	
-	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
+	<title>Portal Fentec</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
@@ -83,7 +81,7 @@
 	<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
 	<div class="nav" id="pagination">
       <ul>
-		  <li class="nav--btn nav--btn-1 " data-page="1" href="#dropdown1"  role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1"></li> 
+		  <li class="nav--btn nav--btn-1" data-page="1" href="#dropdown1"  role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1"></li> 
           <li class="nav--btn nav--btn-2" data-page="2" href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2"></li>
           <li class="nav--btn nav--btn-3" data-page="3" href="#dropdown3" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown3"></li>
           <li class="nav--btn nav--btn-4" data-page="4" href="#dropdown4" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown4"></li>
@@ -133,7 +131,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -182,7 +180,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -230,7 +228,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -279,7 +277,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -328,7 +326,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -377,7 +375,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -426,7 +424,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -475,7 +473,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
@@ -524,7 +522,7 @@
 						 <div >
 								<div id="patrocinador" class="well">
 									
-									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}  | filter:pesquisa">
+									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o}">
 											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>

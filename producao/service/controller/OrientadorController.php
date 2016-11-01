@@ -94,6 +94,7 @@ class OrientadorController{
 		$obj['sexo'] = mb_check_encoding($value->sexo, 'UTF-8') ? $value->sexo : utf8_encode($value->sexo);
 		$obj['cidade'] = mb_check_encoding($value->cidade, 'UTF-8') ? $value->cidade : utf8_encode($value->cidade);
 		$obj['estado'] = mb_check_encoding($value->estado, 'UTF-8') ? $value->estado : utf8_encode($value->estado);
+		$obj['arquivo'] = mb_check_encoding($value->arquivo, 'UTF-8') ? $value->arquivo : utf8_encode($value->arquivo);
 		return $obj;
 	}
 

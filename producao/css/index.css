@@ -9,7 +9,7 @@ html, body{
 	background-color:white;
 	padding:0;
 	margin:0;
-	font-size:;*/
+	font-size:;
 }
 
 header{
@@ -17,6 +17,10 @@ header{
 	z-index:2;
 	min-height:15%;
 	
+}
+#tudo{
+	width:100%;
+	height:500%;
 }
 #buttons>*{
 	display:inline-block;
@@ -42,7 +46,7 @@ header{
 
 #principal{
 	width:100%;
-	height:14.5%;
+	height:20%;
 }
 
 #menu{
@@ -266,7 +270,7 @@ nav{
 }
 #midia{
 	width:100%;
-	height:150%;
+	height:109%;
 	margin-top:100%;
 	margin-bottom:84%;
 	position:absolute;
@@ -297,7 +301,7 @@ nav{
 #video{
 	position:absolute;
 	margin-top:10%;
-	margin-left:35.5%;
+	margin-left:26.5%;
 	height:25%;
 }
 #vermais{
@@ -312,9 +316,9 @@ nav{
 }
 #patrocinadores{
 	width:100%;
-	height:123%;
+	height:125.7%;
 	position:absolute;
-	margin-top:160%;
+	margin-top:151%;
 }
 #myTabDrop1{
 	border-radius:4px 4px 4px 4px;
@@ -372,4 +376,8 @@ nav{
 #privacity{
 	margin-top:12%;
 	color:white;
+}
+#iconrede:hover{
+	opacity:0.8;
+	outline:none;
 }

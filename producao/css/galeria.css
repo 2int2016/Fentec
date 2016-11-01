@@ -1,3 +1,11 @@
+@font-face{ font-family: DistProTh; src: url('fonts/DistProTh.otf'); }
+
+*{ font-family: DistProTh; }
+
+
+
+
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -83,6 +91,34 @@ nav{
 	text-decoration: none;
 	border-bottom:2px solid #1E90FF;
 	color:white;
+}
+#afastamento{
+	margin-left:65px;
+	margin-top:18px;
+}
+#buttonmidia{
+	margin-left:50px;
+	font-family: DistProTh;
+	
+}
+#buttonpatrocinadores{
+	margin-left:40px;
+	font-family: DistProTh;
+	
+}
+#buttonprojetos{
+	font-family: DistProTh;
+}
+#buttonlocalizacao{
+	font-family: DistProTh;
+}
+#buttonhome{
+	font-family: DistProTh;
+}
+#ull{
+	margin-left:35px;
+	margin-top:-10px;
+	
 }
 .option:focus{
 	border-bottom:2px solid #1E90FF;

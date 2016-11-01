@@ -1,4 +1,6 @@
+@font-face{ font-family: DistProTh; src: url('fonts/DistProTh.otf'); }
 
+*{ font-family: DistProTh; }
 
 *, *:after, *:before {
   margin: 0;
@@ -8,6 +10,22 @@
 body {
   width: 100%;
   height: 100%;
+}
+
+#afastamento{
+	margin-left:45px;
+	margin-top:13px;
+}
+#buttonmidia{
+	margin-left:4.2%;
+	
+}
+#buttonhome{
+	margin-left:73px;
+}
+#buttonpatrocinadores{
+	margin-left:70px;
+	
 }
 
 div.container {
@@ -76,6 +94,7 @@ header>*{
 }
 #logo{
   margin-left:2%;
+  margin-top:-7px;
 }
 #menuheader{
   position:absolute;
@@ -105,7 +124,7 @@ header>*{
 }
 #patrocinadoresicon{
   width:4rem;
-  margin-left: 9%;
+  margin-left: 11%;
 }
 #contaicon{
   width:3rem;
@@ -114,8 +133,11 @@ header>*{
 }
 #projetoicon{
   width:3.5rem;
-  margin-left: 9.7%;
+  margin-left: 8.5%;
   margin-top: 0.5%;
+}
+#buttonprojetos{
+	margin-left:52px;
 }
 #midiaicon{
   width:3.7rem;
@@ -124,13 +146,16 @@ header>*{
 }
 #localizacaoicon{
   width:3rem;
-  margin-left:9%;
+  margin-left:8.8%;
   margin-top: 1%;
+}
+#buttonlocalizacao{
+	margin-left:55px;
 }
 #homeicon{
   margin-top: 1%;
   width:3rem;
-  margin-left:9%;
+  margin-left:9.3%;
 }
 #imagesheader{
   width:100%;

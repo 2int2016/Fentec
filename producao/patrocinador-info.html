@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html ng-app="fentec">
+	
+	<head>
+		
+		<title>Fentec | Feira Norte de Tecnologia e Ciência</title>
+	
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
+		
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css"/>
+		
+		<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+		
+		<script type="text/javascript" src="js/libs/angular.min.js"></script>
+		
+		<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="js/libs/velocity.min.js"></script>
+		
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<link rel="stylesheet" href="css/patrocinador-info.css"/>
+			
+		<link rel="stylesheet" href="css/normalize.css"/>
+		
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<script type="text/javascript" src="js/fentec.js"></script>
+		
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<script src="js/respond.js"></script>
+		
+		<script type="text/javascript" src="js/projetofiltro.js"></script>
+		
+		<script type="text/javascript" src="js/projeto.js"></script>
+		
+		<style type="text/css">
+			
+			html,body{
+				background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
+			}
+			
+			#foto-patrocinador{
+				width:240px; 
+				height:240px; 
+				border:1px solid grey; 
+				border-radius:2px;
+				margin:5px;
+				display:inline;
+				box-shadow:0px 1px 1px 0px #2A2A2A;
+			}
+			
+			#patro{
+				display:inline-block;
+				margin-left:20px;
+			}
+			
+			hr{
+				width:84.5%;
+				margin-left:85px;
+			}
+			
+			#nome{
+				margin-left:100px;
+				color:black
+			}
+			
+		</style>
+	
+	</head>
+	
+	<body>
+		
+		<header id="menu">
+			
+			<img id="logo" src="assets/images/logoo.fw.png"/>
+			
+			<nav ng-controller="FiltroController">
+			
+				<div id="afastamento">
+					
+					<div  id="imagesheader">
+					
+						<img id="homeicon" src="assets/images/homeicon.fw.png">
+						<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+						<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+						<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+						<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+						
+					</div>
+					
+					<ul>
+						
+						<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
+						<a href="index.html#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
+						<a href="index.html#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+						<a href="index.html#midia" class="option" id="buttonmidia">Portfólio</span></a>
+						<a href="index.html#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
+						
+					</ul>
+				
+				</div>
+			
+			</nav>
+		
+		</header>
+		
+		<div id="principal">
+		
+			<h2 id="titulo"> O que é a FENTEC?</h2>
+			<p  id="texto">A FENTEC é uma oportunidade diferenciada para que sua instituição participe de um Projeto de Relevância Social, de incentivo à criatividade, à inovação e ao desenvolvimento de jovens talentos.</p>
+			
+			<h2 id="titulo">Como ajudar?</h2>
+			
+			<ul id="opcoes">
+			
+				<li id="opcao"> Exposição da marca nas peças de comunicação; </li>
+				<li id="opcao"> Espaço durante a feira para promoção de ações voltadas à inclusão social, à qualidade e à geração de oportunidades para estudantes e professores; </li>
+				<li id="opcao"> Apoio cultural através da permuta de serviços; </li>
+				<li id="opcao"> Instituição de um Prêmio de Inovação Tecnológica (estágios e/ou equipamentos eletrônicos, bolsas de estudo, visitas técnicas etc.) para professores e estudantes que se destaquem em aspectos que a Instituição valoriza. </li>
+			
+			</ul>
+			
+			<h2 id="titulo">Contato</h2>
+			<p  id="texto"> (92) 2129-2991 / 2999 </p>
+			
+			<h2 id="titulo">Localização</h2>
+			<p  id="texto"> Av. Ministro Mário Andreazza, 916
+			Distrito Industrial, Manaus/AM
+			CEP 69075 830 </p>
+		
+		</div>
+		
+		<p id="footer">&copy; 2016 FENTEC, Inc &middot;     <a style="color:blue;"href="#localizacao"> Localização&middot </a>     (92) 2129-2991 / 2999 &middot; </p>
+		
+	</body>
+</html>

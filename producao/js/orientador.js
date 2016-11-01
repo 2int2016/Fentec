@@ -100,7 +100,39 @@
 			
 			$scope.arrcidades=$estado["cidades"];
 		};
-		
+		$("#fileUpload").on('change', function(){
+			if(typeof (FileReader) !="undefined"){
+				var image_holder = $("#image-holder");
+				image_holder.empty();
+				var reader = new FileReader();
+				reader.onload - function (e) {
+					$("<img/>",{
+						"src": e.target.result,
+						"class": "thumb-image"
+					}).appendTo(image_holder);
+				}
+				image_holder.show();
+				$scope.model.arquivo = $(this) [0].files[0].name;
+				reader.readAsDataURL($(this) [0].files[0]);
+			} else{
+				alert("Este navegador não suporta FileReader.");
+			}
+		});
+		$scope.uploadFile = function(){
+			var fd = new FormData();
+			$scope.files = document.getElementById("fileUpload");
+			
+			fd.append('file', $scope.files.files[0]);
+			
+			$http.post('./upload.php',fd,
+			{
+				transformRequest:angular.identify,
+				headers:{'Content-Type':undefined}
+			})
+			.success(function(d){
+				window.location="perfilorient.html";
+		})
+		};
 
 		$scope.init();
 
