@@ -27,7 +27,7 @@
 			window.location = 'listamaterialmob.html'
 				} 
 				else {
-					window.location = 'listamat.html'
+					window.location = 'listamaterial.html'
 				}
 				}
 				
@@ -94,7 +94,7 @@
 			$diaa=$scope.model.retorno.substr(0,2);
 			
 			
-			if(  $ano != '2016'  || $mes > '12'  || $dia > '31' || $anoo != '2016'  || $mess > '12'  || $diaa > '31'   ){
+			if(  $ano != '2016'  || $mes > '12'  || $dia > '31' && $anoo != '2016'  || $mess > '12'  || $diaa > '31'   ){
 					alert("Data invalida");
 				}
 				

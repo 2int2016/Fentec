@@ -23,8 +23,8 @@
 			switch ($scope.o) {
 				
 				case '1':
-					document.getElementById("dropdown1-tab").click();
-					
+					document.getElementById("dropdown1-tab")  .click();
+				
 				break;
 				case '2':
 				document.getElementById("dropdown2-tab").click();
