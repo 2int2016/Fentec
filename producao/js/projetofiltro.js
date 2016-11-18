@@ -18,7 +18,7 @@
 		
 		$scope.init = function(){
 
-			
+			if($scope.getUrlVars()["objetivo"]!=null){
 			$scope.o = $scope.getUrlVars()["objetivo"];
 			switch ($scope.o) {
 				
@@ -48,72 +48,81 @@
 				case '8':
 				document.getElementById("dropdown8-tab").click();
 				break;
-				case '9':
+			
+				
+			}
+			}
+			$scope.u = $scope.getUrlVars()["meta"];
+			switch ($scope.u) {
+				case '1':
 				document.getElementById("dropdown9-tab").click();
 				break;
-				case '10':
+				case '2':
 				document.getElementById("dropdown10-tab").click();
 				break;
-				case '11':
+				case '3':
 				document.getElementById("dropdown11-tab").click();
 				break;
-				case '12':
+				case '4':
 				document.getElementById("dropdown12-tab").click();
 				break;
-				case '13':
+				case '5':
 				document.getElementById("dropdown13-tab").click();
 				break;
-				case '14':
+				case '6':
 				document.getElementById("dropdown14-tab").click();
 				break;
-				case '15':
+				case '7':
 				document.getElementById("dropdown15-tab").click();
 				break;
-				case '16':
+				case '8':
 				document.getElementById("dropdown16-tab").click();
 				break;
-				case '17':
+				case '9':
 				document.getElementById("dropdown17-tab").click();
 				break;
-				case '18':
+				case '10':
 				document.getElementById("dropdown18-tab").click();
 				break;
-				case '19':
+				case '11':
 				document.getElementById("dropdown19-tab").click();
 				break;
-				case '20':
+				case '12':
 				document.getElementById("dropdown20-tab").click();
 				break;
-				case '21':
+				case '13':
 				document.getElementById("dropdown21-tab").click();
 				break;
-				case '22':
+				case '14':
 				document.getElementById("dropdown22-tab").click();
 				break;
-				case '23':
+				case '15':
 				document.getElementById("dropdown23-tab").click();
 				break;
-				case '24':
+				case '16':
 				document.getElementById("dropdown24-tab").click();
 				break;
-				case '25':
+			
+			}
+			$scope.t = $scope.getUrlVars("")["turma"];
+			switch ($scope.t) {
+				case '1':
 				document.getElementById("dropdown25-tab").click();
 				break;
-				case '26':
+				case '2':
 				document.getElementById("dropdown26-tab").click();
 				break;
-				case '27':
+				case '3':
 				document.getElementById("dropdown27-tab").click();
 				break;
-				case '28':
+				case '4':
 				document.getElementById("dropdown28-tab").click();
 				break;
 				
-				
+			
 			}
+		
 		};
-	
-
 		$scope.init();
 
 	});

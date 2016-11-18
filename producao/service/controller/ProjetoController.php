@@ -60,6 +60,10 @@ class ProjetoController{
 		$obj['segundapalavra'] = mb_check_encoding($value->segundapalavra, 'UTF-8') ? $value->segundapalavra : utf8_encode($value->segundapalavra);
 		$obj['terceirapalavra'] = mb_check_encoding($value->terceirapalavra, 'UTF-8') ? $value->terceirapalavra : utf8_encode($value->terceirapalavra);
 		$obj['relatorio'] = mb_check_encoding($value->relatorio, 'UTF-8') ? $value->relatorio : utf8_encode($value->relatorio);
+		$obj['turma'] = mb_check_encoding($value->turma, 'UTF-8') ? $value->turma : utf8_encode($value->turma);
+		$obj['meta'] = mb_check_encoding($value->meta, 'UTF-8') ? $value->meta : utf8_encode($value->meta);
+		$obj['integrantes'] = mb_check_encoding($value->integrantes, 'UTF-8') ? $value->integrantes : utf8_encode($value->integrantes);
+		$obj['orientador'] = mb_check_encoding($value->orientador, 'UTF-8') ? $value->orientador : utf8_encode($value->orientador);
 
 		return $obj;
 	}

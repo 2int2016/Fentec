@@ -61,7 +61,7 @@
 					window.location = "cadastroavaliador.html?email=+$email";
 				}
 				else if(data == "41" && window.location.pathname == "/fentec/producao/conta.html"){
-					window.location = "perfilorient.html?email=+$email";
+					window.location = "listprojetos.html?email=+$email";
 				}
 				else if(data !== "0" && window.location.pathname == "/fentec/producao/conta.html"){
 					window.location = "dadosorient.html?email=+$email";

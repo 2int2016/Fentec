@@ -1,7 +1,8 @@
 <html ng-app="fentec">
 <head>
-	<title>Portal Fentec</title>
+	<title>Administração Fentec | Orientador</title>
 	<meta charset="utf-8"/>
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
 	<link rel="stylesheet" type="text/css" href="css/perfil.css"/>
 	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
 	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
@@ -151,7 +152,49 @@
 											<input placeholder="DD/MM/AA" type="text" name="datafinal" style="width:250px;" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" ng-model="model.datafinal"></input>
 									</div>
 								</div>
-								
+								</br>
+								<div id="catobj">
+										<div id="divcat">
+										<p id="categoria" style=" font-family:'Segoe UI';">Turma</p>
+										<select ng-model="model.turma" style="width:250px;">
+											<option>1- Mecatrônica</option>
+											<option>2- Informática</option>
+											<option>3- Telecomunicações</option>
+											<option>4- Eletrônica</option>
+										</select>
+										</div>
+										<div id="divobj">
+										<p id="objmilenio" style=" font-family:'Segoe UI';">Meta Global</p>
+										<select ng-model="model.meta" style="width:250px;">
+											<option>1- Erradicação da pobreza</option>
+											<option>2- Erradicação da fome</option>
+											<option>3- Saúde de qualidade</option>
+											<option>4- Educação de qualidade</option>
+											<option>5- Igualdade de gênero</option>
+											<option>6- Água limpa e saneamento</option>
+											<option>7- Energias renováveis</option>
+											<option>8- Empregos dignos e crescimento econômico</option>
+											<option>9- Inovação e infraestrutura</option>
+											<option>10- Redução das desigualdades</option>
+											<option>11- Cidades e comunidades sustentáveis</option>
+											<option>12- Consumo responsável</option>
+											<option>13- Combate às mudanças climáticas</option>
+											<option>14- Vida debaixo da água</option>
+											<option>15- Vida sobre a terra</option>
+											<option>16- Paz e justiça</option>
+										</select>
+										</div>
+								</div>
+									</br>
+									<div  id="campusprimarios">
+										<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Orientadores</p>
+										<input ng-model="model.orientador" style="width:540px; margin-left:20px;"" name="orientador" type="name"  ></input>
+									</div>
+									</br>
+									<div  id="campusprimarios">
+										<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Integrantes</p>
+										<input ng-model="model.integrantes" style="width:540px; margin-left:20px;"" name="integrantes" type="name"  ></input>
+									</div>
 							</form>
 							</p> 
 						</div> 
@@ -231,6 +274,49 @@
 											<input placeholder="DD/MM/AA" type="text" name="datafinal" style="width:250px;" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" ng-model="model.datafinal"></input>
 									</div>
 								</div>
+								</br>
+								<div id="catobj">
+										<div id="divcat">
+										<p id="categoria" style=" font-family:'Segoe UI';">Turma</p>
+										<select ng-model="model.turma" style="width:250px;">
+											<option>3° ano de Eletrônica</option>
+											<option>3° ano de Informática</option>
+											<option>3° ano de Mecatrônica</option>
+											<option>3° ano de Telecomunicações</option>
+										</select>
+										</div>
+										<div id="divobj">
+										<p id="objmilenio" style=" font-family:'Segoe UI';">Meta Global</p>
+										<select ng-model="model.meta" style="width:250px;">
+											<option>1- Erradicação da pobreza</option>
+											<option>2- Erradicação da fome</option>
+											<option>3- Saúde de qualidade</option>
+											<option>4- Educação de qualidade</option>
+											<option>5- Igualdade de gênero</option>
+											<option>6- Água limpa e saneamento</option>
+											<option>7- Energias renováveis</option>
+											<option>8- Empregos dignos e crescimento econômico</option>
+											<option>9- Inovação e infraestrutura</option>
+											<option>10- Redução das desigualdades</option>
+											<option>11- Cidades e comunidades sustentáveis</option>
+											<option>12- Consumo responsável</option>
+											<option>13- Combate às mudanças climáticas</option>
+											<option>14- Vida debaixo da água</option>
+											<option>15- Vida sobre a terra</option>
+											<option>16- Paz e justiça</option>
+										</select>
+										</div>
+								</div>
+									</br>
+									<div  id="campusprimarios">
+										<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Orientadores</p>
+										<input ng-model="model.orientador" style="width:540px; margin-left:20px;"" name="orientador" type="name"  ></input>
+									</div>
+									</br>
+									<div  id="campusprimarios">
+										<p id="title" style=" font-family:'Segoe UI'; margin-left:20px;">Integrantes</p>
+										<input ng-model="model.integrantes" style="width:540px; margin-left:20px;"" name="integrantes" type="name"  ></input>
+									</div>
 								
 							</form>
 							

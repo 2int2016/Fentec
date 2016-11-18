@@ -74,25 +74,24 @@
 				<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
 				<a href="index.html#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
 				<a href="index.html#projeto" class="option" id="buttonprojetos">Projetos</span></a>
-				<a href="index.html#midia" class="option" id="buttonmidia">Port
-fólio</span></a>
+				<a href="index.html#midia" class="option" id="buttonmidia">Portfólio</span></a>
 				<a href="index.html#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
 			
 			</ul>
 		</nav>
 	</header>
 	
-	<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs>
-	<div class="nav" id="pagination">
+	<div class="bs-example bs-example-tabs" data-example-id=togglable-tabs >
+	<div class="nav" id="pagination"  ng-controller="ProjetoController">
       <ul>
-        <li class="nav--btn nav--btn-1 active" data-page="1" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1></li>
-        <li class="nav--btn nav--btn-2" data-page="2" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2></li>
-        <li class="nav--btn nav--btn-3" data-page="3" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3></li>
-        <li class="nav--btn nav--btn-4" data-page="4" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4></li>
-        <li class="nav--btn nav--btn-5" data-page="5" href=#dropdown5 role=tab id=dropdown5-tab data-toggle=tab aria-controls=dropdown5></li>
-        <li class="nav--btn nav--btn-6" data-page="6" href=#dropdown6 role=tab id=dropdown6-tab data-toggle=tab aria-controls=dropdown6></li>
-        <li class="nav--btn nav--btn-7" data-page="7" href=#dropdown7 role=tab id=dropdown7-tab data-toggle=tab aria-controls=dropdown7></li>
-        <li class="nav--btn nav--btn-8" data-page="8" href=#dropdown8 role=tab id=dropdown8-tab data-toggle=tab aria-controls=dropdown8></li>
+        <li class="nav--btn nav--btn-1 active" ng-click="troca()" data-page="1" href=#dropdown1 role=tab id=dropdown1-tab data-toggle=tab aria-controls=dropdown1></li>
+        <li class="nav--btn nav--btn-2" data-page="2" ng-click="trocar()" href=#dropdown2 role=tab id=dropdown2-tab data-toggle=tab aria-controls=dropdown2></li>
+        <li class="nav--btn nav--btn-3" data-page="3" ng-click="obj()" href=#dropdown3 role=tab id=dropdown3-tab data-toggle=tab aria-controls=dropdown3></li>
+        <li class="nav--btn nav--btn-4" data-page="4" ng-click="shirley()" href=#dropdown4 role=tab id=dropdown4-tab data-toggle=tab aria-controls=dropdown4></li>
+        <li class="nav--btn nav--btn-5" data-page="5" ng-click="verlei()" href=#dropdown5 role=tab id=dropdown5-tab data-toggle=tab aria-controls=dropdown5></li>
+        <li class="nav--btn nav--btn-6" data-page="6" ng-click="rocha()" href=#dropdown6 role=tab id=dropdown6-tab data-toggle=tab aria-controls=dropdown6></li>
+        <li class="nav--btn nav--btn-7" data-page="7" ng-click="pi()" href=#dropdown7 role=tab id=dropdown7-tab data-toggle=tab aria-controls=dropdown7></li>
+        <li class="nav--btn nav--btn-8" data-page="8" ng-click="pazu()" href=#dropdown8 role=tab id=dropdown8-tab data-toggle=tab aria-controls=dropdown8></li>
       </ul>
     </div> 
 	
@@ -119,10 +118,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				  <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				<ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -136,7 +135,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -168,10 +167,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				  <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				  <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -185,7 +184,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -216,10 +215,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				   <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				   <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -233,7 +232,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -265,10 +264,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				   <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				  <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -282,7 +281,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -314,10 +313,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				   <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				   <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -331,7 +330,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -363,10 +362,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				   <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				   <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -380,7 +379,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -412,10 +411,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				   <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				  <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -429,7 +428,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -461,10 +460,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				   <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				   <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -478,7 +477,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									
@@ -510,10 +509,10 @@ fólio</span></a>
 				  <button type="button" id="butao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    Filtrar por... <span class="caret"></span>
 				  </button>
-				  <ul class="dropdown-menu">
-				    <li><a href="objetivosprojetos.html">Objetivos do milênio</a></li>
-				    <li><a href="projetos.html">Metas globais</a></li>
-				    <li><a href="listaturmas.html">Turmas</a></li>
+				  <ul class="dropdown-menu  "  ng-controller="ProjetoController">
+				    <li><a href="objetivosprojetos.html?objetivo=1" >Objetivos do milênio</a></li>
+				    <li><a href="projetos.html?meta=1">Metas globais</a></li>
+				    <li><a href="listaturmas.html?turma=1">Turmas</a></li>
 						<li><a href="listatprojetos.html">Todos</a></li>
 				  </ul>
 				</div>	
@@ -527,7 +526,7 @@ fólio</span></a>
 								<div id="patrocinador" class="well">
 									
 									<div id="patro" ng-repeat="projeto in arrProjeto | filter:{metaobj:o} | filter:pesquisa">
-											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
+											<a href="perfilprojeto.html?id={{projeto.id}}"><img id="foto-patrocinador" ng-src="assets/uploads/projeto/{{projeto.arquivo}}" alt="Image" class="img-responsive" ></a>
 										<a  href=""><p id="nome">{{projeto.nome}}</p></a>	
 						           	</div>
 									

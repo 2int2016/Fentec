@@ -27,7 +27,6 @@
 			<img id="logout"      title="Sair" src="assets/images/logout.png">
 			
 			</a>
-			<a href=""><img id="log2" src="assets/images/engr.fw.png"/></a>
 		</div>
 	
 
@@ -55,9 +54,15 @@
 	</div>
 		<div  ng-controller="LogarController" id="miolo">
 			<div  ng-controller="LogarController" id="Projeto"><p style="margin-left:235px; font-size:22px; font-family:'Segoe UI';" >Meu perfil</p></div>
+			<div id="dados">
+			<img id="usuimg" ng-src="assets/uploads/{{usu.arquivo}}"/>
 			<h3>Bem-vindo, {{usu.nome}}.</h3>
-			<img {{usu.arquivo}}/>
-			<h3>Instituição:{{usu.cargo}}.</h3>
+			<h3>Instituição:{{usu.escola}}.</h3>
+			<h3>Cargo:{{usu.cargo}}.</h3>
+			<h3>Cidade:{{usu.cidade}}.</h3>
+			<a href=""><p>[Editar dados]</p></a>
+			</div>
+			
 
 		</div>
 	</div>

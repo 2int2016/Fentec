@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="js/libs/angular.min.js"></script>
 	<script type="text/javascript" src="js/fentec.js"></script>
 	<script type="text/javascript" src="js/projeto.js"></script>
-	<script type="text/javascript" src="js/visitante.js"></script>
+	<script type="text/javascript" src="js/nota.js"></script>
 	
 	
 
@@ -63,18 +63,13 @@
 			
 			<div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
 				<ul class="jqm-list ui-alt-icon ui-nodisc-icon">
-					<li data-filtertext="home" data-icon="home"><a href="#">Home</a></li>
-					<li data-filtertext="materiais" ><a href="#" data-ajax="false">Materiais</a></li>
-					<li data-filtertext="avaliadores" ><a href="listaavaliadormob.html" data-ajax="false">Avaliadores</a></li>
-					<li data-filtertext="orientadores" ><a href="cadastroorientadormob.html" data-ajax="false">Orientadores</a></li>
-					<li data-filtertext="visitantes" ><a href="#"data-ajax="false" >Visitantes</a></li>
-						<li data-filtertext="patrocinadores" ><a href="#"data-ajax="false" >Patrocinadores</a></li>
+					<li data-filtertext="home" data-icon="home"><a href="avalimob.html">Home</a></li>
 				</ul>
 			</div>
 	</div>	
 
-	<div id="miolo" ng-controller="ProjetoController">
-		<center><img ng-src="assets/uploads/{{model.arquivo}}" style="width:200px;height:200px;"></center>
+	<div id="miolo" ng-controller="NotaController">
+		<center><img ng-src="assets/uploads/projeto/{{model.arquivo}}" style="width:200px;height:200px;"></center>
 		<h2 style="text-align:center;color:#036" >{{model.nome}}</h2>
 		<h3 style="text-align:center" >Categoria</h3>
 		<p style="text-align:center;" >{{model.categoria}}</p>
@@ -86,15 +81,21 @@
 		<p style="text-align:center;" >{{model.descricao}}</p>
 		<h3 style="text-align:center">Problemática</h3>
 		<p style="text-align:center;" >{{model.problema}}</p>
-		<h3 style="text-align:center">Bibliografia</h3>
-		<p style="text-align:center;" >{{model.bibliografia}}</p>
+		<h3 style="text-align:center">Palavras Chaves</h3>
+		<p style="text-align:center;" >{{model.primeirapalavra}}</p>
+		<p style="text-align:center;" >{{model.segundapalavra}}</p>
+		<p style="text-align:center;" >{{model.terceirapalavra}}</p>
+		<h3 style="text-align:center">Turma</h3>
+		<p style="text-align:center;" >{{model.turma}}</p>
+		<h3 style="text-align:center">Integrantes</h3>
+		<p style="text-align:center;" >{{model.integrantes}}</p>
 		<br>
 		<h3 style="text-align:center">Nota do Projeto</h3>
 		<input step="0.01" type="number" min="0" max="10"  >
 		<br>
-		<button>Salvar</button>
+		<input id="salvar" type="submit" ng-model="model.nota" ng-click="save()" />
 	</div>
 	</div>
-
+	</div>
 </body>
 </html>

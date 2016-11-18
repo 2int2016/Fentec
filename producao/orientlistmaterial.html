@@ -578,13 +578,13 @@
 		</div>
 		
 	</div>	
-	<div  ng-controller="MatController" id="mioloo">
+	<div  ng-controller="MatController" id="mioloo" style="height:auto;">
 			<div id="Projeto">
 				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Materiais</p>
 			</div>
 			<ul>
-			 <li style="text-decoration:none" ng-repeat="material in arr">
-				<div id="divlist">
+			 <li style="text-decoration:none; " ng-repeat="material in arr">
+				<div id="divlist" style="height:auto;">
 				</br>
 				<div id="atributoss">
 					<img ng-src="assets/uploads/{{material.arquivo}}" style="width:100px; border-radius:200px;">
@@ -598,6 +598,7 @@
 				</div>
 			</li>
 		</ul>
+		
 		</div>
 
 </body>

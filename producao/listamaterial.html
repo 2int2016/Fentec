@@ -21,7 +21,7 @@
 	<header>
 	
 	</header>
-	<a href="index.html"><img id="logo" src="assets/images/logoo.fw.png"></a>
+	<a href=""><img id="logo" src="assets/images/logoo.fw.png"></a>
 		<h2 style="position:absolute; margin-top:-65px; color:white; font-family: Square721 BT; margin-left:160px;">Monitoria</h2>
 		<div id="desconect" ng-controller="LogarController" >
 			<a id="logout1" ng-click="sair()">
@@ -41,19 +41,11 @@
 			<a href="cadastromaterial.html" class="menuopcao" style="margin-left:75px; font-size:20px; font-family:'Segoe UI'; margin-top:55px;">Cadastro</a>
 		</div>
 		
-		<div id="tuts" style="background-color:#036; margin-left:110px; margin-top:115px; width:240px; height:368px; position:absolute; border:0px solid black; border-radius:5px;">
+		<div id="tuts" style="background-color:#036; margin-left:110px; margin-top:115px; width:240px; height:120px; position:absolute; border:0px solid black; border-radius:5px;">
 			<h1 style="margin-top:10px; font-size:25px; margin-left:85px; color:white;">Filtrar</h1>
 			
-				<input data-type="search"  type="text" ng-model="pesqnome" style="width:205px; margin-top:23px; margin-left:20px; position:absolute;" class="form-control" placeholder="Filtrar por Nome">
-				<input data-type="search"  type="text" ng-model="pesqmarca" style="width:205px; margin-top:63px; margin-left:20px; position:absolute;" class="form-control" placeholder="Filtrar por Marca">
-				<select data-type="search"  placeholder="Alterar Tipo" class="form-control"  style="width:205px; margin-top:103px; margin-left:20px; position:absolute;" id="ipt3" ng-model="pesqtipo">
-					<option>Mecanico</option>
-					<option>Logico</option>
-				</select>
-				<textarea data-type="search"  id="ipt4" class="form-control" style="position:absolute; height:50px;	resize:none; margin-left:20px; width:205px; margin-top:144px;" placeholder="Filtrar por Descrição"  ng-model="pesqdescricao"></textarea>
-				<input data-type="search"  type="text" data-thousands="."  data-decimal="," data-prefix="R$ " onkeypress="return SomenteNumero(event)" maxlength="20" class="form-control" style="position:absolute; margin-left:20px; width:205px; margin-top:200px;" placeholder="Filtrar por Preço" ng-model="pesqpreco"/>
-				<input data-type="search"  type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:205px; margin-left:20px; margin-top:240px; position:absolute;" placeholder="Filtrar por Dia da ida" ng-model="pesqida"></input>
-				<input data-type="search"  type="text" onkeypress="mascaraData( this, event ); return SomenteNumero(event)" maxlength="10" class="form-control" style="width:205px; margin-left:20px; margin-top:280px; position:absolute;" placeholder="Filtrar por Dia de retorno " ng-model="pesqretorno"></input>
+				<input data-type="search"  type="text" ng-model="pesqnome" style="width:205px; margin-top:23px; margin-left:20px; position:absolute;" class="form-control" placeholder="Filtrar Materiais">
+				
 		
 		</div>
 	</div>
@@ -62,10 +54,10 @@
 				<p style="margin-left:250px; font-size:22px; font-family:'Segoe UI';" >Materiais</p>
 			</div>
 			<ul>
-			 <li style="text-decoration:none" ng-repeat="material in arr">
+			 <li style="text-decoration:none" ng-repeat="material in arr | filter:pesqnome"">
 				<div id="divlist">
 				</br>
-				<div id="atributos">
+				<div id="atributos" >
 					<img ng-src="assets/uploads/{{material.arquivo}}" style="width:100px; border-radius:200px;">
 					<div id="mais" style="position: absolute; margin-left:2%; margin-top:-1%;">
 						<h3 style="color:#4365B9;">{{material.nome}}</h3>
@@ -74,7 +66,7 @@
 				</div>
 					<!-- <h4>Cidade: {{projeto.cidade}}</h4> -->
 					<div id="butsaltdel">
-					<input type="image" href="altermat.html" title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(material)"/>
+					<input type="image"  title="Editar" id="remove" src="assets/images/edit-black.png" ng-click="change(material)"/>
 					
 					<input type="image" ng-click="delete(material.id)" src="assets/images/delete-black.png" title="Deletar" id="remover"/>
 					</div>

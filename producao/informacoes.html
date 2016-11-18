@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html ng-app="fentec">
+<head>
+	<meta charset="utf-8">
+	<title>Fentec | Feira Norte de Tecnologia e Ciência</title>
+	
+	<link rel="icon" type="image/png"  href="assets/images/logologin2.png" />
+	<link rel="stylesheet" href="js/libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/libs/jquery-1.12.3.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-1.12.0.js"></script>
+	<script type="text/javascript" src="js/libs/angular.min.js"></script>
+	<script type="text/javascript" src="js/velocity.min.js"></script>
+	<script type="text/javascript" src="js/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/fentec.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/visitante.js"></script>
+	<script type="text/javascript" src="js/patrocinador.js"></script>
+	<script type="text/javascript" src="js/projeto.js"></script>
+	<script type="text/javascript" src="js/projetofiltro.js"></script>
+	<script src="js/inputnumero.js"></script>
+	
+	
+
+	
+	
+	<link rel="stylesheet" href="css/informacoes.css">
+	<link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/normalize.css">
+ 	<link rel="stylesheet" href="css/style.css">
+ 	<script src="js/respond.js"></script>
+ 	<script type="text/javascript">
+ 		function mascaraData( campo, e )
+{
+	var kC = (document.all) ? event.keyCode : e.keyCode;
+	var data = campo.value;
+	
+	if( kC!=8 && kC!=46 )
+	{
+		if( data.length==2 )
+		{
+			campo.value = data += '/';
+		}
+		else if( data.length==5 )
+		{
+			campo.value = data += '/';
+		}
+		else
+			campo.value = data;
+	}
+}
+
+ 	</script>
+
+
+	<!-- css -->
+
+	<style type="text/css">
+		body,html{
+			background-image: url('assets/images/Skeletal-Weave-White-Tileable-pattern-for-website-background.jpg');
+		}
+			
+		
+		#imput11{
+			width:300px
+		}
+		#cadastrovisi{
+			position:absolute;
+			margin-left:12%;
+			margin-top: 5%;
+			background: rgba(255,255,255, 0.5);
+		}
+		#btn{
+			width:91% ;
+			height:35px;
+			color:white;
+			background-color:#584380;
+			border:none;
+		}	
+		#btn:hover{
+			background-color:rgba(111, 81, 126, 0.94);
+			transition: all 0.5s ease 0s;
+		}
+		#salvar{
+			margin-top:-3px;
+		}
+		
+					
+	
+	</style>
+</head>
+
+	
+<body>
+	<div id="tudo">
+		<header id="menu">
+			<img id="logo" src="assets/images/logoo.fw.png"/>
+			<nav id="buttons" ng-controller="NavController">
+				<div>
+					<img id="homeicon" src="assets/images/homeicon.fw.png">
+					<a href="index.html#home" class="option" id="buttonhome">Home</span></a>
+				</div>
+				<div>
+					<img id="localizacaoicon" src="assets/images/localizacaoicon.fw.png">
+					<a href="index.html#localizacao" class="option" id="buttonlocalizacao">Localização</span></a>
+				</div>
+				<div>
+					<img id="projetoicon" src="assets/images/projetoicon.fw.png">
+					<a href="index.html#projeto" class="option" id="buttonprojetos">Projetos</span></a>
+				</div>
+				<div>
+					<img id="midiaicon" src="assets/images/midiaicon.fw.png">
+					<a href="index.html#midia" class="option" id="buttonmidia">Portfólio</span></a>
+				</div>
+				<div>
+					<img id="patrocinadoresicon" src="assets/images/patrocinadoresicon.fw.png">
+					<a href="index.html#patrocinadores" class="option" id="buttonpatrocinadores">Patrocinadores</span></a>
+				</div>
+				
+			
+			</nav>
+		</header>
+		
+</body>
+	
+	
+	
+</html>
+	

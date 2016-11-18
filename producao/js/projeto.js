@@ -43,6 +43,8 @@
 
 		$scope.init = function(){
 			$scope.o = $scope.getUrlVars()["objetivo"];
+			$scope.u = $scope.getUrlVars()["meta"];
+			$scope.t = $scope.getUrlVars()["turma"];
 			$scope.arrestados=arrestados;
 			
 			var id = $scope.getUrlVars()["id"];
@@ -189,6 +191,170 @@
 				window.location="perfilorient.html";
 		})
 		};
+		$scope.troca = function(){
+			if(document.getElementById("dropdown1-tab")){
+				window.location="objetivosprojetos.html?objetivo=1";
+			}
+		};
+		$scope.trocar = function(){
+			if(document.getElementById("dropdown2-tab")){
+				window.location="objetivosprojetos.html?objetivo=2";
+			}
+		};
+
+		$scope.obj = function(){
+			if(document.getElementById("dropdown3-tab")){
+				window.location="objetivosprojetos.html?objetivo=3";
+			}
+		};
+
+		$scope.shirley = function(){
+			if(document.getElementById("dropdown4-tab")){
+				window.location="objetivosprojetos.html?objetivo=4";
+			}
+		};
+
+		$scope.verlei = function(){
+			if(document.getElementById("dropdown5-tab")){
+				window.location="objetivosprojetos.html?objetivo=5";
+			}
+		};
+
+		$scope.rocha = function(){
+			if(document.getElementById("dropdown6-tab")){
+				window.location="objetivosprojetos.html?objetivo=6";
+			}
+		};
+
+		$scope.pi = function(){
+			if(document.getElementById("dropdown7-tab")){
+				window.location="objetivosprojetos.html?objetivo=7";
+			}
+		};
+		$scope.pazu = function(){
+			if(document.getElementById("dropdown8-tab")){
+				window.location="objetivosprojetos.html?objetivo=8";
+			}
+		};
+		$scope.pobreza = function(){
+			if(document.getElementById("dropdown9-tab")){
+				window.location="projetos.html?meta=1";
+			}
+		};
+
+		$scope.fome = function(){
+			if(document.getElementById("dropdown10-tab")){
+				window.location="projetos.html?meta=2";
+			}
+		};
+
+		$scope.saude = function(){
+			if(document.getElementById("dropdown11-tab")){
+				window.location="projetos.html?meta=3";
+			}
+		};
+
+		$scope.educacao = function(){
+			if(document.getElementById("dropdown12-tab")){
+				window.location="projetos.html?meta=4";
+			}
+		};
+
+		$scope.genero = function(){
+			if(document.getElementById("dropdown13-tab")){
+				window.location="projetos.html?meta=5";
+			}
+		};
+
+		$scope.agua = function(){
+			if(document.getElementById("dropdown14-tab")){
+				window.location="projetos.html?meta=6";
+			}
+		};
+
+		$scope.energia = function(){
+			if(document.getElementById("dropdown15-tab")){
+				window.location="projetos.html?meta=7";
+			}
+		};
+
+		$scope.empregos = function(){
+			if(document.getElementById("dropdown16-tab")){
+				window.location="projetos.html?meta=8";
+			}
+		};
+
+		$scope.inovacao = function(){
+			if(document.getElementById("dropdown17-tab")){
+				window.location="projetos.html?meta=9";
+			}
+		};
+
+		$scope.reducao = function(){
+			if(document.getElementById("dropdown18-tab")){
+				window.location="projetos.html?meta=10";
+			}
+		};
+
+		$scope.cidades = function(){
+			if(document.getElementById("dropdown19-tab")){
+				window.location="projetos.html?meta=11";
+			}
+		};
+
+		$scope.consumo = function(){
+			if(document.getElementById("dropdown20-tab")){
+				window.location="projetos.html?meta=12";
+			}
+		};
+		$scope.combate = function(){
+			if(document.getElementById("dropdown21-tab")){
+				window.location="projetos.html?meta=13";
+			}
+		};
+
+		$scope.vida = function(){
+			if(document.getElementById("dropdown22-tab")){
+				window.location="projetos.html?meta=14";
+			}
+		};
+
+		$scope.terra = function(){
+			if(document.getElementById("dropdown23-tab")){
+				window.location="projetos.html?meta=15";
+			}
+		};
+
+		$scope.paz = function(){
+			if(document.getElementById("dropdown24-tab")){
+				window.location="projetos.html?meta=16";
+			}
+		};
+
+		$scope.turmaam = function(){
+			if(document.getElementById("dropdown25-tab")){
+				window.location="listaturmas.html?turma=1";
+			}
+		};
+
+		$scope.turmaai = function(){
+			if(document.getElementById("dropdown26-tab")){
+				window.location="listaturmas.html?turma=2";
+			}
+		};
+		$scope.turmaat = function(){
+			if(document.getElementById("dropdown27-tab")){
+				window.location="listaturmas.html?turma=3";
+			}
+		};
+
+		$scope.turmaae = function(){
+			if(document.getElementById("dropdown28-tab")){
+				window.location="listaturmas.html?turma=4";
+			}
+		};
+
+
 
 		$scope.init();
 

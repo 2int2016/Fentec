@@ -72,8 +72,10 @@
 		};
 
 		$scope.change = function($value){
+
 			$scope.updateMode = true;
 			$scope.model = $value;
+			window.location = 'cadastromaterial.html='+$value.id;
 			
 		};
 

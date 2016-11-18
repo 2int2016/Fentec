@@ -32,16 +32,6 @@ class NotaController{
 		return $model->delete();
 	}
 	
-	public function avaliador($id){
-		$model = avaliadorModel::find($id);
-		return $model -> avaliador();
-	}
-	
-	public function projeto($id){
-		$model = ProjetoModel::find($id);
-		return $model -> projeto();
-	}
-	
 	public function setValue($value){
 		$obj['id'] = $value->id;
 		$obj['nota'] = mb_check_encoding($value->nota, 'UTF-8') ? $value->nota : utf8_encode($value->nota);
